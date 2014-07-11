@@ -1,0 +1,18 @@
+{
+  "name": "mcgill-mobile",
+  "version": "0.0.0",
+  "description": "Gives the McGill Mobile app config data",
+  "main": "server.js",
+  "scripts": {},
+  "author": "Julien Guerinet",
+  "license": "ISC",
+  "dependencies": {
+    "express": "~4.1.1",
+    "logfmt": "~1.1.2",
+    "basic-auth": "0.0.1",
+    "csvtojson": "^0.3.10"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
