@@ -1,3 +1,662 @@
 [
-
+	{
+		"Name" : "Adams Building",
+		"Categories" : [
+			"Building"
+		],  
+		"Address" : "3450 University Street, H3A 2A7", 
+		"Longitude" : 45.505743, 
+		"Latitude" : -73.575288, 
+		"Details" : "Departments: \n - Department of Earth and Planetary Sciences \n - Department of Mining and Materials Engineering"
+	},
+	{
+		"Name" : "Arts Building",
+		"Categories" : [
+			"Building"
+		],  
+		"Address" : "853 Sherbrooke Street West, H3A 0G4", 
+		"Longitude" : 45.505501, 
+		"Latitude" : -73.577680, 
+		"Details" : ""
+	},
+	{
+		"Name" : "Barton Building",
+		"Categories" : [
+		
+		],  
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Beatty Hall",
+		"Categories" : [
+		
+		],  
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Birks Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Bronfman Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Burnside Hall",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Chancellor Day Hall",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Centennial Centre",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Charles Meredith House",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Currie Gymnasium",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Davis House",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Dawson Hall",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Duff Medical Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Duggan House",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Education Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "McConnell Engineering Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Macdonald Engineering Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Trottier Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Farm Centre",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "In field",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Hosmer Coach House",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Hosmer House",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Jewish General Hospital",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Leacock Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Maass Chemistry Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Macdonald Stewart Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "McLennan Library Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "McIntyre Medical Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Macdonald Harrington Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Montreal General Hospital",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Montreal Neurological Institute",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Morrice Hall",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Moyse Hall",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "McTavish 3434",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "McTavish 3438",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Strathcona Music Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Institute of Parasitology",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Dr. Penfield 1085",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Peterson Hall",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Pilot House",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Peel 3465",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Peel 3475",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Peel 3487",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Peel 3647",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Peel 3661",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Peel 3674",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Peel 3690",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Peel 3715",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Pine 1033",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Ecole Polytechnique",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Purvis Hall",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Raymond Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Redpath Library Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Redpath Museum",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Redpath Hall",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Rutherford Physics Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Royal Victoria Hospital",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Strathcona Anatomy & Dentistry",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "School Teaching",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Sherbrooke 550",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Sherbrooke 688",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Stewart Biology Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Stewart Hall",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Wilson Hall",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	},
+	{
+		"Name" : "Wong Building",
+		"Categories" : [
+		
+		],    
+		"Address" : "", 
+		"Longitude" : , 
+		"Latitude" : , 
+		"Details" : ""
+	}
 ]
