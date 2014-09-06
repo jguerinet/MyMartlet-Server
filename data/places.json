@@ -907,5 +907,149 @@
         "Address" : "Strathcona Music Building",
         "Latitude" : 45.505818,
         "Longitude" : -73.573536
+    },
+    {
+        "Name" : "Life Sciences Library",
+        "Categories" : [
+            "Library"
+        ],
+        "Address" : "McIntyre Medical Building",
+        "Latitude" : 45.503056,
+        "Longitude" : -73.582501
+    },
+    {
+        "Name" : "Nahum Gelber Law Library",
+        "Categories" : [
+            "Library"
+        ],
+        "Address" : "Gelber Law Library",
+        "Latitude" : 45.503505,
+        "Longitude" : -73.580735
+    },
+    {
+        "Name" : "Education Library & Curriculum Resources Centre",
+        "Categories" : [
+            "Library"
+        ],
+        "Address" : "Education Building",
+        "Latitude" : 45.504333,
+        "Longitude" : -73.580492
+    },
+    {
+        "Name" : "Islamic Studies Library",
+        "Categories" : [
+            "Library"
+        ],
+        "Address" : "Morrice Hall",
+        "Latitude" : 45.503997,
+        "Longitude" : -73.577735
+    },
+    {
+        "Name" : "Blackader-Lauterman Library",
+        "Categories" : [
+            "Library"
+        ],
+        "Address" : "Redpath Library Building",
+        "Latitude" : 45.503501,
+        "Longitude" : -73.576593
+    },
+    {
+        "Name" : "Humanities and Social Sciences Library",
+        "Categories" : [
+            "Library"
+        ],
+        "Address" : "Redpath Library Building",
+        "Latitude" : 45.503501,
+        "Longitude" : -73.576593
+    },
+    {
+        "Name" : "Edward Rosenthall Mathematics and Statistics Library",
+        "Categories" : [
+            "Library"
+        ],
+        "Address" : "Burnside Hall",
+        "Latitude" : 45.504704,
+        "Longitude" : -73.574985
+    },
+    {
+        "Name" : "Schulich Library of Science and Engineering",
+        "Categories" : [
+            "Library"
+        ],
+        "Address" : "Macdonald Stewart Library Building",
+        "Latitude" : 45.505065,
+        "Longitude" : -73.575355
+    },
+    {
+        "Name" : "Birks Reading Room",
+        "Categories" : [
+            "Library"
+        ],
+        "Address" : "Birks Building",
+        "Latitude" : 45.506575,
+        "Longitude" : -73.577408
+    },
+    {
+        "Name" : "Marvin Duchow Music Library",
+        "Categories" : [
+            "Library"
+        ],
+        "Address" : "New Music Building",
+        "Latitude" : 45.506228,
+        "Longitude" : -73.57324
+    },
+    {
+        "Name" : "Howard Ross Library of Management",
+        "Categories" : [
+            "Library"
+        ],
+        "Address" : "McLennan Library Building",
+        "Latitude" : 45.503218,
+        "Longitude" : -73.575874
+    },
+    {
+        "Name" : "Rare Books and Special Collections",
+        "Categories" : [
+            "Library"
+        ],
+        "Address" : "Redpath Library Building",
+        "Latitude" : 45.503501,
+        "Longitude" : -73.576593
+    },
+    {
+        "Name" : "McGill University Archives",
+        "Categories" : [
+            "Library"
+        ],
+        "Address" : "McLennan Library Building",
+        "Latitude" : 45.503218,
+        "Longitude" : -73.575874
+    },
+    {
+        "Name" : "Osler Library of the History of Medicine",
+        "Categories" : [
+            "Library"
+        ],
+        "Address" : "McIntyre Medical Building",
+        "Latitude" : 45.503056,
+        "Longitude" : -73.582501
+    },
+    {
+        "Name" : "Walter Hitschfeld Geography Information Centre",
+        "Categories" : [
+            "Library"
+        ],
+        "Address" : "Burnside Hall",
+        "Latitude" : 45.504704,
+        "Longitude" : -73.574985
+    },
+    {
+        "Name" : "Macdonald Campus Library",
+        "Categories" : [
+            "Library"
+        ],
+        "Address" : "Barton Building",
+        "Latitude" : 45.407981,
+        "Longitude" : -73.938073
     }
 ]
