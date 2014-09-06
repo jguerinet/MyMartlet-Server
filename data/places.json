@@ -1483,5 +1483,59 @@
         "Address" : "21111 Lakeshore Road St Anne de Bellevue",
         "Latitude" : 45.406885,
         "Longitude" : -73.939479
+    },
+    {
+        "Name" : "EUS Common Room (Blues Pub)",
+        "Categories" : [
+            "Social"
+        ],
+        "Address" : "McConnell Engineering Building",
+        "Latitude" : 45.505955,
+        "Longitude" : -73.576263
+    },
+    {
+        "Name" : "4a7",
+        "Categories" : [
+            "Social"
+        ],
+        "Address" : "Bronfman Building",
+        "Latitude" : 45.502572,
+        "Longitude" : -73.576442
+    },
+    {
+        "Name" : "BDA (Bar des Arts)",
+        "Categories" : [
+            "Social"
+        ],
+        "Address" : "Leacock Building",
+        "Latitude" : 45.504371,
+        "Longitude" : -73.578038
+    },
+    {
+        "Name" : "Gerts",
+        "Categories" : [
+            "Social"
+        ],
+        "Address" : "University Centre (Shatner Building)",
+        "Latitude" : 45.5035012,
+        "Longitude" : -73.578223
+    },
+    {
+        "Name" : "Frostbite",
+        "Categories" : [
+            "Social"
+        ],
+        "Address" : "McConnell Engineering Building",
+        "Latitude" : 45.505955,
+        "Longitude" : -73.576263
+    },
+    {
+        "Name" : "ECSESS Lounge",
+        "Categories" : [
+            "Social"
+        ],
+        "Address" : "Trottier Building",
+        "Latitude" : 45.50739,
+        "Longitude" : -73.57909
     }
 ]
