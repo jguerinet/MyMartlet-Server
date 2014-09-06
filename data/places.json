@@ -1285,5 +1285,203 @@
         "Address" : "21111 Lakeshore Road St Anne de Bellevue",
         "Latitude" : 45.404388,
         "Longitude" : -73.937481
+    },
+    {
+        "Name" : "Carrefour Sherbrooke",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "475 Sherbrooke Ouest",
+        "Latitude" : 45.506712,
+        "Longitude" : -73.57261
+    },
+    {
+        "Name" : "Douglas Hall",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "3851 University",
+        "Latitude" : 45.509107,
+        "Longitude" : -73.581725
+    },
+    {
+        "Name" : "Greenbriar Apartments",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "3575 University",
+        "Latitude" : 45.507359,
+        "Longitude" : -73.577901
+    },
+    {
+        "Name" : "La Citadelle Buidling",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "410 Sherbrooke Ouest",
+        "Latitude" : 45.50729,
+        "Longitude" : -73.571525
+    },
+    {
+        "Name" : "McConnell Hall",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "3905 University",
+        "Latitude" : 45.510943,
+        "Longitude" : -73.583118
+    },
+    {
+        "Name" : "Molson Hall",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "3915 University",
+        "Latitude" : 45.511105,
+        "Longitude" : -73.583919
+    },
+    {
+        "Name" : "Gardner Hall",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "3925 University",
+        "Latitude" : 45.510347,
+        "Longitude" : -73.584252
+    },
+    {
+        "Name" : "M.O.R.E. House Peel",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "3491 Peel",
+        "Latitude" : 45.503149,
+        "Longitude" : -73.578662
+    },
+    {
+        "Name" : "M.O.R.E. House University 1",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "3561 University",
+        "Latitude" : 45.50725,
+        "Longitude" : -73.577728
+    },
+    {
+        "Name" : "M.O.R.E. House University 2",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "3619 University",
+        "Latitude" : 45.507811,
+        "Longitude" : -73.578975
+    },
+    {
+        "Name" : "M.O.R.E. House University 3",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "3653 University",
+        "Latitude" : 45.508174,
+        "Longitude" : -73.579719
+    },
+    {
+        "Name" : "M.O.R.E. House Pine 1",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "546 Pine",
+        "Latitude" : 45.50847,
+        "Longitude" : -73.579714
+    },
+    {
+        "Name" : "M.O.R.E. House Pine 2",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "510 Pine",
+        "Latitude" : 45.508995,
+        "Longitude" : -73.579537
+    },
+    {
+        "Name" : "M.O.R.E. House Pine 3",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "515 Pine",
+        "Latitude" : 45.509152,
+        "Longitude" : -73.57997
+    },
+    {
+        "Name" : "New Residence Hall",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "3625 Parc",
+        "Latitude" : 45.510903,
+        "Longitude" : -73.57615
+    },
+    {
+        "Name" : "Royal Victoria College (RVC)",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "3425 University",
+        "Latitude" : 45.505381,
+        "Longitude" : -73.573968
+    },
+    {
+        "Name" : "Solin Hall",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "3510 Lionel-Groulx",
+        "Latitude" : 45.481275,
+        "Longitude" : -73.581653
+    },
+    {
+        "Name" : "University Hall",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "3473 University",
+        "Latitude" : 45.506409,
+        "Longitude" : -73.575539
+    },
+    {
+        "Name" : "Pres Rez",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "3495 University",
+        "Latitude" : 45.506528,
+        "Longitude" : -73.575936
+    },
+    {
+        "Name" : "Bishop Mountain Hall",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "3935 University",
+        "Latitude" : 45.510656,
+        "Longitude" : -73.583728
+    },
+    {
+        "Name" : "ECO Residence",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.407187,
+        "Longitude" : -73.935042
+    },
+    {
+        "Name" : "Laird Hall",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.406885,
+        "Longitude" : -73.939479
     }
 ]
