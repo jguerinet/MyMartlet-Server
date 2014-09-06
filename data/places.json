@@ -1051,5 +1051,239 @@
         "Address" : "Barton Building",
         "Latitude" : 45.407981,
         "Longitude" : -73.938073
+    },
+    {
+        "Name" : "Barton Building",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.407981,
+        "Longitude" : -73.938073
+    },
+    {
+        "Name" : "Brace Research Unit",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.405384,
+        "Longitude" : -73.936365
+    },
+    {
+        "Name" : "Brittain Hall",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.404854,
+        "Longitude" : -73.942925
+    },
+    {
+        "Name" : "Cattle Complex",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.412033,
+        "Longitude" : -73.94436
+    },
+    {
+        "Name" : "Centennial Centre Building (Student Service)",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.405997,
+        "Longitude" : -73.938889
+    },
+    {
+        "Name" : "Department of Bioresource Engineering",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.407801,
+        "Longitude" : -73.938701
+    },
+    {
+        "Name" : "EcoMuseum",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21125 Sainte Marie Rd",
+        "Latitude" : 45.426159,
+        "Longitude" : -73.935635
+    },
+    {
+        "Name" : "EcoResidence",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.407187,
+        "Longitude" : -73.935042
+    },
+    {
+        "Name" : "Farm Centre",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.411652,
+        "Longitude" : -73.943186
+    },
+    {
+        "Name" : "Facilities Management",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.403428,
+        "Longitude" : -73.94017
+    },
+    {
+        "Name" : "Glenfinnan Arena",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.407675,
+        "Longitude" : -73.943708
+    },
+    {
+        "Name" : "Glenaladale House",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.403563,
+        "Longitude" : -73.943267
+    },
+    {
+        "Name" : "Harrison House",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.405191,
+        "Longitude" : -73.937515
+    },
+    {
+        "Name" : "Horticultural Services",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.40909,
+        "Longitude" : -73.936521
+    },
+    {
+        "Name" : "Institute of Parasitology",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.408434,
+        "Longitude" : -73.938422
+    },
+    {
+        "Name" : "Large Animal Research Unit",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.410221,
+        "Longitude" : -73.945068
+    },
+    {
+        "Name" : "Laird Hall",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.406885,
+        "Longitude" : -73.939479
+    },
+    {
+        "Name" : "Macdonald Campus Daycare",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "1 Maple St Anne de Bellevue",
+        "Latitude" : 45.403129,
+        "Longitude" : -73.944215
+    },
+    {
+        "Name" : "Nutrition Barn",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.411136,
+        "Longitude" : -73.944264
+    },
+    {
+        "Name" : "Old Barn",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.411923,
+        "Longitude" : -73.941667
+    },
+    {
+        "Name" : "Power House",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.404595,
+        "Longitude" : -73.938885
+    },
+    {
+        "Name" : "Donald McQueen Shaver Poultry Research Center",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.413946,
+        "Longitude" : -73.942354
+    },
+    {
+        "Name" : "Raymond Building",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.407774,
+        "Longitude" : -73.939645
+    },
+    {
+        "Name" : "Rowles House",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.405144,
+        "Longitude" : -73.937934
+    },
+    {
+        "Name" : "Stewart Athletic Complex",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.405381,
+        "Longitude" : -73.94045
+    },
+    {
+        "Name" : "Tadja Hall",
+        "Categories" : [
+            "Building"
+        ],
+        "Address" : "21111 Lakeshore Road St Anne de Bellevue",
+        "Latitude" : 45.404388,
+        "Longitude" : -73.937481
     }
 ]
