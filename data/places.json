@@ -628,5 +628,284 @@
         "Address" : "3610 University,  H3A 0C5",
         "Latitude" : 45.506619,
         "Longitude" : -73.578746
-   }
+    },
+    {
+        "Name" : "McIntyre Café",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "McIntyre Medical Building",
+        "Latitude" : 45.503056,
+        "Longitude" : -73.582501
+    },
+    {
+        "Name" : "Second Cup",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Stewart Biology Building",
+        "Latitude" : 45.502408,
+        "Longitude" : -73.581585
+    },
+    {
+        "Name" : "le comptoir MAC",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Barton Building",
+        "Latitude" : 45.407981,
+        "Longitude" : -73.938073
+    },
+    {
+        "Name" : "Avvocato Café",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "(New) Chancellor Day Hall",
+        "Latitude" : 45.502951,
+        "Longitude" : -73.58084
+    },
+    {
+        "Name" : "Education Café",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Education Building",
+        "Latitude" : 45.504333,
+        "Longitude" : -73.580492
+    },
+    {
+        "Name" : "Al Taib & Gerts Pub",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "University Centre (Shatner Building)",
+        "Latitude" : 45.5035012,
+        "Longitude" : -73.578223
+    },
+    {
+        "Name" : "Bento Sushi",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Bronfman Building",
+        "Latitude" : 45.502572,
+        "Longitude" : -73.576442
+    },
+    {
+        "Name" : "Quesada",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Bronfman Building",
+        "Latitude" : 45.502572,
+        "Longitude" : -73.576442
+    },
+    {
+        "Name" : "Première Moisson",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Redpath Library Building",
+        "Latitude" : 45.503501,
+        "Longitude" : -73.576593
+    },
+    {
+        "Name" : "Subway",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Arts Building",
+        "Latitude" : 45.505224,
+        "Longitude" : -73.577727
+    },
+    {
+        "Name" : "Burnside Café",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Burnside Hall",
+        "Latitude" : 45.504704,
+        "Longitude" : -73.574985
+    },
+    {
+        "Name" : "E-Café",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "McConnell Engineering Building",
+        "Latitude" : 45.505955,
+        "Longitude" : -73.576263
+    },
+    {
+        "Name" : "Dispatch Café",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "McConnell Engineering Building",
+        "Latitude" : 45.505955,
+        "Longitude" : -73.576263
+    },
+    {
+        "Name" : "rue McGill Deli",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Trottier Building",
+        "Latitude" : 45.50739,
+        "Longitude" : -73.57909
+    },
+    {
+        "Name" : "St-Hubert Express",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Trottier Building",
+        "Latitude" : 45.50739,
+        "Longitude" : -73.57909
+    },
+    {
+        "Name" : "Fabergé Express",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Duff Medical Building",
+        "Latitude" : 45.508824,
+        "Longitude" : -73.580616
+    },
+    {
+        "Name" : "Athletics Café",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Currie Gymnasium",
+        "Latitude" : 45.510004,
+        "Longitude" : -73.579659
+    },
+    {
+        "Name" : "Royal Victoria College Dining Hall",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Royal Victoria College",
+        "Latitude" : 45.505381,
+        "Longitude" : -73.573968
+    },
+    {
+        "Name" : "Carrefour Sherbrooke Dining Hall",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Carrefour Sherbrooke",
+        "Latitude" : 45.506712,
+        "Longitude" : -73.57261
+    },
+    {
+        "Name" : "Première Moisson",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "New Residence Hall",
+        "Latitude" : 45.510903,
+        "Longitude" : -73.57615
+    },
+    {
+        "Name" : "New Residence Dining Hall",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "New Residence Hall",
+        "Latitude" : 45.510903,
+        "Longitude" : -73.57615
+    },
+    {
+        "Name" : "Douglas Dining Hall",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Douglas Hall",
+        "Latitude" : 45.509107,
+        "Longitude" : -73.581725
+    },
+    {
+        "Name" : "Bishop Mountain Hall",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Bishop Mountain Hall",
+        "Latitude" : 45.510656,
+        "Longitude" : -73.583728
+    },
+    {
+        "Name" : "Faculty Club",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Faculty Club",
+        "Latitude" : 45.503156,
+        "Longitude" : -73.577286
+    },
+    {
+        "Name" : "La Prep",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "University Centre",
+        "Latitude" : 45.5035012,
+        "Longitude" : -73.578223
+    },
+    {
+        "Name" : "PGSS",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Thomson House",
+        "Latitude" : 45.504251,
+        "Longitude" : -73.579693
+    },
+    {
+        "Name" : "Liquid Nutrition",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "University Centre",
+        "Latitude" : 45.5035012,
+        "Longitude" : -73.578223
+    },
+    {
+        "Name" : "Mange Tout Cafe",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "La Citadelle Building",
+        "Latitude" : 45.50729,
+        "Longitude" : -73.571525
+    },
+    {
+        "Name" : "S.S.M.U. (Student's Society of McGill)",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "University Centre",
+        "Latitude" : 45.5035012,
+        "Longitude" : -73.578223
+    },
+    {
+        "Name" : "Vinh's Café",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Penfield 740 (Genome)",
+        "Latitude" : 45.506957,
+        "Longitude" : -73.579599
+    },
+    {
+        "Name" : "Vinh's Music Building",
+        "Categories" : [
+            "Food"
+        ],
+        "Address" : "Strathcona Music Building",
+        "Latitude" : 45.505818,
+        "Longitude" : -73.573536
+    }
 ]
