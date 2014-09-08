@@ -1,3 +1,7 @@
 {
-	"Test" : "Test"
+	"PlacesURL" : "https://mcgill-mobile.herokuapp.com/places",
+	"RegistrationSemesters" : [
+		"Fall 2014", 
+		"Winter 2015"
+		]
 }
