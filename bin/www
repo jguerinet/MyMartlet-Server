@@ -1,9 +1,28 @@
 #!/usr/bin/env node
 var debug = require('debug')('mymartlet_admin');
-var app = require('../app');
 
-app.set('port', process.env.PORT || 3000);
-
-var server = app.listen(app.get('port'), function() {
-  debug('Express server listening on port ' + server.address().port);
+//Call the function to connect to the mongoDB database
+require("../util/db").connectToMongoDatabase(process.env.MONGOLAB_URI|| 'mongodb://localhost/db',function() {
+	//Call the function to set up the express app object
+	setupAppObject();
 });
+
+//Sets up the express app object
+function setupAppObject() {
+	//Call the method that sets up the routes anf middleware for the application
+	var app = require('../app');
+
+	//Add the port which the app will use
+	app.set('port', process.env.PORT || 3000);
+
+	///Call the function that will start the server
+	startServer(app);
+}
+
+//Starts the server
+function startServer(app) {
+	//Starts the server
+	var server = app.listen(app.get('port'), function () {
+		debug('Express server listening on port ' + server.address().port);
+	});
+}
