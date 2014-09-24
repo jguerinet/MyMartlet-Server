@@ -14,7 +14,7 @@ module.exports = function(passport) {
 	//This method when given the session finds the user object connected with this id
 	passport.deserializeUser(function(id,done) {
 		//Since we use the mongo id as the session id all we have to do is a findById to get the user object.
-		User.findById(id,function(Err,user) {
+		User.findById(id,function(err,user) {
 			done(err,user);
 		});
 	});
@@ -31,7 +31,7 @@ module.exports = function(passport) {
 		//Makes it asynchronous
 		process.nextTick(function() {
 			//Try to fins a user with the same email in the db
-			User.findOne({"email": email}, function (err, user) {
+			User.findOne({"Email": email}, function (err, user) {
 				//If err then pass it to passport
 				if (err) {
 					return done(err);
@@ -47,7 +47,7 @@ module.exports = function(passport) {
 					var newUser = new User(
 						{
 							Email: email,
-							Password: password
+							Password: User.generateHash(password)
 						}
 					);
 
@@ -63,6 +63,37 @@ module.exports = function(passport) {
 					});
 				}
 			});
+		});
+	}));
+
+	//The strategy for logging in a user
+	passport.use("local-login",new LocalStrategy({
+		usernameField: "email",
+		passwordField: "password",
+		passReqToCallback: true
+	},function(req,email,password,done) {
+		//Try to find a user with the same email in the db
+		User.findOne({Email:email},function(err,foundUser) {
+			//If err pass it to the done callback
+			if(err) {
+				return done(err);
+			}
+			//If no user found return null and false to callback
+			else if(!foundUser) {
+				return done(null,false);
+			}
+			//If user found
+			else {
+				//Check if the user entered password matches the one in the document
+				if(User.verifyPassword(foundUser.Password,password)) {
+					//If yes then return the user
+					return done(null,foundUser);
+				}
+				//Otherwise return null and false
+				else {
+					return done(null,false);
+				}
+			}
 		});
 	}));
 };
