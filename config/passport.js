@@ -48,7 +48,8 @@ module.exports = function(passport) {
 				var newUser = new User(
 					{
 						Email: email,
-						Password: User.generateHash(password)
+						Password: User.generateHash(password),
+						Auth: require("../constants/roles").pending
 					}
 				);
 
