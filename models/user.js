@@ -24,7 +24,7 @@ var userSchema = new mongoose.Schema({
 	//Admin: Allowed to view content, edit content and also change the Auth field of other users
 	Auth: {
 		type: String,
-		default: "pending"
+		required: true
 	}
 });
 
