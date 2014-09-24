@@ -24,7 +24,8 @@
 	"passport-local": "~1.0.0",
 	"express-session": "~1.8.2",
 	"bcrypt-nodejs": "0.0.3",
-	"connect-mongo": "~0.4.1"
+	"connect-mongo": "~0.4.1",
+	"connect-roles": "~3.0.3"
   },
   "engines": {
     "node": "0.10.x"
