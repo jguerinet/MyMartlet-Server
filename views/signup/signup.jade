@@ -1,1 +1,25 @@
+include ../layout
+
+block css
+	include css
+
+block js
+	include js
+
+block content
+	.height-25
+
+	.row.col-lg-6.col-lg-offset-3
+		.panel.panel-default.height-50
+			.panel-heading MyMartlet Admin Signup
+			.panel-body
+				form(role="form")
+					.form-group
+						label Email Address
+						input.form-control(type="email")
+					.form-group
+						label Password
+						input.form-control(type="text")
+
+	.height-25
 
