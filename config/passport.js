@@ -4,9 +4,6 @@ var LocalStrategy = require("passport-local").Strategy;
 //The mongoose user model object
 var User = require("../models/user");
 
-//The err code to return when a username tries to signup with an email that already exists
-var emailExistsErr = 100;
-
 module.exports = function(passport) {
 	//When a user logs into our system we need to setup a session for them. This method returns the identifier that will be used to find the user
 	//that has logged into the system in the subsequent requests they make. We use the mongoDB id that is generated when creating a new document as the session id
@@ -31,38 +28,22 @@ module.exports = function(passport) {
 		//Pass the req to the callback
 		passReqToCallback: true
 	},function(req,email,password,done) {
-		//Try to fins a user with the same email in the db
-		User.findOne({"Email": email}, function (err, user) {
-			//If err then pass it to passport
-			if (err) {
-				return done(err,null,null);
+		//Call the mongoose method to signup a new user
+		User.signup({email:email,password:password,confPassword:req.body.confPassword},function(err) {
+			//If err
+			if(err) {
+				//Check if it is a user err
+				if (err.hasOwnProperty("err")) {
+					done(null, false, err);
+				}
+				//Otheriwse it is a server err
+				else {
+					done(err);
+				}
 			}
-
-			//If no errs then pass null as err and false and the correct error code
-			if (user) {
-				return done(null,false,{err: emailExistsErr});
-			}
-			//Otherwise everything is good
+			//No errs
 			else {
-				//Create a new mongoose User object
-				var newUser = new User(
-					{
-						Email: email,
-						Password: User.generateHash(password),
-						Auth: require("../constants/roles").pending
-					}
-				);
-
-				//Save them to the database
-				newUser.save(function (err) {
-					//If err saving then throw it
-					if (err) {
-						throw err;
-					}
-
-					//otherwise return null and the newUser object
-					return done(null,newUser,null);
-				});
+				done(null,true);
 			}
 		});
 	}));
