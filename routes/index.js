@@ -1,9 +1,5 @@
-var express = require('express');
-var router = express.Router();
-
-/* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
-});
-
-module.exports = router;
+//This method adds all the routes to the app object
+module.exports = function(app,passport) {
+	//Add the /signup routes
+	require("./signup")(app,passport);
+};
