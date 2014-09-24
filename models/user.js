@@ -28,6 +28,14 @@ var userSchema = new mongoose.Schema({
 	}
 });
 
+//The pre save middleware. Called before this is saved to the db
+userSchema.pre("save",function(next) {
+	//Make the email to lower case
+	this.Email = this.Email.toLowerCase();
+	//Call the next middleware in line
+	next();
+});
+
 //Generates a hash for the passed variable. Mainly used to generate a hash for a user's password
 userSchema.statics.generateHash = function(toHash) {
 	return bcrypt.hashSync(toHash,bcrypt.genSaltSync(8),null);
