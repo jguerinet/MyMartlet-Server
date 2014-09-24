@@ -16,6 +16,15 @@ var userSchema = new mongoose.Schema({
 	Password: {
 		type: String,
 		required: true
+	},
+	//Can have 4 values:
+	//Pending: Not allowed to views content
+	//Viewer: Allowed to view content but not edit
+	//Editor: Allowed to edit content
+	//Admin: Allowed to view content, edit content and also change the Auth field of other users
+	Auth: {
+		type: String,
+		default: "pending"
 	}
 });
 
