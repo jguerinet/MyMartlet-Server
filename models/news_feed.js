@@ -34,12 +34,12 @@ var newsFeedSchema = new mongoose.Schema({
 	//The last person who updated this value. Has their email
 	LastUpdatedBy: {
 		type: String,
-		default: ""
+		default: null
 	},
 	//The person who added this NewFeed item. Has their email
 	AddedBy: {
 		type: String,
-		default: ""
+		default: null
 	},
 	//The last time this object was updated
 	LastUpdatedOn: {
