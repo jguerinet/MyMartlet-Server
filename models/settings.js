@@ -21,7 +21,7 @@ var settingsSchema = new mongoose.Schema({
 settingsSchema.statics.updateNewsFeedId = function(){
 	//Gte the setting sobject and icnrement the NewsFeedId var by one
 	this.findOne({},function(err,settingsFound) {
-		settingsFound.update({$inc: {'UniqueIds.NewsFeed': 1}}).exec();
+		settingsFound.update({$inc: {'UniqueIds.NewsFeedId': 1}}).exec();
 	});
 };
 
