@@ -9,7 +9,7 @@ angular.module("mymartlet.signup.controllers")
 		signupErrs: [
 			{
 				errCode: 100,
-				errMsg: "Username already taken"
+				errMsg: "Email already exists in our accounts"
 			}
 		]
 	});
@@ -67,7 +67,7 @@ function SignupController($scope,$http,SignupFactory,SignupConstants) {
 							if(response.err == SignupConstants.signupErrs[index].errCode) {
 								$scope.err = {
 									show: true,
-									msg: SignupConstants.signupErrs[index].msg
+									msg: SignupConstants.signupErrs[index].errMsg
 								};
 								break;
 							}
