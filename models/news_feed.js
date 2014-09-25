@@ -2,6 +2,8 @@ var mongoose = require("mongoose");
 
 var settingsUtil = require("../util/settings");
 
+var modelTransforms = require("./model_transforms/news_feed");
+
 var newsFeedSchema = new mongoose.Schema({
 	//The unique identifier for this new feed item
 	NewsFeedId: {
@@ -143,6 +145,28 @@ function setupNewsFeedItemUpdate(newsFeedItem,newsFeedUpdate,updatedBy) {
 	newsFeedItem.LastUpdatedBy = updatedBy;
 }
 
+//Returns the array pf news feed object for the admin system
+newsFeedSchema.statics.getObjectsForAdmin = function(callback) {
+	//Get all the news feed objects
+	this.find({},function(err,newsFeedDocs) {
+		//if err then pass it to the callback
+		if(err) {
+			return callback(err);
+		}
+		else {
+			//Make an array where we will put all the newFeed objects
+			var newsFeedItems = [];
+
+			//Go through the retreived docs and convert to object and pply the adminTransform to the roObject function
+			for(var index=0; index<newsFeedDocs.length; index++) {
+				newsFeedItems.push(newsFeedDocs[index].toObject({transform:modelTransforms.adminTransform}));
+			}
+
+			//Return the array to the calback
+			return callback(null,newsFeedItems);
+		}
+	});
+};
 
 //Generate the mongoose model object for a NewsFeed using the above schema and module export it
 module.exports = mongoose.model("NewsFeed",newsFeedSchema);
