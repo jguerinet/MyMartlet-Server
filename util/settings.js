@@ -33,4 +33,6 @@ exports.getNewsFeedId = function() {
 
 	settings.UniqueIds.NewsFeedId+=1;
 	Settings.updateNewsFeedId();
+
+	return newsFeedId;
 };
