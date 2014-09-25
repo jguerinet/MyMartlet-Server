@@ -1,1 +1,1 @@
-angular.module("SignupApp");
+angular.module("mymartlet.signup",["mymartlet.signup.controllers"]);
