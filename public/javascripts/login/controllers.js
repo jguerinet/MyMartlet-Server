@@ -69,3 +69,7 @@ function LoginController($scope,$http,$window,LoginConstants) {
 		}
 	}
 }
+
+//Make the login controller
+angular.module("mymartlet.login.controllers")
+	.controller("LoginController",LoginController);
