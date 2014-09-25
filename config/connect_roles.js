@@ -2,7 +2,22 @@
 var connectRoles = require("connect-roles");
 
 //make a new connect roles object
-var user  = new connectRoles({});
+var user  = new connectRoles({
+	failureHandler: function (req, res, action) {
+		// optional function to customise code that runs when
+		// user fails authorisation
+		var accept = req.headers.accept || '';
+
+		//If the client accepts html then redirect to the lgin page
+		if (~accept.indexOf('html')&&req.method === "get") {
+			res.redirect("/login");
+		}
+		//Otherwise send 403
+		else {
+			res.status(403).end();
+		}
+	}
+});
 //get the roles constants
 var roles = require("../constants/roles");
 
@@ -31,3 +46,5 @@ user.use("edit users",function(req) {
 		return true;
 	}
 });
+
+module.exports = user;
