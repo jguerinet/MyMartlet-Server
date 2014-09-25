@@ -1,1 +1,1 @@
-angular.module("mymartlet.login",[]);
+angular.module("mymartlet.login",["mymartlet.login.controllers"]);
