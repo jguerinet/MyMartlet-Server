@@ -5,4 +5,7 @@ module.exports = function(app,passport) {
 
 	//Add the /login routes
 	require("./login")(app,passport);
+
+	//Add the /admin routes
+	require("./admin")(app);
 };
