@@ -16,6 +16,13 @@ exports.setSettingsObject = function() {
 		//if no settingsFound then create a new one and set the settings object to that
 		if(!settingsFound) {
 			settings = new Settings({});
+
+			//Save the new one to the db.
+			settings.save(function(err) {
+				if(err) {
+					throw err;
+				}
+			});
 		}
 		//Otherwise simply set setitngs to settingsFound
 		else {
