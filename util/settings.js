@@ -17,9 +17,13 @@ exports.setSettingsObject = function() {
 		if(!settingsFound) {
 			settings = new Settings({});
 		}
+		//Otherwise simply set setitngs to settingsFound
+		else {
+			settings = settingsFound;
+		}
 
 		//Set the settings vavr to the acquired Settings object
-		settings = settingsFound.toObject();
+		settings = settings.toObject();
 	});
 };
 
