@@ -5,6 +5,8 @@ angular.module("mymartlet.login.controllers")
 		//The POST url to which we send the login detaisl
 		loginPostUrl: "/login",
 
+		adminUrl: "/admin",
+
 		//Has the strings for each possible error type
 		loginErr: {
 			//string for invalid login credentials
@@ -14,7 +16,7 @@ angular.module("mymartlet.login.controllers")
 		}
 	});
 
-function LoginController($scope,$http,LoginConstants) {
+function LoginController($scope,$http,$window,LoginConstants) {
 	//scope variable to keep track of whether the user pressed the login button
 	$scope.submitted = false;
 
@@ -50,7 +52,8 @@ function LoginController($scope,$http,LoginConstants) {
 			//Do a post action to the server to login the user
 			$http.post(LoginConstants.loginPostUrl, {email: $scope.email, password: $scope.password})
 				.success(function (data) {
-					//TODO Redirect user to admin page
+					//Redirect to the admin page on sucessfull login
+					$window.location.href = LoginConstants.adminUrl;
 				})
 				//The error promise
 				.error(function (response, data) {
