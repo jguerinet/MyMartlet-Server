@@ -3,7 +3,10 @@ angular.module("mymartlet.signup.controllers",["mymartlet.signup.factories"]);
 angular.module("mymartlet.signup.controllers")
 	.constant("SignupConstants", {
 		//The url to post the signup details
-		signupPostUrl: "http://localhost:3000/signup",
+		signupPostUrl: "/signup",
+
+		//The url to the login page. We rediretc to this on sucessfull signup
+		loginUrl: "/login",
 
 		//The err codes possibly returned by the server on signupPost
 		signupErrs: {
@@ -16,7 +19,7 @@ angular.module("mymartlet.signup.controllers")
 		}
 	});
 
-function SignupController($scope,$http,SignupFactory,SignupConstants) {
+function SignupController($scope,$http,$window,SignupFactory,SignupConstants) {
 	//Scope object for the error views
 	$scope.err = {
 		//Whether to show the err views
