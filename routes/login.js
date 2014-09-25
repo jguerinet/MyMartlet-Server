@@ -10,6 +10,12 @@ module.exports = function(app,passport) {
 		res.status(200).end();
 	});
 
+	//The GET route handler for the /login route
+	loginRouter.get("/",function(req,res) {
+		//redner and send the login.jade file
+		res.render("account/login/login");
+	});
+
 	//Use the loginRouter for the /login routes
 	app.use("/login",loginRouter);
 };
