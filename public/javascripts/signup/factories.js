@@ -9,10 +9,10 @@ function SignupFactory() {
 	signupFactory.validatePasswords = function(password,confPasswords) {
 		//Check if the two passwords entered by the user match
 		if(password != confPasswords) {
-			//If they do not pass in the err msg to show
-			return {err: "Passwords do not match"};
+			//If they di not then return false
+			return false;
 		}
-		//Otherwise return null err
+		//Otherwise return true
 		else {
 			return null;
 		}
