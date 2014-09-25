@@ -16,5 +16,13 @@ var settingsSchema = new mongoose.Schema({
 	}
 });
 
+//Updates the NewsFeedId value in the db by incrementing it by one
+settingsSchema.statics.updateNewsFeedId = function(){
+	//Gte the setting sobject and icnrement the NewsFeedId var by one
+	this.findOne({},function(err,settingsFound) {
+		settingsFound.update({$inc: {'UniqueIds.NewsFeed': 1}}).exec();
+	});
+};
+
 //Make a mongoose model for the Settings object using the above schema and export it
 module.exports = mongoose.model("Settings",settingsSchema);
