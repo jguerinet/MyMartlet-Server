@@ -30,6 +30,26 @@ var newsFeedSchema = new mongoose.Schema({
 	LiveDate: {
 		type: Date,
 		default: Date.now()
+	},
+	//The last person who updated this value. Has their email
+	LastUpdatedBy: {
+		type: String,
+		default: ""
+	},
+	//The person who added this NewFeed item. Has their email
+	AddedBy: {
+		type: String,
+		default: ""
+	},
+	//The last time this object was updated
+	LastUpdatedOn: {
+		type: Date,
+		default: null
+	},
+	//The date when this object was first added to the db
+	AddedOn: {
+		type: Date,
+		default: null
 	}
 });
 
