@@ -62,7 +62,8 @@ function SignupController($scope,$http,$window,SignupFactory,SignupConstants) {
 				$http.post(SignupConstants.signupPostUrl, {email: $scope.email, password: $scope.password, confPassword: $scope.confPassword})
 				//The success promise
 				.success(function () {
-
+						//Redirect the user to the login page
+					$window.location.href = SignupConstants.loginUrl;
 				})
 				//The error promise
 				.error(function(response, data, status, header) {
