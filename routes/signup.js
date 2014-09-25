@@ -26,7 +26,7 @@ module.exports = function(app,passport) {
 	//The route handler for the GET /signup route
 	signupRouter.get("/",function(req,res) {
 		//Server the signup.jade file
-		res.render("signup/signup");
+		res.render("account/signup/signup");
 	});
 
 	//Use the signupRouter with /signup as the base url
