@@ -5,7 +5,7 @@ var settingsSchema = new mongoose.Schema({
 	UniqueIds: {
 		//The next unqiue id for a NewsFeed document
 		NewsFeedId: {
-			type: String,
+			type: Number,
 			default: 0
 		}
 	},
