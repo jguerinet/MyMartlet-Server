@@ -12,14 +12,26 @@ block content
 	.row.col-lg-6.col-lg-offset-3
 		.panel.panel-default.height-50
 			.panel-heading MyMartlet Admin Signup
-			.panel-body
-				form(role="form")
-					.form-group
+			.panel-body(ng-app="mymartlet.signup",ng-controller="SignupController")
+				form(role="form",name="signupForm")
+					.form-group(ng-class="{true:'has-error'}[signupForm.email.$invalid&&submitted]")
 						label Email Address
-						input.form-control(type="email")
-					.form-group
+						input.form-control(type="email",ng-model="email",name="email",required,email)
+						div(ng-show="signupForm.email.$invalid&&submitted")
+							p.help-block(ng-show="signupForm.email.$error.required") This field is required
+							p.help-block(ng-show="signupForm.email.$error.email") This field has to be a valid address
+					.form-group(ng-class="{true:'has-error'}[signupForm.email.$invalid&&submitted]")
 						label Password
-						input.form-control(type="text")
+						input.form-control(type="password",ng-model="password",name="password",required)
+						div(ng-show="signupForm.password.$invalid&&submitted")
+							p.help-block(ng-show="signupForm.password.$error.required") This field is required
+					.form-group
+						label Confirm Password
+						input.form-control(type="password",ng-model="confPassword")
+				div.has-error
+					a.btn.btn-default.pull-right.margin-left(href="/login") Login
+					button.btn.btn-default.pull-right(type="button",ng-click="signupButtonListener()") Signup
+					p.help-block.pull-left(ng-show="err.show") {{err.msg}}
 
 	.height-25
 
