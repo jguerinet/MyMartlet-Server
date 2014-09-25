@@ -19,4 +19,26 @@ module.exports = function(adminRouter) {
 			}
 		});
 	});
+
+	//The route handler to get config object for the admin system
+	adminRouter.get("/api/GetConfig",function(req,res) {
+		//the config object
+		var config = {};
+
+		//Get the news feed object from the db
+		NewsFeed.getObjectsForAdmin(function(err,newsFeedItems) {
+			//if err return 500
+			if(err) {
+				res.status(500).end();
+			}
+			//Otherwise
+			else {
+				//Set the NewsFeed feild to the array of news feed object
+				config.NewsFeed = newsFeedItems;
+
+				//Jsonify the config object and return it to the client
+				res.json(config);
+			}
+		});
+	});
 };
