@@ -12,7 +12,8 @@ var settingsSchema = new mongoose.Schema({
 	//The last time when the data in the server was changed. Used to decide whether to send a 304 if a client sends an If-Modified-Since
 	LastModified: {
 		type: Date,
-		requireD: true
+		required: true,
+		default: Date.now()
 	}
 });
 
