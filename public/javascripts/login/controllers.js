@@ -3,7 +3,7 @@ angular.module("mymartlet.login.controllers",[]);
 angular.module("mymartlet.login.controllers")
 	.constant("LoginConstants",{
 		//The POST url to which we send the login detaisl
-		loginPostUrl: "http://localhost:3000/login",
+		loginPostUrl: "/login",
 
 		//Has the strings for each possible error type
 		loginErr: {
