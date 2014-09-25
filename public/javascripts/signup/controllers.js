@@ -6,12 +6,14 @@ angular.module("mymartlet.signup.controllers")
 		signupPostUrl: "http://localhost:3000/signup",
 
 		//The err codes possibly returned by the server on signupPost
-		signupErrs: [
-			{
-				errCode: 100,
-				errMsg: "Email already exists in our accounts"
-			}
-		]
+		signupErrs: {
+			//The msg for when the passowrds do not match
+			passDoNotMatch: "Your entered passwords do not match",
+			//The msg for when the entered email already exists in the db
+			emailAlreadyExists: "The entered email has already been registered",
+			//The default err
+			serverErr: "We are unable to process your request at this time"
+		}
 	});
 
 function SignupController($scope,$http,SignupFactory,SignupConstants) {
@@ -47,43 +49,36 @@ function SignupController($scope,$http,SignupFactory,SignupConstants) {
 		//Check if the form is valid
 		if($scope.signupForm.$valid) {
 			//validate the passwords entered
-			var validatePass = SignupFactory.validatePasswords($scope.password,$scope.confPassword);
-
-			//If validation failed then show the err view with the err msg
-			if(validatePass) {
-				$scope.err = {
-					show: true,
-					msg: validatePass.err
-				}
+			if(SignupFactory.validatePasswords($scope.password,$scope.confPassword) == false)
+			{
+				//Validation failed then show the err
+				showErr(SignupConstants.signupErrs.passDoNotMatch);
 			}
 			//Otherwise everythign is good so call the post method
 			else {
-				$http.post(SignupConstants.signupPostUrl, {email: $scope.email, password: $scope.password})
+				$http.post(SignupConstants.signupPostUrl, {email: $scope.email, password: $scope.password, confPassword: $scope.confPassword})
 				//The success promise
 				.success(function () {
 
 				})
 				//The error promise
 				.error(function(response, data, status, header) {
-					//If it is an internal server error then show the following error
-					if(data === 500) {
-						$scope.err = {
-							show: true,
-							msg: "Error processing your request. Please try again later"
-						}
-					}
-					//Otherwise if it is a user error then do the following
-					else {
-						//Go through the signupError array
-						for(var index=0; index<SignupConstants.signupErrs.length; index++) {
-							//If the response status code matches the current err object errCode the show that err and break
-							if(response.err == SignupConstants.signupErrs[index].errCode) {
-								$scope.err = {
-									show: true,
-									msg: SignupConstants.signupErrs[index].errMsg
-								};
-								break;
+					//Switch the status code sent
+					switch(data) {
+						//If it is 409then it is a user generated err
+						case 409: {
+							//Switch the response to see what kind of user err
+							switch(response) {
+								//If it is 100 the the email has already been registered
+								case 100: {
+									showErr(SignupConstants.signupErrs.emailAlreadyExists);
+									break;
+								}
 							}
+						}
+						//By default show the server Err
+						default: {
+							showErr(SignupConstants.signupErrs.serverErr);
 						}
 					}
 				});
@@ -92,5 +87,6 @@ function SignupController($scope,$http,SignupFactory,SignupConstants) {
 	};
 }
 
+//Add the SignupController
 angular.module("mymartlet.signup.controllers")
 	.controller("SignupController",SignupController);
