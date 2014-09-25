@@ -26,6 +26,19 @@ function SignupController($scope,$http,SignupFactory,SignupConstants) {
 	//var to keep trakc of when the user has tries to submit the signup form
 	$scope.submitted = false;
 
+	//function taht shows the error views with the passed msg
+	function showErr(msg) {
+		//Set the scope err.msg to the msg that has to be shown
+		$scope.err.msg = msg;
+		//Show the err view
+		$scope.err.show = true;
+	}
+
+	//function to hide the error view
+	function hideErr() {
+		$scope.err.show = false;
+	}
+
 	//The function to call when they click on the signup buton
 	$scope.signupButtonListener = function() {
 		//Set submitted to true
