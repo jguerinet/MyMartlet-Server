@@ -21,7 +21,7 @@ module.exports = function(adminRouter) {
 	});
 
 	//The route handler to get config object for the admin system
-	adminRouter.get("/api/GetConfig",function(req,res) {
+	adminRouter.get("/api/GetConfig",userRoles.can("view"),function(req,res) {
 		//the config object
 		var config = {};
 
