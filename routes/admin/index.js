@@ -22,8 +22,21 @@ module.exports = function(app) {
 		}
 	});
 
+	///admin route pass in index.jade
+	adminRouter.get("/",function(req,res) {
+		res.render("admin/index",
+			{
+				navbar: {
+					subTitle: "Logged in as " + req.user.Email
+				}
+			});
+	});
+
 	//Add the /admin/api routes
 	require("./api")(adminRouter);
+
+	//Add all the /admin/partials routes
+	require("./partials")(adminRouter);
 
 	//Add the router to the app object
 	app.use("/admin",adminRouter);
