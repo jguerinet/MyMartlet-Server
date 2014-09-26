@@ -1,0 +1,4 @@
+/*This selector makes sure that the content is aleays below the navabr and is not hidden by it*/
+body {
+    padding-top: 70px;
+}
