@@ -145,7 +145,14 @@ function NewsFeedController($scope,$rootScope,NewsFeedFactory) {
 
 	//The click listener for the add new new feed item
 	$scope.addNewNewsFeedItemClickListener = function() {
-		$scope.panelModels.splice(0,0,NewsFeedFactory.generatePanelModel(NewsFeedFactory.getNewNewsFeedItem()));
+		//Make a new newsFeedItem object
+		var newNewsFeedItem = NewsFeedFactory.getNewNewsFeedItem();
+
+		//Add it ot eh master list
+		$rootScope.newsFeed.splice(0,0,newNewsFeedItem);
+
+		//Generate a panle model fir it and add it to the panelModels array
+		$scope.panelModels.splice(0,0,NewsFeedFactory.generatePanelModel(newNewsFeedItem));
 	};
 }
 
