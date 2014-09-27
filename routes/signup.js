@@ -29,6 +29,6 @@ module.exports = function(app,passport) {
 		res.render("account/signup/signup");
 	});
 
-	//Use the signupRouter with / as the base url
-	app.use("/",signupRouter);
+	//Use the signupRouter with /signup as the base url
+	app.use("/signup",signupRouter);
 };

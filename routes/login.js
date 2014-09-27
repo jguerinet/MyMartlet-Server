@@ -17,5 +17,5 @@ module.exports = function(app,passport) {
 	});
 
 	//Use the loginRouter for the /login routes
-	app.use("/login",loginRouter);
+	app.use("/",loginRouter);
 };
