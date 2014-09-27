@@ -1,6 +1,6 @@
 {
 	"PlacesURL" : "https://mymartlet.herokuapp.com/places",
-	"PlacesCategories" : [
+	"Place Categories" : [
 		{
 			"Name" : "Building",
 			"En" : "Building", 
