@@ -1,6 +1,7 @@
 angular.module("mymartlet.admin.newsfeed",[])
 	.constant("NewsFeedConstants",{
-		saveNewsFeedUrl: "/admin/api/save_news_feed"
+		saveNewsFeedUrl: "/admin/api/save_news_feed",
+		deleteNewsFeedUrl: "/admin/api/delete_news_feed"
 	});
 
 //A angularjs factory. Has methods to hekp the NewsFeedController
@@ -91,6 +92,37 @@ function NewsFeedFactory($http,$rootScope,NewsFeedConstants) {
 			})
 	};
 
+	//General method to make post requests
+	newsFeedFactory.makePost = function(postUrl,postBody,callback) {
+		$http.post(postUrl,postBody)
+			.success(function() {
+				callback(null);
+			})
+			.error(function(response,data,status,headers) {
+				callback(data,response);
+			});
+	};
+
+	//Removes a newsFeeDItemObject from the passed panelModels and the master list
+	//if it has the same NewsFeedId as the passed var
+	newsFeedFactory.removeModelWithNewsFeedId = function(newsFeedId,panelModels) {
+		//Find the object to delete from the passed panelModels array
+		for(var index=0; index<panelModels.length; index++) {
+			if(panelModels[index].dataModel.NewsFeedId == newsFeedId) {
+				panelModels.splice(index,1);
+				break;
+			}
+		}
+
+		//Find the object to delete from the master list
+		for(var index=0; index<$rootScope.newsFeed.length; index++) {
+			if($rootScope.newsFeed[index].NewsFeedId == newsFeedId) {
+				$rootScope.newsFeed.splice(index,1);
+				break;
+			}
+		}
+	};
+
 	return newsFeedFactory;
 }
 
@@ -98,7 +130,7 @@ angular.module("mymartlet.admin.newsfeed")
 	.factory("NewsFeedFactory",NewsFeedFactory);
 
 //The controller for the news feed view
-function NewsFeedController($scope,$rootScope,NewsFeedFactory) {
+function NewsFeedController($scope,$rootScope,NewsFeedFactory,NewsFeedConstants) {
 	//The array if panelModel objects which represent the model for each panel view
 	$scope.panelModels = [];
 	//initialise the above variable
@@ -136,13 +168,6 @@ function NewsFeedController($scope,$rootScope,NewsFeedFactory) {
 		});
 	};
 
-	//The button for the save selected news feed items
-	$scope.saveSelectedNewsFeedItemsClickListener = function() {
-		NewsFeedFactory.postNewsFeedItems(NewsFeedFactory.getSelectedNewsFeedItems($scope.panelModels),function(status,data) {
-			console.log(status);
-		});
-	};
-
 	//The click listener for the add new new feed item
 	$scope.addNewNewsFeedItemClickListener = function() {
 		//Make a new newsFeedItem object
@@ -153,6 +178,32 @@ function NewsFeedController($scope,$rootScope,NewsFeedFactory) {
 
 		//Generate a panle model fir it and add it to the panelModels array
 		$scope.panelModels.splice(0,0,NewsFeedFactory.generatePanelModel(newNewsFeedItem));
+	};
+
+
+	//The button for the save selected news feed items
+	$scope.saveSelectedNewsFeedItemsClickListener = function() {
+		NewsFeedFactory.postNewsFeedItems(NewsFeedFactory.getSelectedNewsFeedItems($scope.panelModels),function(status,data) {
+			console.log(status);
+		});
+	};
+
+	//The click listener for the button that deletes selected news feed items
+	$scope.deleteSelectedNewsFeedItemsClickListener = function() {
+		//Get all the selected news feed items
+		var selectedNewsFeedItems = NewsFeedFactory.getSelectedNewsFeedItems($scope.panelModels);
+
+		//Make the post to delete the selectes new feed items.
+		NewsFeedFactory.makePost(NewsFeedConstants.deleteNewsFeedUrl,{newsFeedItems:selectedNewsFeedItems},function(status,data) {
+			//Inside the callback
+			//If data is null then it was sucessfully
+			if(!data) {
+				//Go through the selected news feed items and remove them from the panelModel array and master list
+				for(var index=0; index<selectedNewsFeedItems.length; index++) {
+					NewsFeedFactory.removeModelWithNewsFeedId(selectedNewsFeedItems[index].NewsFeedId,$scope.panelModels);
+				}
+			}
+		});
 	};
 }
 
