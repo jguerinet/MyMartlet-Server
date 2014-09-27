@@ -1537,5 +1537,445 @@
         "Address" : "Trottier Building",
         "Latitude" : 45.50739,
         "Longitude" : -73.57909
-    }
+    },
+    {
+        "Name" : "BMO Branch",
+        "Categories" : [
+            "BMO",
+            "Bank"
+        ],
+        "Address" : "93 St-Anne,  H9X 1L9",
+        "Latitude" : 45.412412,
+        "Longitude" : -73.948399
+    },
+    {
+        "Name" : "BMO ATM",
+        "Categories" : [
+            "BMO",
+            "Bank"
+        ],
+        "Address" : "305 Des Anciens Combatants,  H9X 1Y9",
+        "Latitude" : 45.411275,
+        "Longitude" : -73.950802
+    },
+    {
+        "Name" : "National Bank ATM",
+        "Categories" : [
+            "National Bank",
+            "Bank"
+        ],
+        "Address" : "33 St-Pierre,  H9X 1Z5",
+        "Latitude" : 45.405324,
+        "Longitude" : -73.950643
+    },
+    {
+        "Name" : "CIBC ATM",
+        "Categories" : [
+            "CIBC",
+            "Bank"
+        ],
+        "Address" : "21275 Lakeshore,  H9X 3L9",
+        "Latitude" : 45.405286,
+        "Longitude" : -73.94188
+    },
+    {
+        "Name" : "RBC ATM",
+        "Categories" : [
+            "RBC",
+            "Bank"
+        ],
+        "Address" : "56 Sainte Anne,  H9X 1L6",
+        "Latitude" : 45.403088,
+        "Longitude" : 73.949662
+    },
+    {
+        "Name" : "RBC ATM",
+        "Categories" : [
+            "RBC",
+            "Bank"
+        ],
+        "Address" : "Department of Bioresource Engineering Macdonald Stewart Building",
+        "Latitude" : 45.407801,
+        "Longitude" : -73.938701
+    },
+    {
+        "Name" : "CIBC Branch",
+        "Categories" : [
+            "CIBC",
+            "Bank"
+        ],
+        "Address" : "1006 Sherbrooke W,  H3A 2S2",
+        "Latitude" : 45.502385,
+        "Longitude" : -73.575869
+    },
+    {
+        "Name" : "Scotiabank ATM",
+        "Categories" : [
+            "Scotiabank",
+            "Bank"
+        ],
+        "Address" : "University Centre (Shatner Building)",
+        "Latitude" : 45.5035012,
+        "Longitude" : -73.578223
+    },
+    {
+        "Name" : "Scotiabank ATM",
+        "Categories" : [
+            "Scotiabank",
+            "Bank"
+        ],
+        "Address" : "1100 Docteur Penfield,  H3A 1A8",
+        "Latitude" : 45.50262,
+        "Longitude" : -73.580209
+    },
+    {
+        "Name" : "CIBC ATM",
+        "Categories" : [
+            "CIBC",
+            "Bank"
+        ],
+        "Address" : "1200 Mcgill College,  H3B 4G7",
+        "Latitude" : 45.501506,
+        "Longitude" : -73.570516
+    },
+    {
+        "Name" : "CIBC Branch",
+        "Categories" : [
+            "CIBC",
+            "Bank"
+        ],
+        "Address" : "600 Cathcart,  H3B 1K8",
+        "Latitude" : 45.503794,
+        "Longitude" : -73.568168
+    },
+    {
+        "Name" : "TD Branch",
+        "Categories" : [
+            "TD",
+            "Bank"
+        ],
+        "Address" : "2001 University,  H3A 2A6",
+        "Latitude" : 45.504564,
+        "Longitude" : -73.572159
+    },
+    {
+        "Name" : "Scotiabank Branch",
+        "Categories" : [
+            "Scotiabank",
+            "Bank"
+        ],
+        "Address" : "1002 Sherbrooke W,  H3A 3L6",
+        "Latitude" : 45.502235,
+        "Longitude" : -73.574962
+    },
+    {
+        "Name" : "Scotiabank ATM",
+        "Categories" : [
+            "Scotiabank",
+            "Bank"
+        ],
+        "Address" : "977 St-Catherine W,  H3B 4W3",
+        "Latitude" : 45.501044,
+        "Longitude" : -73.57234
+    },
+    {
+        "Name" : "Scotiabank ATM",
+        "Categories" : [
+            "Scotiabank",
+            "Bank"
+        ],
+        "Address" : "1500 Mcgill College,  H3A 3J5",
+        "Latitude" : 45.502278,
+        "Longitude" : -73.572724
+    },
+    {
+        "Name" : "Scotiabank ATM",
+        "Categories" : [
+            "Scotiabank",
+            "Bank"
+        ],
+        "Address" : "600 De Maisonneuve,  H3A 3J2",
+        "Latitude" : 45.504623,
+        "Longitude" : -73.571113
+    },
+    {
+        "Name" : "Scotiabank Branch",
+        "Categories" : [
+            "Scotiabank",
+            "Bank"
+        ],
+        "Address" : "2055 University,  H3A 3H9",
+        "Latitude" : 45.504451,
+        "Longitude" : -73.572141
+    },
+    {
+        "Name" : "Scotiabank ATM",
+        "Categories" : [
+            "Scotiabank",
+            "Bank"
+        ],
+        "Address" : "333 President Kennedy,  H2X 4C7",
+        "Latitude" : 45.507733,
+        "Longitude" : -73.56957
+    },
+    {
+        "Name" : "National Bank Branch",
+        "Categories" : [
+            "National Bank",
+            "Bank"
+        ],
+        "Address" : "1140 Sherbrooke W,  H3A 2S1",
+        "Latitude" : 45.501227,
+        "Longitude" : -73.577064
+    },
+    {
+        "Name" : "National Bank ATM",
+        "Categories" : [
+            "National Bank",
+            "Bank"
+        ],
+        "Address" : "1411 Peel,  H3A 1S5",
+        "Latitude" : 45.500285,
+        "Longitude" : -73.573086
+    },
+    {
+        "Name" : "National Bank Branch",
+        "Categories" : [
+            "National Bank",
+            "Bank"
+        ],
+        "Address" : "955 De Maisonneuve W,  H3A 1M4",
+        "Latitude" : 45.502204,
+        "Longitude" : -73.573457
+    },
+    {
+        "Name" : "National Bank ATM",
+        "Categories" : [
+            "National Bank",
+            "Bank"
+        ],
+        "Address" : "1155 Metcalfe,  H3B 5G2",
+        "Latitude" : 45.500052,
+        "Longitude" : -73.570376
+    },
+    {
+        "Name" : "National Bank ATM",
+        "Categories" : [
+            "National Bank",
+            "Bank"
+        ],
+        "Address" : "800 De Maisonneuve,  H3A 3E4",
+        "Latitude" : 45.503373,
+        "Longitude" : -73.572391
+    },
+    {
+        "Name" : "National Bank ATM",
+        "Categories" : [
+            "National Bank",
+            "Bank"
+        ],
+        "Address" : "2100 University,  H3A 2T3",
+        "Latitude" : 45.504502,
+        "Longitude" : -73.572668
+    },
+    {
+        "Name" : "National Bank ATM",
+        "Categories" : [
+            "National Bank",
+            "Bank"
+        ],
+        "Address" : "500 Sherbrooke W,  H3A 3G6",
+        "Latitude" : 45.506209,
+        "Longitude" : -73.572113
+    },
+    {
+        "Name" : "BMO Branch",
+        "Categories" : [
+            "BMO",
+            "Bank"
+        ],
+        "Address" : "2005 Peel,  H3A 1T7",
+        "Latitude" : 45.501082,
+        "Longitude" : -73.574813
+    },
+    {
+        "Name" : "BMO Branch",
+        "Categories" : [
+            "BMO",
+            "Bank"
+        ],
+        "Address" : "1155 Metcalfe,  H3B 2V7",
+        "Latitude" : 45.500052,
+        "Longitude" : -73.570376
+    },
+    {
+        "Name" : "BMO Branch",
+        "Categories" : [
+            " H3B 1C1",
+            "Bank"
+        ],
+        "Address" : "670,  St-Catherine W",
+        "Latitude" : 45.502973,
+        "Longitude" : -73.5698
+    },
+    {
+        "Name" : "BMO ATM",
+        "Categories" : [
+            "BMO",
+            "Bank"
+        ],
+        "Address" : "705 St-Catherine W,  H3B 4G5",
+        "Latitude" : 45.502841,
+        "Longitude" : -73.571638
+    },
+    {
+        "Name" : "RBC Branch",
+        "Categories" : [
+            "RBC",
+            "Bank"
+        ],
+        "Address" : "1 Place Ville Marie,  H3C 3B5",
+        "Latitude" : 45.501461,
+        "Longitude" : -73.569412
+    },
+    {
+        "Name" : "RBC Branch",
+        "Categories" : [
+            "RBC",
+            "Bank"
+        ],
+        "Address" : "1100 Sherbrooke W,  H3A 1G7",
+        "Latitude" : 45.501556,
+        "Longitude" : -73.576562
+    },
+    {
+        "Name" : "RBC Branch",
+        "Categories" : [
+            "RBC",
+            "Bank"
+        ],
+        "Address" : "300 Leo Pariseau,  H2X 4B3",
+        "Latitude" : 45.511569,
+        "Longitude" : -73.576509
+    },
+    {
+        "Name" : "RBC Branch",
+        "Categories" : [
+            "RBC",
+            "Bank"
+        ],
+        "Address" : "2157 Guy,  H3H 2L9",
+        "Latitude" : 45.496279,
+        "Longitude" : -73.580176
+    },
+    {
+        "Name" : "RBC Branch",
+        "Categories" : [
+            "RBC",
+            "Bank"
+        ],
+        "Address" : "1140 St-Catherine W,  H3B 1H7",
+        "Latitude" : 45.499423,
+        "Longitude" : -73.573423
+    },
+    {
+        "Name" : "RBC ATM",
+        "Categories" : [
+            "RBC",
+            "Bank"
+        ],
+        "Address" : "Mcintyre Medical Centre",
+        "Latitude" : 45.502297,
+        "Longitude" : -73.581726
+    },
+    {
+        "Name" : "RBC ATM",
+        "Categories" : [
+            "RBC",
+            "Bank"
+        ],
+        "Address" : "McConnell Engineering Building",
+        "Latitude" : 45.505955,
+        "Longitude" : -73.576263
+    },
+    {
+        "Name" : "RBC ATM",
+        "Categories" : [
+            "RBC",
+            "Bank"
+        ],
+        "Address" : "Bronfman Management Building",
+        "Latitude" : 45.502572,
+        "Longitude" : -73.576442
+    },
+    {
+        "Name" : "RBC ATM",
+        "Categories" : [
+            "RBC",
+            "Bank"
+        ],
+        "Address" : "Sir Arthur Currie Gymnasium",
+        "Latitude" : 45.510004,
+        "Longitude" : -73.579659
+    },
+    {
+        "Name" : "RBC ATM",
+        "Categories" : [
+            "RBC",
+            "Bank"
+        ],
+        "Address" : "Burnside Hall",
+        "Latitude" : 45.504704,
+        "Longitude" : -73.574985
+    },
+    {
+        "Name" : "RBC ATM",
+        "Categories" : [
+            "RBC",
+            "Bank"
+        ],
+        "Address" : "New Reisdence Hall",
+        "Latitude" : 45.510903,
+        "Longitude" : -73.57615
+    },
+    {
+        "Name" : "RBC ATM",
+        "Categories" : [
+            "RBC",
+            "Bank"
+        ],
+        "Address" : "Sherbrooke 688",
+        "Latitude" : 45.504565,
+        "Longitude" : -73.573175
+    },
+    {
+        "Name" : "RBC ATM",
+        "Categories" : [
+            "RBC",
+            "Bank"
+        ],
+        "Address" : "Redpath Library Building",
+        "Latitude" : 45.503501,
+        "Longitude" : -73.576593
+    },
+    {
+        "Name" : "RBC ATM",
+        "Categories" : [
+            "RBC",
+            "Bank"
+        ],
+        "Address" : "Chancellor Day Building",
+        "Latitude" : 45.502951,
+        "Longitude" : -73.58084
+    },
+    {
+        "Name" : "RBC ATM",
+        "Categories" : [
+            "RBC",
+            "Bank"
+        ],
+        "Address" : "Education Building",
+        "Latitude" : 45.504333,
+        "Longitude" : -73.580492
+   }
 ]
