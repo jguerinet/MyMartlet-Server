@@ -25,6 +25,36 @@
 			"Name" : "Social", 
 			"En" : "Social Locations",
 			"Fr" : "Endroits Sociaux" 
+		}, 
+		{
+			"Name" : "BMO", 
+			"En" : "BMO", 
+			"Fr" : "BMO"
+		},
+				{
+			"Name" : "National Bank", 
+			"En" : "National Bank", 
+			"Fr" : "Banque Nationale"
+		},
+				{
+			"Name" : "CIBC", 
+			"En" : "CBC", 
+			"Fr" : "CBC"
+		},
+				{
+			"Name" : "RBC", 
+			"En" : "RBC", 
+			"Fr" : "RBC"
+		},
+				{
+			"Name" : "Scotiabank", 
+			"En" : "Scotiabank", 
+			"Fr" : "Banque Scotia"
+		},
+				{
+			"Name" : "TD", 
+			"En" : "TD", 
+			"Fr" : "TD"
 		}
 	], 
 	"RegistrationSemesters" : [
