@@ -80,18 +80,6 @@ function NewsFeedFactory($http,$rootScope,NewsFeedConstants) {
 		return selectedNewsFeedItems;
 	};
 
-	//Makes a post request to the server to save the passed newsFeedItems to the server's db.
-	//The passed callback is called one we are done with the post request and the server sends a response
-	newsFeedFactory.postNewsFeedItems = function(newsFeedItems,callback) {
-		$http.post(NewsFeedConstants.saveNewsFeedUrl,{newsFeedItems:$rootScope.newsFeed})
-			.success(function() {
-				callback(null);
-			})
-			.error(function(response, data, status, header) {
-				callback(data,response);
-			})
-	};
-
 	//General method to make post requests
 	newsFeedFactory.makePost = function(postUrl,postBody,callback) {
 		$http.post(postUrl,postBody)
