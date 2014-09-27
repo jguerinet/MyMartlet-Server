@@ -140,6 +140,19 @@ function NewsFeedFactory($http,$rootScope,NewsFeedConstants) {
 		}
 	};
 
+	//Updates the newsFeedItems array of objects with the newsFeedItemUpdates arr of object
+	newsFeedFactory.updateNewsFeedItems = function(newsFeedItems,newsFeedItemUpdates) {
+		//Updates them property by property to ensure that the changes are propagted to the maste rlist a s well as the panelModel objects
+		// that represent them
+		for(var index=0; index<newsFeedItems.length; index++) {
+			for(var property in newsFeedItems[index]) {
+				if(newsFeedItems[index].hasOwnProperty(property)) {
+					newsFeedItems[index][property] = newsFeedItemUpdates[index][property];
+				}
+			}
+		}
+	};
+
 	return newsFeedFactory;
 }
 
@@ -183,7 +196,14 @@ function NewsFeedController($scope,$rootScope,NewsFeedFactory,NewsFeedConstants)
 	//The listener for the save all news feed items button
 	$scope.saveNewsFeedItemsClickListener = function() {
 		NewsFeedFactory.makePost(NewsFeedConstants.saveNewsFeedUrl ,{newsFeedItems: $rootScope.newsFeed},function(status,data) {
-			console.log(status);
+			if(status == 500) {
+				//TODO Handle this error better
+				console.log(status);
+			}
+			else if(status == 200) {
+				//Otherwise update the objects in the db
+				NewsFeedFactory.updateNewsFeedItems($rootScope.newsFeed,data);
+			}
 		});
 	};
 
