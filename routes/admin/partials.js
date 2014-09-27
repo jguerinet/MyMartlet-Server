@@ -11,4 +11,9 @@ module.exports = function(adminRouter) {
 	adminRouter.get("/partials/news_feed.html",userRoles.can("view"),function(req,res) {
 		res.render("admin/partials/news_feed");
 	});
+
+	//The route to get the home html file.  Only users with permission higher than pending can get this file
+	adminRouter.get("/partials/home.html",userRoles.can("view"),function(req,res) {
+		res.render("admin/partials/home");
+	});
 };
