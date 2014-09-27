@@ -34,15 +34,20 @@ angular.module("mymartlet.admin",['ui.router','ui.bootstrap',"mymartlet.admin.ne
 					}
 				}
 			})
+			//The home state. The intial state of the app
+			.state("admin.home", {
+				url: "/home",
+				views: {
+					"content@": {
+						controller: function(){},
+						templateUrl: "/admin/partials/home.html"
+					}
+				}
+			})
 			//The state that shows all the news feed items
 			.state("admin.newsFeed",{
+				url: "/NewsFeed",
 				views: {
-					"sidebar@": {
-						controller: function() {
-
-						},
-						templateUrl: "/admin/partials/sidebar.html"
-					},
 					"content@": {
 						controller: "NewsFeedController",
 						templateUrl: "/admin/partials/news_feed.html"
@@ -52,6 +57,6 @@ angular.module("mymartlet.admin",['ui.router','ui.bootstrap',"mymartlet.admin.ne
 	})
 	//When the app starts running
 	.run(function($state) {
-		//Go to the admin stats
-		$state.go("admin.newsFeed");
+		//Go to the home stats
+		$state.go("admin.home");
 	});
