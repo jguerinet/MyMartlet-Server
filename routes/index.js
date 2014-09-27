@@ -11,4 +11,6 @@ module.exports = function(app,passport) {
 
 	//Add the log out route
 	require("./logout")(app);
+
+	require("./config")(app);
 };
