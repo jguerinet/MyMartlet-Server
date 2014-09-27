@@ -112,11 +112,11 @@ function NewsFeedFactory($http,$rootScope,NewsFeedConstants) {
 	//General method to make post requests
 	newsFeedFactory.makePost = function(postUrl,postBody,callback) {
 		$http.post(postUrl,postBody)
-			.success(function() {
-				callback(null);
+			.success(function(response,data) {
+				return callback(data,response);
 			})
 			.error(function(response,data,status,headers) {
-				callback(data,response);
+				return callback(data,response);
 			});
 	};
 
