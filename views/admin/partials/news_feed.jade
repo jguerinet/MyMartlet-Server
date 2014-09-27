@@ -37,7 +37,11 @@
 			.col-lg-6
 				button.btn.btn-default.btn-block(type="button",ng-click="saveNewsFeedItemsClickListener()") Save all items
 			.col-lg-6
-				.btn-group.pull-right
+				button.btn.btn-default.btn-block(type="button",ng-click="addNewNewsFeedItemClickListener()") Add new item
+
+		.row.margin-bottom
+			.col-lg-12
+				.btn-group
 					button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown",ng-disabled="actionButtonModel.disabled") Actions&nbsp;
 						span.caret
 					ul.dropdown-menu(role="menu")
