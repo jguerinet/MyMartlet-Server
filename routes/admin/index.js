@@ -7,7 +7,15 @@ module.exports = function(app) {
 	adminRouter.use(function(req,res,next) {
 		//Check if the client making this request is logged in. If he is then proceed to the next middleware
 		if(req.user) {
-			next();
+			//Check if his account is pending
+			if(req.user.Auth === "pending") {
+				//if it is then shoe the psngin page
+				res.render("admin/partials/pending");
+			}
+			//Otherwise proceed to the next middleware
+			else {
+				next();
+			}
 		}
 		//Otherwise
 		else {
