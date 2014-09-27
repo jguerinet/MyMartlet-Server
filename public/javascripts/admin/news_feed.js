@@ -182,7 +182,7 @@ function NewsFeedController($scope,$rootScope,NewsFeedFactory,NewsFeedConstants)
 
 	//The listener for the save all news feed items button
 	$scope.saveNewsFeedItemsClickListener = function() {
-		NewsFeedFactory.postNewsFeedItems($rootScope.newsFeed,function(status,data) {
+		NewsFeedFactory.makePost(NewsFeedConstants.saveNewsFeedUrl ,{newsFeedItems: $rootScope.newsFeed},function(status,data) {
 			console.log(status);
 		});
 	};
