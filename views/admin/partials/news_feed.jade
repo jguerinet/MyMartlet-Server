@@ -1,6 +1,6 @@
 .row
 	.col-lg-8
-		.panel.panel-default(ng-repeat="(index,panelModel) in panelModels")
+		.panel.panel-default(ng-repeat="(index,panelModel) in panelModels | newsFeedFilter: searchModel.searchProperty:searchModel.searchText")
 			.panel-heading
 				.row
 					.col-lg-10(ng-click="panelModel.setCollapsed(!panelModel.getCollapsed())")
@@ -24,15 +24,15 @@
 		.row.margin-bottom
 			.col-lg-12
 				.input-group
-					input.form-control(type="text")
+					input.form-control(type="text",ng-model="searchModel.searchText")
 					.input-group-btn
-						button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown") Search by&nbsp;
+						button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown") {{searchModel.searchDisplay}}&nbsp;
 							span.caret
 						ul.dropdown-menu.dropdown-menu-right(role="menu")
 							li
-								a(href="#") News Feed Id
+								a(href="#",ng-click="searchModel.setSearchProperty('NewsFeedId')") News Feed Id
 							li
-								a(href="#") Title
+								a(href="#",ng-click="searchModel.setSearchProperty('Title')") Title
 		.row.margin-bottom
 			.col-lg-6
 				button.btn.btn-default.btn-block(type="button",ng-click="saveNewsFeedItemsClickListener()") Save all items
