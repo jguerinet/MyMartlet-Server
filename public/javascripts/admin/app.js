@@ -1,5 +1,5 @@
 //Initialsie the admin app
-angular.module("mymartlet.admin",['ui.router'])
+angular.module("mymartlet.admin",['ui.router','ui.bootstrap',"mymartlet.admin.newsfeed"])
 	//Add constants used in this file
 	.constant("AdminConstants",{
 		configUrl: "/admin/api/GetConfig"
@@ -34,9 +34,24 @@ angular.module("mymartlet.admin",['ui.router'])
 					}
 				}
 			})
+			//The state that shows all the news feed items
+			.state("admin.newsFeed",{
+				views: {
+					"sidebar@": {
+						controller: function() {
+
+						},
+						templateUrl: "/admin/partials/sidebar.html"
+					},
+					"content@": {
+						controller: "NewsFeedController",
+						templateUrl: "/admin/partials/news_feed.html"
+					}
+				}
+			});
 	})
 	//When the app starts running
 	.run(function($state) {
 		//Go to the admin stats
-		$state.go("admin");
+		$state.go("admin.newsFeed");
 	});
