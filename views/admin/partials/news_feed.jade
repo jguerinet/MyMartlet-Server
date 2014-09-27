@@ -1,0 +1,47 @@
+.row
+	.col-lg-8
+		.panel.panel-default(ng-repeat="(index,panelModel) in panelModels")
+			.panel-heading
+				.row
+					.col-lg-10(ng-click="panelModel.setCollapsed(!panelModel.getCollapsed())")
+						label.text-center {{panelModel.dataModel.Title}}
+					.col-lg-2
+						input.pull-right(type="checkbox",ng-model="panelModel.checkbox",ng-change="panelCheckboxChange(panelModel)")
+			.panel-body(collapse="panelModel.collapsed")
+				form(role="form")
+					.form-group
+						label Title
+						input.form-control(type="text",ng-model="panelModel.dataModel.Title")
+
+					.form-group
+						label Description
+						input.form-control(type="text",ng-model="panelModel.dataModel.Description")
+
+					.form-group
+						label Link
+						input.form-control(type="text",ng-model="panelModel.dataModel.Link")
+	.col-lg-4
+		.row.margin-bottom
+			.col-lg-12
+				.input-group
+					input.form-control(type="text")
+					.input-group-btn
+						button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown") Search by&nbsp;
+							span.caret
+						ul.dropdown-menu.dropdown-menu-right(role="menu")
+							li
+								a(href="#") News Feed Id
+							li
+								a(href="#") Title
+		.row.margin-bottom
+			.col-lg-6
+				button.btn.btn-default.btn-block(type="button",ng-click="saveNewsFeedItemsClickListener()") Save all items
+			.col-lg-6
+				.btn-group.pull-right
+					button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown",ng-disabled="actionButtonModel.disabled") Actions&nbsp;
+						span.caret
+					ul.dropdown-menu(role="menu")
+						li
+							a(href="#",ng-click="saveSelectedNewsFeedItemsClickListener()") Save selected Items
+						li
+							a(href="#") Delete selected items
