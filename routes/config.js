@@ -34,13 +34,15 @@ module.exports = function(app) {
 		}
 	});
 
-	app.get('/', function(req, res) {
+	configRouter.get('/', function(req, res) {
 		res.set('Content-Type', 'application/json');
 		res.json(configData);
 	});
 
-	app.get('/places', function(req, res) {
+	configRouter.get('/places', function(req, res) {
 		res.set('Content-Type', 'application/json');
 		res.json(placesData);
 	});
+
+	app.use("/",configRouter);
 };
