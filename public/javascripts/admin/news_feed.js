@@ -54,6 +54,35 @@ function NewsFeedFactory($http,$rootScope,NewsFeedConstants) {
 		}
 	};
 
+	//Generate a model for the search view
+	newsFeedFactory.generateSearchModel = function() {
+		return {
+			//The text the user has entered into the search input
+			searchText: "",
+
+			//The property by which the user is filtering the new feed items
+			searchProperty: "Title",
+			//Setter for the searchProperty field. Also sets the searchDisplay var
+			setSearchProperty: function(property) {
+				this.searchProperty = property;
+
+				switch(property) {
+					case "Title": {
+						this.searchDisplay = "Title";
+						break;
+					}
+					case "NewsFeedId": {
+						this.searchDisplay = "News Feed Id";
+						break;
+					}
+				}
+			},
+
+			//The text that informs the user what he is currently filtering by
+			searchDisplay: "Title"
+		}
+	};
+
 	//Goes through the panelModels and sees if any of the checkbox fields has a value of true
 	//If nay of them are tru return true immediately. If none of them are tru return false
 	newsFeedFactory.areAnyPanelCheckboxesSet = function(panelModels) {
@@ -129,6 +158,8 @@ function NewsFeedController($scope,$rootScope,NewsFeedFactory,NewsFeedConstants)
 	//Generate an actionButton model and add to scope
 	$scope.actionButtonModel = NewsFeedFactory.generateActionButtonModel();
 
+	$scope.searchModel = NewsFeedFactory.generateSearchModel();
+
 	//The listener for when the user changes the value of the panel checkbox
 	//panelModelChanged: The panel model object whose checkbox was clicked
 	$scope.panelCheckboxChange = function(panelModelChanged) {
@@ -197,4 +228,29 @@ function NewsFeedController($scope,$rootScope,NewsFeedFactory,NewsFeedConstants)
 
 angular.module("mymartlet.admin.newsfeed")
 	.controller("NewsFeedController",NewsFeedController);
+
+//The filter to decide what news feed items to show to the user depending on the value of the search text they type in
+//searchProperty: The property by which the user wants to filter the items by
+//searchText: The search items entered
+function NewsFeedItemsFilter() {
+	return function(panelModelItems,searchProperty,searchText) {
+		//The array that has all our search results
+		var searchResults = [];
+
+		//Go through the panelModelItems
+		for(var index=0; index<panelModelItems.length; index++) {
+			//Convert the property value to a string and check if the text entered is present int ehs tring
+			if((panelModelItems[index].dataModel[searchProperty] + "").indexOf(searchText) > -1) {
+				//if it si then oush the object to the searchResults array
+				searchResults.push(panelModelItems[index]);
+			}
+		}
+
+		//Return the searchResults
+		return searchResults;
+	}
+}
+
+angular.module("mymartlet.admin.newsfeed")
+	.filter("newsFeedFilter",NewsFeedItemsFilter);
 
