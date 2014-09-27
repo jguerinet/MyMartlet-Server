@@ -168,6 +168,13 @@ newsFeedSchema.statics.getObjectsForAdmin = function(callback) {
 	});
 };
 
+//Removed the passed newsFeed item from the db
+newsFeedSchema.statics.deleteNewsFeedItem = function(newsFeedItem,callback) {
+	this.remove({NewsFeedId:newsFeedItem.NewsFeedId},function(err,newsFeedItemDeleted) {
+		return callback(err);
+	});
+};
+
 //Generate the mongoose model object for a NewsFeed using the above schema and module export it
 module.exports = mongoose.model("NewsFeed",newsFeedSchema);
 
