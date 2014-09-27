@@ -58,7 +58,8 @@ var newsFeedSchema = new mongoose.Schema({
 });
 
 //Method to save anewsFeed object to the db. Decides whether it is a new item or old one and ecies what to do
-newsFeedSchema.statics.saveNewsFeedItem = function(newsFeedItem,updatedBy,callback) {
+//itemIndex: an identifier which we return to the callback
+newsFeedSchema.statics.saveNewsFeedItem = function(newsFeedItem,itemIndex,updatedBy,callback) {
 	//Store the mongoose NewsFeed model in this var
 	var NewsFeed = this;
 
@@ -66,7 +67,7 @@ newsFeedSchema.statics.saveNewsFeedItem = function(newsFeedItem,updatedBy,callba
 	NewsFeed.findOne({NewsFeedId: newsFeedItem.NewsFeedId},function(err,newsFeedItemFound) {
 		//If db err then pass to the callback
 		if(err) {
-			return callback(err);
+			return callback(err,null,itemIndex);
 		}
 		//Otherwise if a NewsFeed doc was found
 		else if(newsFeedItemFound) {
@@ -77,11 +78,11 @@ newsFeedSchema.statics.saveNewsFeedItem = function(newsFeedItem,updatedBy,callba
 			newsFeedItemFound.save(function(err,newsFeedItemSaved,numAffected) {
 				//If err then pass to the callback
 				if(err) {
-					return callback(err);
+					return callback(err,null,itemIndex);
 				}
 				//Otherwise return null to the callback
 				else {
-					return callback();
+					return callback(null,newsFeedItemSaved,itemIndex);
 				}
 			});
 		}
@@ -94,15 +95,54 @@ newsFeedSchema.statics.saveNewsFeedItem = function(newsFeedItem,updatedBy,callba
 			(new NewsFeed(newsFeedItem)).save(function(err,newsFeedItemSaved) {
 				//If err pass to the callback
 				if(err) {
-					return callback(err);
+					return callback(err,newsFeedItemSaved,itemIndex);
 				}
 				//Otherwise call the callback with null
 				else {
-					return callback();
+					return callback(null,newsFeedItemSaved,itemIndex);
 				}
 			});
 		}
 	});
+};
+
+//Saves an array of newsFeedItems to the db
+//newsFeedItems: The array of newsFeedItems to save
+//updatedBy: The email addr of the person who pushed the update
+//callback: The function once it is done
+newsFeedSchema.statics.saveNewsFeedItems = function(newsFeedItems,updatedBy,callback) {
+	//The count of the number of items we have attempted to save
+	var numItemsTriedSaved = 0;
+
+	//The mongoose model for a NewsFeedItem
+	var NewsFeed = this;
+
+	//Stores the objects that have been saved to the db in the same order that they were sent to the sevrer
+	var newsFeedItemsSaved = [];
+
+	//Go through the newsFeedItems to save
+	for(var index=0; index<newsFeedItems.length; index++) {
+		//Call the static NewsFeed method to save a newsFeed to the db passing it the person who called the update and the
+		//index of the object we are saving
+		NewsFeed.saveNewsFeedItem(newsFeedItems[index],updatedBy,index,function(err,newsFeedItemSaved,itemIndex) {
+			//Increment the count of objects tries to save
+			numItemsTriedSaved++;
+
+			//Add the returned newsFeedItemSaved var to the arry at the returned itemIndex var
+			newsFeedItemsSaved.splice(itemIndex,0,newsFeedItemSaved);
+
+			//Check if we have tries to save all the objects
+			if(numItemsTriedSaved === newsFeedItems.length) {
+				//If we have then go through the newsFeedItemsSaved an apply the adminTransform to each object
+				for(var newsFeedItemIndex=0; newsFeedItemIndex<newsFeedItemsSaved.length; newsFeedItemIndex++) {
+					newsFeedItemsSaved[newsFeedItemIndex] = newsFeedItemsSaved[newsFeedItemIndex].toObject({transform:modelTransforms.adminTransform});
+				}
+
+				//Return the array to the callback
+				return callback(newsFeedItemsSaved);
+			}
+		});
+	}
 };
 
 //Sets up a new NewsFeed item
