@@ -27,6 +27,11 @@
 			"Fr" : "Endroits Sociaux" 
 		}, 
 		{
+			"Name" : "Bank", 
+			"En" : "All ATMs/Banks", 
+			"Fr" : "Tous Guichets Automatiques/Banques"
+		},
+		{
 			"Name" : "BMO", 
 			"En" : "BMO", 
 			"Fr" : "BMO"
