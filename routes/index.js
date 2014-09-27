@@ -12,5 +12,9 @@ module.exports = function(app,passport) {
 	//Add the log out route
 	require("./logout")(app);
 
+	//Route to get the config for the mobile devices
 	require("./config")(app);
+
+	//Route for the the mobile devices api routes
+	require("./api")(app);
 };
