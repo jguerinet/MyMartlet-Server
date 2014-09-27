@@ -142,6 +142,11 @@ function NewsFeedController($scope,$rootScope,NewsFeedFactory) {
 			console.log(status);
 		});
 	};
+
+	//The click listener for the add new new feed item
+	$scope.addNewNewsFeedItemClickListener = function() {
+		$scope.panelModels.splice(0,0,NewsFeedFactory.generatePanelModel(NewsFeedFactory.getNewNewsFeedItem()));
+	};
 }
 
 angular.module("mymartlet.admin.newsfeed")
