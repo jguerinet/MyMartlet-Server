@@ -16,7 +16,8 @@ function NewsFeedFactory($http,$rootScope,NewsFeedConstants) {
 			Description: "",
 			Link: "",
 			ExpiryDate: Date.now(),
-			LiveDate: Date.now()
+			LiveDate: Date.now(),
+			LastUpdatedOn: null
 		}
 	};
 
