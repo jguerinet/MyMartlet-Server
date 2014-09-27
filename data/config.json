@@ -1,6 +1,33 @@
 {
 	"PlacesURL" : "https://mymartlet.herokuapp.com/places",
+	"PlacesCategories" : [
+		{
+			"Name" : "Building",
+			"En" : "Building", 
+			"Fr" : "Bâtiments"
+		}, 
+		{
+			"Name" : "Food",
+			"En" : "Food Services", 
+			"Fr" : "Services Alimentaires"
+		}, 
+		{
+			"Name" : "Library", 
+			"En" : "Libraries", 
+			"Fr" : "Bibliothèques"
+		}, 
+		{
+			"Name" : "Residence", 
+			"En" : "Residences", 
+			"Fr" : "Résidences"
+		}, 
+		{
+			"Name" : "Social", 
+			"En" : "Social Locations",
+			"Fr" : "Endroits Sociaux" 
+		}
+	], 
 	"RegistrationSemesters" : [
 		"Winter 2015"
-		]
+	]
 }
