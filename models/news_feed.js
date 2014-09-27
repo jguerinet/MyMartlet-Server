@@ -71,7 +71,7 @@ newsFeedSchema.statics.saveNewsFeedItem = function(newsFeedItem,updatedBy,callba
 		//Otherwise if a NewsFeed doc was found
 		else if(newsFeedItemFound) {
 			//Update the properties of this document
-			setupNewsFeedItemUpdate(newsFeedItem,updatedBy);
+			setupNewsFeedItemUpdate(newsFeedItemFound,newsFeedItem,updatedBy);
 
 			//Save the update to the db
 			newsFeedItemFound.save(function(err,newsFeedItemSaved,numAffected) {
