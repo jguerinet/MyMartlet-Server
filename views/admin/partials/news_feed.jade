@@ -9,6 +9,9 @@
 						input.pull-right(type="checkbox",ng-model="panelModel.checkbox",ng-change="panelCheckboxChange(panelModel)")
 			.panel-body(collapse="panelModel.collapsed")
 				form(role="form")
+					div
+						label News Feed Id:&nbsp;
+						label {{panelModel.dataModel.NewsFeedId | idFilter}}
 					.form-group
 						label Title
 						input.form-control(type="text",ng-model="panelModel.dataModel.Title")
