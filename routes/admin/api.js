@@ -7,8 +7,16 @@ module.exports = function(adminRouter) {
 
 	//The route handler to save a NewsFeed object to the db
 	adminRouter.post("/api/save_news_feed", userRoles.can("edit"), function(req,res) {
+		//Call the NewsFeed static method to save the passed rray of newsFeedItems
 		NewsFeed.saveNewsFeedItems(req.body.newsFeedItems,req.user.Email,function(newsFeedItemsSaved) {
-			res.json(newsFeedItemsSaved);
+			//If the returned array has a null value then some of the item were not saved so send 500
+			if(newsFeedItemsSaved.indexOf(null) > -1) {
+				res.status(500).end();
+			}
+			//Otherwise send the items back
+			else {
+				res.json(newsFeedItemsSaved);
+			}
 		});
 	});
 
