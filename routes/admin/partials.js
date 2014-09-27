@@ -6,4 +6,9 @@ module.exports = function(adminRouter) {
 	adminRouter.get("/partials/sidebar.html",userRoles.can("view"),function(req,res) {
 		res.render("admin/partials/sidebar");
 	});
+
+	//The route to get the news-feed html file.  Only users with permission higher than pending can get this file
+	adminRouter.get("/partials/news_feed.html",userRoles.can("view"),function(req,res) {
+		res.render("admin/partials/news_feed");
+	});
 };
