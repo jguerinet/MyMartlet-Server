@@ -183,7 +183,7 @@ function NewsFeedController($scope,$rootScope,NewsFeedFactory,NewsFeedConstants)
 
 	//The button for the save selected news feed items
 	$scope.saveSelectedNewsFeedItemsClickListener = function() {
-		NewsFeedFactory.postNewsFeedItems(NewsFeedFactory.getSelectedNewsFeedItems($scope.panelModels),function(status,data) {
+		NewsFeedFactory.makePost(NewsFeedConstants.saveNewsFeedUrl,{newsFeedItems:NewsFeedFactory.getSelectedNewsFeedItems($scope.panelModels)},function(status,data) {
 			console.log(status);
 		});
 	};
