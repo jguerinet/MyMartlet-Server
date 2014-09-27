@@ -254,3 +254,21 @@ function NewsFeedItemsFilter() {
 angular.module("mymartlet.admin.newsfeed")
 	.filter("newsFeedFilter",NewsFeedItemsFilter);
 
+//Filter that changes what the NewsFeedId looks like
+function IdFilter() {
+	return function(id) {
+		//If id is not null (if the object is not a new object)
+		if(id) {
+			//Return the id
+			return id;
+		}
+		//Otherwise return the strinf
+		else {
+			return "Not saved to server";
+		}
+	}
+}
+
+angular.module("mymartlet.admin.newsfeed")
+	.filter("idFilter",IdFilter);
+
