@@ -1,12 +1,8 @@
-var fs = require("fs");
-
-var configData = JSON.parse(fs.readFileSync('data/config.json', 'UTF8'));
-var placesData = JSON.parse(fs.readFileSync('data/places.json', 'UTF8'));
+var configData = require('../data/config.json');
+var placesData = require('../data/places.json');
 
 module.exports = function(app) {
-	var configRouter = require("express").Router();
-
-	configRouter.use(function(req,res,next) {
+	function auth(req,res,next) {
 		var basicAuth = require("basic-auth");
 
 		function unauthorized(res) {
@@ -32,17 +28,20 @@ module.exports = function(app) {
 		else {
 			unauthorized(res);
 		}
-	});
+	}
 
-	configRouter.get('/config', function(req, res) {
-		res.set('Content-Type', 'application/json');
+	var configRouter = require("express").Router();
+	configRouter.use(auth);
+	configRouter.get('/', function(req, res) {
 		res.json(configData);
 	});
 
-	configRouter.get('/places', function(req, res) {
-		res.set('Content-Type', 'application/json');
+	var placesRouter = require("express").Router();
+	placesRouter.use(auth);
+	placesRouter.get('/', function(req, res) {
 		res.json(placesData);
 	});
 
-	app.use("/",configRouter);
+	app.use("/config",configRouter);
+	app.use("/places",placesRouter);
 };
