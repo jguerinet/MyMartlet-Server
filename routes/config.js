@@ -39,7 +39,7 @@ module.exports = function(app) {
 		res.json(configData);
 	});
 
-	app.get('/places',auth, function(req, res) {
+	app.get('/places', function(req, res) {
 		res.set('Content-Type', 'application/json');
 		res.json(placesData);
 	});
