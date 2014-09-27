@@ -1,3 +1,5 @@
+var fs = require("fs");
+
 var configData = JSON.parse(fs.readFileSync('data/config.json', 'UTF8'));
 var placesData = JSON.parse(fs.readFileSync('data/places.json', 'UTF8'));
 
