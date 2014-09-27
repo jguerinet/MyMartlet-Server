@@ -34,7 +34,7 @@ module.exports = function(app) {
 		}
 	});
 
-	configRouter.get('/', function(req, res) {
+	configRouter.get('/config', function(req, res) {
 		res.set('Content-Type', 'application/json');
 		res.json(configData);
 	});
