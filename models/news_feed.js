@@ -168,6 +168,30 @@ newsFeedSchema.statics.getObjectsForAdmin = function(callback) {
 	});
 };
 
+//Retuens the array of news feed objects for mobile devices
+newsFeedSchema.statics.getObjectsForMobile = function(callback) {
+	//Get all the news feed objects from the db
+	this.find({},function(err,newsFeedDocs) {
+		//If err pass it to the callback
+		if(err) {
+			return callback(err);
+		}
+		//Otheriwse
+		else {
+			//Make an array called newsFeedItems where all the objects willbe stores
+			var newsFeedItems = [];
+
+			//Go through the returned docs and convert them to js bjects using the passed transform. Push each transformed js object to the array
+			for(var index=0; index<newsFeedDocs.length; index++) {
+				newsFeedItems.push(newsFeedDocs[index].toObject({transform:modelTransforms.mobileTransform}));
+			}
+
+			//Pass the array to the callback
+			return callback(null,newsFeedItems);
+		}
+	});
+};
+
 //Removed the passed newsFeed item from the db
 newsFeedSchema.statics.deleteNewsFeedItem = function(newsFeedItem,callback) {
 	this.remove({NewsFeedId:newsFeedItem.NewsFeedId},function(err,newsFeedItemDeleted) {
