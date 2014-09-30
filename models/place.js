@@ -38,7 +38,11 @@ var placeSchema = new mongoose.Schema({
 	Longitude: {
 		type: Number,
 		required: true
-	}
+	},
+	AddedBy: String,
+	AddedOn: Date,
+	LastUpdatedBy: String,
+	LastUpdatedOn: Date
 });
 
 module.exports = mongoose.model("Place",placeSchema);
