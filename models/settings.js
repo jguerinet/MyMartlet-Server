@@ -7,6 +7,11 @@ var settingsSchema = new mongoose.Schema({
 		NewsFeedId: {
 			type: Number,
 			default: 0
+		},
+		//The next unique id for a place document
+		PlaceId: {
+			type: Number,
+			default: 0
 		}
 	},
 	//The last time when the data in the server was changed. Used to decide whether to send a 304 if a client sends an If-Modified-Since
@@ -22,6 +27,14 @@ settingsSchema.statics.updateNewsFeedId = function(){
 	//Gte the setting sobject and icnrement the NewsFeedId var by one
 	this.findOne({},function(err,settingsFound) {
 		settingsFound.update({$inc: {'UniqueIds.NewsFeedId': 1}}).exec();
+	});
+};
+
+//Updates the PlaceId value in the db by incrementing it by one
+settingsSchema.statics.updatePlaceId = function() {
+	//Get the settingsobject and increment the PlaceId var by one
+	this.findOne({},function(err,settingsFound) {
+		settingsFound.update({$inc: {'UniqueIds.PlaceId': 1}}).exec();
 	});
 };
 
