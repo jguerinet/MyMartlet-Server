@@ -4,6 +4,10 @@ var mongoose = require("mongoose");
 var placeValidation = require("../validation/place");
 
 var placeSchema = new mongoose.Schema({
+	PlaceId: {
+		type: Number,
+		required: true
+	},
 	Name: {
 		type: String,
 		required: true
