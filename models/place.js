@@ -1,5 +1,8 @@
 var mongoose = require("mongoose");
 
+//Th validation methods used for this mongoose model
+var placeValidation = require("../validation/place");
+
 var placeSchema = new mongoose.Schema({
 	Name: {
 		type: String,
@@ -7,7 +10,8 @@ var placeSchema = new mongoose.Schema({
 	},
 	Categories: {
 		type: [String],
-		default: []
+		default: [],
+		validate: [{validator: placeValidation.validateCategory,msg: "Invalid category string"}]
 	},
 	Address: {
 		BuildingNumber: {
