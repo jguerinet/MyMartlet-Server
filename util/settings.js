@@ -43,3 +43,13 @@ exports.getNewsFeedId = function() {
 
 	return newsFeedId;
 };
+
+//Gte the next unique PlaceId and updates the id in the settings var and in the db
+exports.getPlaceId = function() {
+	var placeId = settings.UniqueIds.PlaceId;
+
+	settings.UniqueIds.PlacdId+=1;
+	Settings.updatePlaceId();
+
+	return placeId;
+};
