@@ -19,6 +19,6 @@ module.exports = function(app,passport) {
 	require("./api")(app);
 
     app.get("/",function(req,res) {
-        res.render("index.html");
+        res.render("index");
     });
 };
