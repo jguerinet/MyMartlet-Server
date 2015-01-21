@@ -17,4 +17,8 @@ module.exports = function(app,passport) {
 
 	//Route for the the mobile devices api routes
 	require("./api")(app);
+
+    app.get("/",function(req,res) {
+        res.render("index.html");
+    });
 };
