@@ -1,12 +1,16 @@
-MyMartlet - Web
+MyMartlet - Admin
 ======
 
 Summary 
 ------
-This is the repository containing the code for www.mymartlet.ca, the web page of MyMartlet. To run on your local computer (assuming you have Node JS installed): node app.js
+This is the repository containing the code for the admin portal of the MyMartlet app. Please note that an instance of
+MongoDB is needed to run this
 
-Directories
+Important Directories
 ------
+* config: Has all of the config JSONs
+* constants: Contains constant values
+* models: The models for the DB
 * public: All of the public resources
 * routes: Contains the routes for the website 
 * views: All of the view files
@@ -20,6 +24,4 @@ Branches
 Team Members
 ------
 * Julien Guerinet - Project Leader
-* Rafi Uddin - Web Developer
-* Selim Belhaouane - Web Developer
-* Shabbir Hussain - Web Developer
+* Yulric Sequeira - Web Developer
