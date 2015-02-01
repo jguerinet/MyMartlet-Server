@@ -1,11 +1,11 @@
 {
-  "name": "mcgill-mobile",
+  "name": "mymartlet",
   "version": "0.0.0",
-  "description": "Gives the McGill Mobile app config data",
+  "description": "The admin portal for the MyMartlet app",
   "scripts": {
     "start": "node ./bin/www"
   },
-  "author": "Julien Guerinet",
+  "author": "Appvelopers",
   "license": "ISC",
   "dependencies": {
     "express": "~4.9.0",
