@@ -2,7 +2,7 @@
 var debug = require('debug')('mymartlet_admin');
 
 //Call the function to connect to the mongoDB database
-require("../util/db").connectToMongoDatabase(process.env.MONGOLAB_URI|| 'mongodb://localhost/db',function() {
+require("../util/db").connectToMongoDatabase(process.env.MONGOLAB_URI|| 'mongodb://localhost:27017/mymartlet',function() {
 	//Set the settings object that we need for the server
 	require("../util/settings").setSettingsObject();
 
