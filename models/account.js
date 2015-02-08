@@ -4,6 +4,8 @@
  */
 
 var mongoose = require('mongoose');
+var q = require('q');
+var bcrypt = require('bcrypt-nodejs');
 
 /**
  * The Mongoose model for an Account
@@ -72,6 +74,44 @@ var accountSchema = new mongoose.Schema({
 	},
 	//The name of the collection used to store the account documents
 	{collection: 'accounts'});
+
+/**
+ * Used to add a new Account to the db. The Account should only have the email and the un-hashed password.
+ * @alias Account#signup
+ * @returns {Q.promise} Resolves with the Account saved. Rejects with the Error object.
+ */
+accountSchema.methods.signup = function() {
+	//Create a promise
+	var deferred = q.defer();
+
+	//Store the Account instance
+	var self = this;
+
+	//Convert the email to lower case
+	self.email = this.email.toLowerCase();
+	//Set the type of pending since this is a new account
+	self.type = 'pending';
+	//Hash the password
+	self.password = bcrypt.hashSync(this.password, bcrypt.genSaltSync(8), null);
+	//Update the date fields
+	self.createdAt = Date.now();
+	self.updatedAt = Date.now();
+
+	//Save the account to the db
+	self.save(function(err) {
+		//Error
+		if(err) {
+			//Reject the promise
+			return deferred.reject(err);
+		}
+
+		//Success. Resolve with the updated Account
+		return deferred.resolve(self);
+	});
+
+	//Return the promise
+	return deferred.promise;
+};
 
 /**
  * Exports the Mongoose model for an Account
