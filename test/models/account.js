@@ -2,7 +2,7 @@ var assert = require('chai').assert;
 var bcrypt = require('bcrypt-nodejs');
 var sinon = require('sinon');
 
-var error = require('../../err').account;
+var error = require('../../err/index').account;
 
 describe('Account', function() {
 	var Account = null;
@@ -85,7 +85,7 @@ describe('Account', function() {
 		});
 	});
 
-	describe('#signup', function() {
+	describe('.signup', function() {
 		beforeEach(function(next) {
 			Account.find().remove().exec(
 				function() {
@@ -108,16 +108,16 @@ describe('Account', function() {
 			);
 		});
 
-		it('should be an instance method', function() {
-			assert.isFunction(Account.schema.methods.signup);
+		it('should be an static method', function() {
+			assert.isFunction(Account.schema.statics.signup);
 		});
 		it('should return a Promise object', function() {
-			assert.equal(new Account({email: 'email', password: 'password'}).signup().constructor.name, 'Promise');
+			assert.equal(Account.signup({email: 'email', password: 'password'}).constructor.name, 'Promise');
 		});
 		it('should save the Account to the db and the password field should be hashed', function(done) {
 			var account = {email: 'yulrics@gmail.com', password: 'password'};
 
-			new Account(account).signup().then(
+			Account.signup(account).then(
 				function(accountSaved) {
 					Account.find({
 						email: account.email
@@ -125,7 +125,7 @@ describe('Account', function() {
 						function(accountsFound) {
 							try {
 								assert.equal(accountsFound.length, 1);
-								assert.isTrue(bcrypt.compareSync(account.password, accountsFound[0].password))
+								assert.equal(account.password, accountsFound[0].password)
 							}
 							catch(err) {
 								return done(err);
@@ -146,12 +146,12 @@ describe('Account', function() {
 		it('should resolve the promise with the saved Account', function(done) {
 			var account = {email: 'yulrics@gmail.com', password: 'pass'};
 
-			new Account(account).signup().then(
+			Account.signup(account).then(
 				function(accountSaved) {
 					try {
 						assert.equal(accountSaved.constructor.modelName, 'Account');
-						assert.equal(accountSaved.email, account.email);
-						assert.isTrue(bcrypt.compareSync(account.password, accountSaved.password));
+						assert.equal(accountSaved.email, account.email, 'Emails are not the same');
+						assert.equal(account.password, accountSaved.password, 'Passwords are not the same');
 					}
 					catch(err) {
 						return done(err);
@@ -167,7 +167,7 @@ describe('Account', function() {
 		it('should convert the email to lower case before saving it to the db', function(done) {
 			var account = {email: 'YuLrIcS@gMail.cOm', password: 'pass'};
 
-			new Account(account).signup().then(
+			Account.signup(account).then(
 				function() {
 					Account.findOne({email: account.email.toLowerCase()}).exec().then(
 						function(accountFound) {
@@ -193,7 +193,7 @@ describe('Account', function() {
 		it('should the value of the type field to pending', function(done) {
 			var account = {email: 'yulrics@gmail.com', password: 'pass', type: 'admin'};
 
-			new Account(account).signup().then(
+			Account.signup(account).then(
 				function() {
 					Account.findOne({email: account.email, type: 'pending'}).exec().then(
 						function(accountFound) {
@@ -225,12 +225,12 @@ describe('Account', function() {
 
 			var account = {email: 'yulrics@gmail.com', password: 'pass', type: 'admin'};
 
-			new Account(account).signup().then(
+			Account.signup(account).then(
 				function(accountSaved) {
 					try {
 						assert.isTrue(dateNowSpy.called, 'Date.now() not called');
-						assert.equal(accountSaved.createdAt.valueOf(), dateNowSpy.returnValues[1].valueOf());
-						assert.equal(accountSaved.updatedAt.valueOf(), dateNowSpy.returnValues[1].valueOf());
+						assert.equal(accountSaved.createdAt.valueOf(), dateNowSpy.returnValues[0].valueOf());
+						assert.equal(accountSaved.updatedAt.valueOf(), dateNowSpy.returnValues[0].valueOf());
 					}
 					catch(err) {
 						return done(err);
@@ -245,7 +245,7 @@ describe('Account', function() {
 		});
 	});
 
-	describe('#login', function() {
+	describe('.login', function() {
 		beforeEach(function(next) {
 			Account.find().remove().exec(
 				function() {
@@ -268,14 +268,14 @@ describe('Account', function() {
 			);
 		});
 
-		it('should be a instance function', function() {
-			assert.isFunction(Account.schema.methods.login);
+		it('should be a static function', function() {
+			assert.isFunction(Account.schema.statics.login);
 		});
 		it('should return a Promise', function() {
-			assert.equal(new Account({email: 'email', password: 'password'}).login().constructor.name, 'Promise');
+			assert.equal(Account.login({email: 'email', password: 'password'}).constructor.name, 'Promise');
 		});
 		it('should reject the promise if the email was not found in the db', function(done) {
-			new Account({email: 'email', password: 'password'}).login().then(
+			Account.login({email: 'email', password: 'password'}).then(
 				function() {
 					return done(new Error('Promise was resolved'));
 				},
@@ -292,13 +292,13 @@ describe('Account', function() {
 			);
 		});
 		it('should reject with the promise if the password was not correct', function(done) {
-			var account = new Account({email: 'email', password: 'pass'});
+			var account = {email: 'email', password: 'pass'};
 
-			account.signup().then(
+			Account.signup(account).then(
 				function() {
 					account.password = 'pass1';
 
-					account.login().then(
+					Account.login(account).then(
 						function() {
 							return done(new Error('Promise was resolved'));
 						},
@@ -322,14 +322,14 @@ describe('Account', function() {
 		it('should resolve the promise with the right Account object', function(done) {
 			var account = {email: 'email', password: 'pass'};
 
-			new Account(account).signup().then(
+			Account.signup(account).then(
 				function() {
-					new Account(account).login().then(
+					Account.login({email: 'email', password: 'pass'}).then(
 						function(accountFound) {
 							try {
 								assert.equal(accountFound.constructor.modelName, 'Account');
-								assert.equal(accountFound.email, account.email);
-								assert.isTrue(bcrypt.compareSync(account.password, accountFound.password));
+								assert.equal(accountFound.email, account.email, 'Emails do not match');
+								assert.isTrue(bcrypt.compareSync('pass', accountFound.password), 'Passwords do not match');
 							}
 							catch(err) {
 								return done(err);
