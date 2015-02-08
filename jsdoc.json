@@ -1,0 +1,5 @@
+{
+  "source": {
+    "include": ["err\\signup.js", "models\\account.js"]
+  }
+}
