@@ -79,30 +79,33 @@ var accountSchema = new mongoose.Schema({
 
 /**
  * Used to add a new Account to the db. The Account should only have the email and the un-hashed password.
- * @alias Account#signup
+ * @alias Account.signup
+ * @param account The object that has the properties with which to build the new Account
+ * @param account.email {string} The email of the new Account
+ * @param account.password {string} The un-hashed password of the new account
  * @returns {Q.promise} Resolves with the Account saved. Rejects with the Error object.
  */
-accountSchema.methods.signup = function() {
+accountSchema.statics.signup = function(account) {
 	//Create a promise
 	var deferred = q.defer();
 
-	//Store the Account instance
-	var self = this;
+	if(account.email) {
+		//Convert the email to lower case and trim any extra spaces
+		account.email = account.email.toLowerCase().trim();
+	}
 
-	//Convert the email to lower case and trim any extra spaces
-	self.email = this.email.toLowerCase().trim();
 	//Set the type of pending since this is a new account
-	self.type = 'pending';
+	account.type = 'pending';
 	//Hash the password
-	self.password = bcrypt.hashSync(this.password, bcrypt.genSaltSync(8), null);
+	account.password = bcrypt.hashSync(account.password, bcrypt.genSaltSync(8), null);
 
 	var currentDate = Date.now();
 	//Update the date fields
-	self.createdAt = currentDate;
-	self.updatedAt = currentDate;
+	account.createdAt = currentDate;
+	account.updatedAt = currentDate;
 
 	//Save the account to the db
-	self.save(function(err) {
+	this.create(account, function(err, accountCreated) {
 		//Error
 		if(err) {
 			//Reject the promise
@@ -110,7 +113,7 @@ accountSchema.methods.signup = function() {
 		}
 
 		//Success. Resolve with the updated Account
-		return deferred.resolve(self);
+		return deferred.resolve(accountCreated);
 	});
 
 	//Return the promise
