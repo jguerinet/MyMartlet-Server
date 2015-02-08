@@ -93,9 +93,11 @@ accountSchema.methods.signup = function() {
 	self.type = 'pending';
 	//Hash the password
 	self.password = bcrypt.hashSync(this.password, bcrypt.genSaltSync(8), null);
+
+	var currentDate = Date.now();
 	//Update the date fields
-	self.createdAt = Date.now();
-	self.updatedAt = Date.now();
+	self.createdAt = currentDate;
+	self.updatedAt = currentDate;
 
 	//Save the account to the db
 	self.save(function(err) {
