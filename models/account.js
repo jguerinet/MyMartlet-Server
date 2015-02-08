@@ -7,6 +7,8 @@ var mongoose = require('mongoose');
 var q = require('q');
 var bcrypt = require('bcrypt-nodejs');
 
+var error = require('../err').account;
+
 /**
  * The Mongoose model for an Account
  * @class
@@ -132,12 +134,12 @@ accountSchema.statics.login = function(account) {
 		function(accountFound) {
 			//if we did not find an account then reject with the user message
 			if(accountFound) {
-				return deferred.reject('No account associated with that email');
+				return deferred.reject(error.emailNotFound);
 			}
 
 			//if the password's do not match then reject with the user message
 			if(!bcrypt.compareSync(account.password, accountFound.password)) {
-				return deferred.reject('Incorrect password');
+				return deferred.reject(error.incorrectPassword);
 			}
 
 			//All good. Resolve with the account document
