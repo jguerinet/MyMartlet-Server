@@ -1,5 +1,5 @@
 {
   "source": {
-    "include": ["err\\account.js", "models\\account.js"]
+    "include": ["err\\account.js", "err/index.js", "models\\account.js"]
   }
 }
