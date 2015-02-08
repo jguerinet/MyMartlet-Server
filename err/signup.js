@@ -1,4 +1,21 @@
-//The err code to return when a username tries to signup with an email that already exists
-exports.emailExistsErr = 100;
-//The err code for when the passwords do not match
-exports.passDoNotMatch = 101;
+/**
+ * Has the error messages for the {@link module:models/account|models/account module}
+ * @module err/account
+ */
+
+/**
+ * @typedef {Object} AccountErrors
+ * @property emailNotFound {string} The error message returned by {@link Account.login|Account.login} when the
+ * 					                user entered email was not found in the db
+ * @property incorrectPassword {string} The error message returned by {@link Account.login|Account.login}
+ * 					  					when the user entered password does not match with the one in the db
+ */
+
+/**
+ * Exports an object with the error messages as properties.
+ * @type AccountErrors
+ */
+module.exports = {
+	emailNotFound: 'No user with that email found',
+	incorrectPassword: 'Incorrect password'
+};
