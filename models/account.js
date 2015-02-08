@@ -87,8 +87,8 @@ accountSchema.methods.signup = function() {
 	//Store the Account instance
 	var self = this;
 
-	//Convert the email to lower case
-	self.email = this.email.toLowerCase();
+	//Convert the email to lower case and trim any extra spaces
+	self.email = this.email.toLowerCase().trim();
 	//Set the type of pending since this is a new account
 	self.type = 'pending';
 	//Hash the password
