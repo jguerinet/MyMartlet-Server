@@ -26,7 +26,7 @@ var localSignupStrategy = new LocalStrategy(
 	//UserErr: If User is false then pass the reason into this param.
 	function(email, password, done) {
 		//Call the mongoose method to signup a new user
-		new Account({email: email, password: password}).signup().then(
+		Account.signup({email: email, password: password}).then(
 			//No errors
 			function() {
 				return done(null, true);
@@ -62,7 +62,7 @@ var localLoginStrategy = new LocalStrategy(
 	//UserErr: If User is false then pass the reason into this param.
 	function(email, password, done) {
 		//Call the method to login the user
-		new Account({email: email, password: password}).login().then(
+		Account.login({email: email, password: password}).then(
 			//Success
 			function(accountFound) {
 				return done(null, accountFound);
