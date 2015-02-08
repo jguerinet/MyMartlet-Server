@@ -114,6 +114,45 @@ accountSchema.methods.signup = function() {
 };
 
 /**
+ * Determines if the passed Account should be allowed to log into the system.
+ * @alias Account.login
+ * @param account {Account} The Account of the user trying to login. Should have their email and the unhashed password
+ * @returns {Q.promise} Resolves with the matching Account document. Rejects with an string message for user errors
+ * 						or an Error object for db errors.
+ */
+accountSchema.statics.login = function(account) {
+	//Create a promise
+	var deferred = q.defer();
+
+	//Find an Account document in the db with the same email as the passed account.
+	this.findOne({email: account.email.toLowerCase()}).exec().then(
+		//Success
+		function(accountFound) {
+			//if we did not find an account then reject with the user message
+			if(accountFound) {
+				return deferred.reject('No account associated with that email');
+			}
+
+			//if the password's do not match then reject with the user message
+			if(!bcrypt.compareSync(account.password, accountFound.password)) {
+				return deferred.reject('Incorrect password');
+			}
+
+			//All good. Resolve with the account document
+			return deferred.resolve(accountFound);
+		},
+		//Error
+		function(err) {
+			//Reject with the mongo error
+			return deferred.reject(err);
+		}
+	);
+
+	//Return the promise
+	return deferred.promise;
+};
+
+/**
  * Exports the Mongoose model for an Account
  * @type {Account}
  */
