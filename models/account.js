@@ -125,7 +125,7 @@ accountSchema.statics.signup = function(account) {
  * @alias Account.login
  * @param account {Object} The object which login fields
  * @param account.email {string} The email of the account
- * @param account.password {string} The password of the account
+ * @param account.password {string} The un-hashed password of the account
  * @returns {Q.promise} Resolves with the matching Account document. Rejects with an string message for user errors
  * 						or an Error object for db errors.
  */
