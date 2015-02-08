@@ -119,22 +119,24 @@ accountSchema.methods.signup = function() {
 
 /**
  * Determines if the passed Account should be allowed to log into the system.
- * @alias Account.login
- * @param account {Account} The Account of the user trying to login. Should have their email and the unhashed password
+ * @alias Account#login
  * @returns {Q.promise} Resolves with the matching Account document. Rejects with an string message for user errors
  * 						or an Error object for db errors.
  */
-accountSchema.statics.login = function(account) {
+accountSchema.methods.login = function() {
 	//Create a promise
 	var deferred = q.defer();
 
+	//Reference to the current Account
+	var self = this;
+
 	//if the email field exists then convert it to lower case and trim it
-	if(account.email) {
-		account.email = account.email.toLowerCase().trim();
+	if(self.email) {
+		self.email = self.email.toLowerCase().trim();
 	}
 
 	//Find an Account document in the db with the same email as the passed account.
-	this.findOne({email: account.email}).exec().then(
+	self.constructor.findOne({email: self.email}).exec().then(
 		//Success
 		function(accountFound) {
 			//if we did not find an account then reject with the user message
@@ -143,7 +145,7 @@ accountSchema.statics.login = function(account) {
 			}
 
 			//if the password's do not match then reject with the user message
-			if(!bcrypt.compareSync(account.password, accountFound.password)) {
+			if(!bcrypt.compareSync(self.password, accountFound.password)) {
 				return deferred.reject(error.incorrectPassword);
 			}
 
