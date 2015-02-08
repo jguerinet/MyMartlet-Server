@@ -128,12 +128,17 @@ accountSchema.statics.login = function(account) {
 	//Create a promise
 	var deferred = q.defer();
 
+	//if the email field exists then convert it to lower case and trim it
+	if(account.email) {
+		account.email = account.email.toLowerCase().trim();
+	}
+
 	//Find an Account document in the db with the same email as the passed account.
-	this.findOne({email: account.email.toLowerCase()}).exec().then(
+	this.findOne({email: account.email}).exec().then(
 		//Success
 		function(accountFound) {
 			//if we did not find an account then reject with the user message
-			if(accountFound) {
+			if(!accountFound) {
 				return deferred.reject(error.emailNotFound);
 			}
 
