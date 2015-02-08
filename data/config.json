@@ -1,5 +1,5 @@
 {
-	"MinAndroidVersion" : 9,
+	"MinAndroidVersion" : 8,
 	"PlacesURL" : "https://mymartlet.herokuapp.com/places",
 	"Place Categories" : [
 		{
