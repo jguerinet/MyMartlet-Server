@@ -1,6 +1,6 @@
 /**
  * The module that declares the schema for an Account and creates a mongoose model from it
- * @module models/Account
+ * @module models/account
  */
 
 var mongoose = require('mongoose');
