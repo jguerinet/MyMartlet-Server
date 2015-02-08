@@ -51,7 +51,7 @@ var accountSchema = new mongoose.Schema({
 		},
 		/**
 		 * The date this account was created
-		 * @type {date}
+		 * @type {Date}
 		 * @memberof Account
 		 * @instance
 		 */
@@ -61,7 +61,7 @@ var accountSchema = new mongoose.Schema({
 		},
 		/**
 		 * The date this account was last updated
-		 * @type {date}
+		 * @type {Date}
 		 * @memberof Account
 		 * @instance
 		 */
