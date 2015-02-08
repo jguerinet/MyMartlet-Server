@@ -80,7 +80,7 @@ var accountSchema = new mongoose.Schema({
 /**
  * Used to add a new Account to the db. The Account should only have the email and the un-hashed password.
  * @alias Account.signup
- * @param account The object that has the properties with which to build the new Account
+ * @param account {Object} The object that has the properties with which to build the new Account
  * @param account.email {string} The email of the new Account
  * @param account.password {string} The un-hashed password of the new account
  * @returns {Q.promise} Resolves with the Account saved. Rejects with the Error object.
@@ -122,24 +122,24 @@ accountSchema.statics.signup = function(account) {
 
 /**
  * Determines if the passed Account should be allowed to log into the system.
- * @alias Account#login
+ * @alias Account.login
+ * @param account {Object} The object which login fields
+ * @param account.email {string} The email of the account
+ * @param account.password {string} The password of the account
  * @returns {Q.promise} Resolves with the matching Account document. Rejects with an string message for user errors
  * 						or an Error object for db errors.
  */
-accountSchema.methods.login = function() {
+accountSchema.statics.login = function(account) {
 	//Create a promise
 	var deferred = q.defer();
 
-	//Reference to the current Account
-	var self = this;
-
 	//if the email field exists then convert it to lower case and trim it
-	if(self.email) {
-		self.email = self.email.toLowerCase().trim();
+	if(account.email) {
+		account.email = account.email.toLowerCase().trim();
 	}
 
 	//Find an Account document in the db with the same email as the passed account.
-	self.constructor.findOne({email: self.email}).exec().then(
+	this.findOne({email: account.email}).exec().then(
 		//Success
 		function(accountFound) {
 			//if we did not find an account then reject with the user message
@@ -148,7 +148,7 @@ accountSchema.methods.login = function() {
 			}
 
 			//if the password's do not match then reject with the user message
-			if(!bcrypt.compareSync(self.password, accountFound.password)) {
+			if(!bcrypt.compareSync(account.password, accountFound.password)) {
 				return deferred.reject(error.incorrectPassword);
 			}
 
