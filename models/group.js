@@ -52,6 +52,16 @@ var groupSchema = new mongoose.Schema({
 	createdAt: {
 		type: Date,
 		required: true
+	},
+
+	/**
+	 * The date when this Group was last updated
+	 * @alias Group#updatedAt
+	 * @type {Date}
+	 */
+	updatedAt: {
+		type: Date,
+		required: true
 	}
 }, {collection: 'groups'});
 
