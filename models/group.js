@@ -20,11 +20,33 @@ var groupSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 		trim: true
+	},
+	/**
+	 * The link to the logo of the group
+	 * @alias Group#logoLink
+	 * @default null
+	 * @type {string}
+	 */
+	logoLink: {
+		type: String,
+		trim: true,
+		default: null
+	},
+	/**
+	 * The array of admins for this group. Each array entry has an ObjectId which is a reference to an Account.
+	 * @alias Group#admins
+	 * @default []
+	 * @type {ObjectId[]}
+	 */
+	admins: {
+		type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Account'}]
 	}
 }, {collection: 'groups'});
+
+var Group = mongoose.model('Group', groupSchema);
 
 /**
  * The mongoose model for a group
  * @type {Group}
  */
-module.exports = mongoose.model('Group', groupSchema);
+module.exports = Group;
