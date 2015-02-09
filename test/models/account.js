@@ -1,6 +1,7 @@
 var assert = require('chai').assert;
 var bcrypt = require('bcrypt-nodejs');
 var sinon = require('sinon');
+var mongoose = require('mongoose');
 
 var error = require('../../err/index').account;
 
@@ -17,6 +18,10 @@ describe('Account', function() {
 
 			return next();
 		});
+	});
+
+	after(function() {
+		mongoose.disconnect();
 	});
 
 	describe('#email', function() {

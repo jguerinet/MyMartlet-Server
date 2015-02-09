@@ -2,6 +2,7 @@ var assert = require('chai').assert;
 var httpMocks = require('node-mocks-http');
 var passport = require('passport');
 var sinon = require('sinon');
+var mongoose = require('mongoose');
 
 require('../../config/passport')(passport);
 passport.initialize();
@@ -20,6 +21,10 @@ describe('config/passport', function() {
 
 			return next();
 		});
+	});
+
+	after(function() {
+		mongoose.disconnect();
 	});
 
 	afterEach(function(next) {
