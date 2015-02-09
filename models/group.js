@@ -43,6 +43,15 @@ var groupSchema = new mongoose.Schema({
 	admins: {
 		type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Account'}],
 		validate: validations.admins
+	},
+	/**
+	 * The date when this Group was first created
+	 * @alias Group#createdAt
+	 * @type {Date}
+	 */
+	createdAt: {
+		type: Date,
+		required: true
 	}
 }, {collection: 'groups'});
 
