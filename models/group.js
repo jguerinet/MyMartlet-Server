@@ -34,8 +34,8 @@ var groupSchema = new mongoose.Schema({
 	},
 	/**
 	 * The array of admins for this group. Each array entry has an ObjectId which is a reference to an Account.
+	 * The field cannot be an empty array, null or undefined.
 	 * @alias Group#admins
-	 * @default []
 	 * @type {ObjectId[]}
 	 */
 	admins: {
@@ -44,6 +44,21 @@ var groupSchema = new mongoose.Schema({
 }, {collection: 'groups'});
 
 var Group = mongoose.model('Group', groupSchema);
+
+//Validation to make sure the admins field cannot be an empty array, null or undefined
+Group.schema.path('admins').validate(function(value) {
+	//Check if the value is null or undefined
+	if(value) {
+		//Check if the array is not empty
+		if(value.length != 0) {
+			//All good
+			return true;
+		}
+	}
+
+	//Validation failed
+	return false;
+}, 'Invalid admins');
 
 /**
  * The mongoose model for a group
