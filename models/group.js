@@ -5,6 +5,8 @@
 
 var mongoose = require('mongoose');
 
+var validations = require('../validation/group');
+
 /**
  * Represents a set of users to associate a particular news feed item to.
  * @class
@@ -39,26 +41,12 @@ var groupSchema = new mongoose.Schema({
 	 * @type {ObjectId[]}
 	 */
 	admins: {
-		type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Account'}]
+		type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Account'}],
+		validate: validations.admins
 	}
 }, {collection: 'groups'});
 
 var Group = mongoose.model('Group', groupSchema);
-
-//Validation to make sure the admins field cannot be an empty array, null or undefined
-Group.schema.path('admins').validate(function(value) {
-	//Check if the value is null or undefined
-	if(value) {
-		//Check if the array is not empty
-		if(value.length != 0) {
-			//All good
-			return true;
-		}
-	}
-
-	//Validation failed
-	return false;
-}, 'Invalid admins');
 
 /**
  * The mongoose model for a group
