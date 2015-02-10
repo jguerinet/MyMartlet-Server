@@ -1,7 +1,10 @@
 var assert = require('chai').assert;
 var mongoose = require('mongoose');
+var sinon = require('sinon');
+var q = require('q');
 
 var Group = require('../../models/group');
+var Account = require('../../models/account');
 
 describe('Group', function() {
 	before(function(next) {
@@ -10,17 +13,19 @@ describe('Group', function() {
 		});
 	});
 
-	after(function() {
-		mongoose.disconnect();
+	after(function(next) {
+		mongoose.disconnect(function() {
+			return next();
+		});
 	});
 
 	afterEach(function(next) {
-		Group.find().remove().exec(
+		q.all([Group.find().remove().exec(), Account.find().remove().exec()]).then(
 			function() {
 				return next();
 			},
 			function(err) {
-				throw err;
+				return next(err);
 			}
 		);
 	});
@@ -152,6 +157,89 @@ describe('Group', function() {
 		});
 		it('should be required', function() {
 			assert.isTrue(Group.schema.paths.updatedAt.options.required);
+		});
+	});
+
+	describe('.getGroups', function() {
+		it('should be a static function', function() {
+			assert.isFunction(Group.schema.statics.getGroups);
+		});
+		it('should take only one param', function() {
+			assert.equal(Group.getGroups.length, 1);
+		});
+		it('should return a promise', function() {
+			assert.equal(Group.getGroups().constructor.name, 'Promise');
+		});
+		it('should call the Group.find method with the right params', function(done) {
+			after(function() {
+				Group.find.restore();
+			});
+
+			var getGroupsSpy = sinon.spy(Group, 'find');
+
+			var query = {name: 'groupName', logoLink: 'logoLink'};
+
+			Group.getGroups(query).then(
+				function() {
+					try {
+						assert.isTrue(getGroupsSpy.calledOnce);
+						sinon.assert.calledWithExactly(getGroupsSpy, query);
+					}
+					catch(err) {
+						return done(err);
+					}
+
+					return done();
+				},
+				function(err) {
+					return done(err);
+				}
+			);
+		});
+		it('should reject the promise with an Error', function() {
+			//TODO Figure out how to do this
+			return true;
+		});
+		it('should resolve with right array of Groups', function(done) {
+			var account = {email: 'email', password: 'pass', createdAt: Date.now(), updatedAt: Date.now()};
+
+			var groupOne = {name: 'group', createdAt: Date.now(), updatedAt: Date.now()};
+			var groupTwo = {name: 'group', createdAt: Date.now(), updatedAt: Date.now()};
+
+			Account.create(account, function(err, accountCreated) {
+				if(err) {
+					return done(err);
+				}
+
+				groupOne.admins = [accountCreated._id];
+				groupTwo.admins = [accountCreated._id];
+
+				q.all([Group.create(groupOne), Group.create(groupTwo)]).spread(
+					function(groupsOneCreated, groupTwoCreated) {
+						Group.getGroups({name: 'group'}).then(
+							function(groupsFound) {
+								try {
+									assert.equal(groupsFound.length, 2);
+									groupsFound.forEach(function(groupFound) {
+										assert.equal(groupFound.constructor.modelName, 'Group');
+									});
+								}
+								catch(err) {
+									return done(err);
+								}
+
+								return done();
+							},
+							function(err) {
+								return done(err);
+							}
+						);
+					},
+					function(err) {
+						return done(err);
+					}
+				);
+			});
 		});
 	});
 });
