@@ -54,6 +54,16 @@ var accountSchema = new mongoose.Schema({
 			enum: ['pending', 'viewer', 'editor', 'admin']
 		},
 		/**
+		 * The array of Groups to which this Account is allowed to make NewFeed items for
+		 * @alias Account#groups
+		 * @type {Group[]}
+		 * @default []
+		 */
+		groups: {
+			type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Group'}],
+			default: []
+		},
+		/**
 		 * The date this account was created
 		 * @type {Date}
 		 * @memberof Account
