@@ -8,6 +8,7 @@ var q = require('q');
 var bcrypt = require('bcrypt-nodejs');
 
 var error = require('../err').account;
+var validation = require('../validation/account');
 
 /**
  * The Mongoose model for an Account
@@ -61,7 +62,8 @@ var accountSchema = new mongoose.Schema({
 		 */
 		groups: {
 			type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Group'}],
-			default: []
+			default: [],
+			validate: validation.groups
 		},
 		/**
 		 * The date this account was created
