@@ -101,7 +101,7 @@ describe('Account', function() {
 		});
 	});
 
-	describe.only('#groups', function() {
+	describe('#groups', function() {
 		it('should be an instance field', function() {
 			assert.isObject(Account.schema.paths.groups);
 		});
