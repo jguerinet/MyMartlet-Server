@@ -1,9 +1,9 @@
+var mongoose = require('mongoose');
+
 /**
  * The mongoose validator objects for an Account
  * @module validation/account
  */
-
-var mongoose = require('mongoose');
 
 /**
  * The array of mongoose validators for the groups field
