@@ -20,6 +20,17 @@ describe('Account', function() {
 		});
 	});
 
+	afterEach(function(next) {
+		Account.find().remove().exec(
+			function() {
+				return next();
+			},
+			function(err) {
+				throw err;
+			}
+		);
+	});
+
 	after(function() {
 		mongoose.disconnect();
 	});
@@ -104,6 +115,29 @@ describe('Account', function() {
 		});
 		it('should be an empty array by default', function() {
 			assert.deepEqual(Account.schema.paths.groups.options.default, []);
+		});
+		it('should only allow entries that point to a Group', function(done) {
+			var account = {
+				email :'email',
+				password: 'pass',
+				groups: [mongoose.Types.ObjectId()],
+				createdAt: Date.now(),
+				updatedAt: Date.now()
+			};
+
+			Account.create(account, function(err, accountCreated) {
+				if(accountCreated) {
+					return done(new Error('The group was created'));
+				}
+
+				if(err.errors.groups) {
+					if(err.errors.groups.message == 'Not all entries in the array point to a Group') {
+						return done();
+					}
+				}
+
+				return done(err);
+			});
 		});
 	});
 
