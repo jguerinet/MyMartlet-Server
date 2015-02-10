@@ -69,4 +69,4 @@ var groupSchema = new mongoose.Schema({
  * The mongoose model for a group
  * @type {Group}
  */
-module.exports = mongoose.model('Group', groupSchema);;
+module.exports = mongoose.model('Group', groupSchema);
