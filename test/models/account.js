@@ -90,6 +90,23 @@ describe('Account', function() {
 		});
 	});
 
+	describe.only('#groups', function() {
+		it('should be an instance field', function() {
+			assert.isObject(Account.schema.paths.groups);
+		});
+		it('should be an Array of ObjectId\'s', function() {
+			assert.equal(Account.schema.paths.groups.constructor.name, 'SchemaArray', 'It\'s not an array');
+			assert.equal(Account.schema.paths.groups.caster.constructor.name, 'ObjectId',
+				'The array should have only ObjectId\'s');
+		});
+		it('should be a ref to an Group', function() {
+			assert.equal(Account.schema.paths.groups.caster.options.ref, 'Group');
+		});
+		it('should be an empty array by default', function() {
+			assert.deepEqual(Account.schema.paths.groups.options.default, []);
+		});
+	});
+
 	describe('.signup', function() {
 		beforeEach(function(next) {
 			Account.find().remove().exec(
