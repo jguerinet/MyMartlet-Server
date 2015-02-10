@@ -1,5 +1,3 @@
-var Account = require('../models/account');
-
 /**
  * Has all the validation function for the properties in a {@link Group}
  * @module validation/group
@@ -43,7 +41,7 @@ exports.admins = [
 	 */
 	{
 		validator: function (admins, done) {
-			Account.find({'_id': {$in: admins}}).exec().then(
+			mongoose.model('Group').find({'_id': {$in: admins}}).exec().then(
 				function (accountsFound) {
 					if(accountsFound.length == admins.length) {
 						return done(true)

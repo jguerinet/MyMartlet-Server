@@ -3,7 +3,7 @@
  * @module validation/account
  */
 
-var Group = require('../models/group');
+var mongoose = require('mongoose');
 
 /**
  * The array of mongoose validators for the groups field
@@ -14,7 +14,7 @@ exports.groups = [
 		//The validator that checks if the entries in the groups array point to a Group
 		validator: function(groups, done) {
 			//Find all Groups whose ObjectId matches one of the entries in the groups array
-			Group.find({'_id': {$in: groups}}).exec().then(
+			mongoose.model('Account').find({'_id': {$in: groups}}).exec().then(
 				//Success
 				function (groupsFound) {
 					//if it is true then the validation has passed
