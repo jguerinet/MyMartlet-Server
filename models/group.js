@@ -4,6 +4,7 @@
  */
 
 var mongoose = require('mongoose');
+var q = require('q');
 
 var validations = require('../validation/group');
 
@@ -64,6 +65,34 @@ var groupSchema = new mongoose.Schema({
 		required: true
 	}
 }, {collection: 'groups'});
+
+/**
+ * Method to get an array of groups from the db which meet the passed query's criteria
+ * @alias Group.getGroups
+ * @param query {Object} The object used to query mongodb with
+ * @returns {Q.promise} Resolves an array of Groups. Rejects with an error.
+ */
+groupSchema.statics.getGroups = function(query) {
+	//Make a promise
+	var deferred = q.defer();
+
+	//Send the query to the db
+	this.find(query).exec().then(
+		//Success
+		function(groupsFound) {
+			//Resolve the promise with the array of Groups
+			return deferred.resolve(groupsFound);
+		},
+		//Error
+		function(err) {
+			//Reject the promise with the err
+			return deferred.reject(err);
+		}
+	);
+
+	//Return the promise
+	return deferred.promise;
+};
 
 /**
  * The mongoose model for a group
