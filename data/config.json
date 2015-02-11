@@ -44,8 +44,8 @@
 		},
 				{
 			"Name" : "CIBC", 
-			"En" : "CBC", 
-			"Fr" : "CBC"
+			"En" : "CIBC", 
+			"Fr" : "CIBC"
 		},
 				{
 			"Name" : "RBC", 
