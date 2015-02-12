@@ -215,7 +215,7 @@ describe('Group', function() {
 				groupTwo.admins = [accountCreated._id];
 
 				q.all([Group.create(groupOne), Group.create(groupTwo)]).spread(
-					function(groupsOneCreated, groupTwoCreated) {
+					function() {
 						Group.getGroups({name: 'group'}).then(
 							function(groupsFound) {
 								try {
@@ -240,6 +240,154 @@ describe('Group', function() {
 					}
 				);
 			});
+		});
+	});
+
+	describe('.deleteGroup', function() {
+		afterEach(function() {
+			if(Group.findOneAndRemove.hasOwnProperty('restore')) {
+				Group.findOneAndRemove.restore();
+			}
+			if(Account.update.hasOwnProperty('restore')) {
+				Account.update.restore();
+			}
+
+			if(Group.create.hasOwnProperty('create')) {
+				Group.create.restore();
+			}
+		});
+
+		it('should be a static function', function() {
+			assert.isFunction(Group.schema.statics.deleteGroup);
+		});
+		it('should should take one arg', function() {
+			assert.equal(Group.deleteGroup.length, 1);
+		});
+		it('should return a promise', function(done) {
+			var returned = Group.deleteGroup();
+
+			assert.equal(returned.constructor.name, 'Promise');
+
+			returned.then(
+				function() {
+					return done();
+				},
+				function() {
+					return done();
+				}
+			);
+		});
+		it('it should delete the Group that matches with the passed query arg', function(done) {
+			var groupFindOneAndRemoveSpy = sinon.spy(Group, 'findOneAndRemove');
+
+			var query = {name: 'groupName'};
+
+			Group.deleteGroup(query).then(
+				function() {
+					try {
+						sinon.assert.calledOnce(groupFindOneAndRemoveSpy);
+						sinon.assert.calledWithExactly(groupFindOneAndRemoveSpy, query);
+					}
+					catch(err) {
+						return done(err);
+					}
+
+					return done();
+				},
+				function(err) {
+					return done(err);
+				}
+			);
+		});
+		it('should update the groups array of all the Accounts that have a reference to the deleted Group', function(done) {
+			var accountUpdateSpy = sinon.spy(Account, 'update');
+
+			var account = {email: 'email', password: 'pass', createdAt: Date.now(), updatedAt: Date.now()};
+
+			Account.create(account).then(
+				function(accountCreated) {
+					var group = {name: 'group', admins: [accountCreated.id], createdAt: Date.now(), updatedAt: Date.now()};
+
+					Group.create(group).then(
+						function(groupCreated) {
+							var deleteGroupQuery = {name: 'group'};
+
+							Group.deleteGroup(deleteGroupQuery).then(
+								function() {
+									try {
+										sinon.assert.calledOnce(accountUpdateSpy);
+										sinon.assert.calledWithMatch(accountUpdateSpy, {$pull: {groups: groupCreated.id}});
+									}
+									catch(err) {
+										return done(err);
+									}
+
+									return done();
+								},
+								function(err) {
+									return done(err);
+								}
+							);
+						},
+						function(err) {
+							return done(err);
+						}
+					);
+				},
+				function(err) {
+					return done(err);
+				}
+			);
+		});
+		it('should add back the Group if the updating the Accounts failed', function(done) {
+			var account = {email: 'email', password: 'pass', createdAt: Date.now(), updatedAt: Date.now()};
+
+			var accountUpdateStub = sinon.stub(Account, 'update',
+				function(update, cb) {
+					return cb(new Error('stub error'));
+				}
+			);
+
+			Account.create(account).then(
+				function(accountCreated) {
+					var group = {name: 'group', admins: [accountCreated.id], createdAt: Date.now(), updatedAt: Date.now()};
+
+					Group.create(group).then(
+						function(groupCreated) {
+							var deleteGroupQuery = {name: 'group'};
+
+							var groupCreateSpy = sinon.spy(Group, 'create');
+
+							Group.deleteGroup(deleteGroupQuery).then(
+								function() {
+									return done(new Error('Function was resolved'));
+								},
+								function(err) {
+									if(err.message == 'stub error') {
+										try {
+											sinon.assert.calledOnce(groupCreateSpy);
+											assert.equal(groupCreateSpy.getCall(0).args[0].id, groupCreated.id);
+										}
+										catch (err) {
+											return done(err);
+										}
+
+										return done();
+									}
+
+									return done(err);
+								}
+							);
+						},
+						function(err) {
+							return done(err);
+						}
+					);
+				},
+				function(err) {
+					return done(err);
+				}
+			);
 		});
 	});
 });
