@@ -5,6 +5,8 @@
 
 var mongoose = require('mongoose');
 
+var validation = require('../validation/news_feed_item');
+
 /**
  * @class
  * @alias NewsFeedItem
@@ -28,6 +30,15 @@ var newsFeedItemSchema = new mongoose.Schema({
 	description: {
 		type: String,
 		trim: true
+	},
+	/**
+	 * The starting Date from which this item is valid
+	 * @alias NewsFeedItem#liveDate
+	 * @type {!Date}
+	 */
+	liveDate: {
+		type: Date,
+		required: true
 	}
 });
 
