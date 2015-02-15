@@ -50,13 +50,23 @@ var newsFeedItemSchema = new mongoose.Schema({
 		required: true
 	},
 	/**
-	 * The group by whom this NewsFeedItem was submitted.
+	 * The ref to the group this NewsFeedItem was submitted.
 	 * @alias NewsFeedItem#group
 	 * @type {!ObjectId}
 	 */
 	group: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'Group',
+		required: true
+	},
+	/**
+	 * The ref to the Account that made this item.
+	 * @alias NewsFeedItem#createdBy
+	 * @type {!ObjectId}
+	 */
+	createdBy: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'Account',
 		required: true
 	}
 });
