@@ -48,6 +48,16 @@ var newsFeedItemSchema = new mongoose.Schema({
 	endDate: {
 		type: Date,
 		required: true
+	},
+	/**
+	 * The group by whom this NewsFeedItem was submitted.
+	 * @alias NewsFeedItem#group
+	 * @type {!ObjectId}
+	 */
+	group: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'Group',
+		required: true
 	}
 });
 
