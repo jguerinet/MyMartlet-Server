@@ -156,6 +156,121 @@ groupSchema.statics.deleteGroup = function(query) {
 };
 
 /**
+ * Either updates the Group found with the query arg object with the group arg or creates a new Group with the group arg
+ * @param query {Object} The criteria for the mongoDB find query.
+ * @param group {Group} The object to update an old Group with or ti create a new Group with.
+ * @returns {Q.promise.<Group|Error>} If a new Group was created then resolves with it, If a Group was updated then
+ * 									  resolves with nothing. Rejects with an Error object
+ */
+groupSchema.statics.putGroup = function(query, group) {
+	//Create a promise
+	var deferred = q.defer();
+
+	//Store the Group model
+	var Group = this;
+
+	//Find a Group using the query arg
+	Group.findOne(query).exec().then(
+		//Success
+		function(groupFound) {
+			//If a Group was not found
+			if(!groupFound) {
+				//Gte the current Date and set it to the group's createdAt and updatedAt fields
+				var currentDate = Date.now();
+
+				group.createdAt = currentDate;
+				group.updatedAt = currentDate;
+
+				//Create a group in the db with the group arg
+				Group.create(group).then(
+					//Success
+					function(groupCreated) {
+						//Update all the Account.groups fields of the admins of this group
+						mongoose.model('Account').find({'_id': {$in: groupCreated.admins}})
+							.update({}, {$push: {groups: groupCreated.id}}, {multi: true}, function(err, numberAffected) {
+								//If Update err then reject the promise
+								if(err) {
+									return deferred.reject(err);
+								}
+
+								//Resolve the promise with the new Group
+								return deferred.resolve(groupCreated);
+							});
+					},
+					//Create Error
+					function(err) {
+						//Reject the promise
+						return deferred.reject(err);
+					}
+				);
+			}
+			//If a Group was found
+			else {
+				//Set the createdAt to the found Group's createdAt to prevent a user overwriting it
+				group.createdAt = groupFound.createdAt;
+				//Update the updatedAt field
+				group.updatedAt = Date.now();
+
+				//Update the found groups with the group arg
+				Group.findOneAndUpdate(query, group).exec().then(
+					//Update Success
+					function(groupUpdated) {
+						//Stores all the new admins for the group
+						var newAdmins = [];
+
+						//Go through all the admins inthe updated Group
+						groupUpdated.admins.forEach(function(updatedAdmin) {
+							//Tracks if the current admin is a new one
+							var isNewAdmin = true;
+
+							//Go through all the admins in the old Group
+							groupFound.admins.forEach(function(admin) {
+								//if the id fields match
+								if(admin.id == updatedAdmin.id) {
+									//This is a an old admin
+									isNewAdmin = false;
+									return false;
+								}
+							});
+
+							//New admin so add it to the newAdmins array
+							if(isNewAdmin) {
+								newAdmins.push(updatedAdmin);
+							}
+						});
+
+						//Update the Account.groups of all the new admins who do not already have a reference to the
+						//Group with the Group's id
+						mongoose.model('Account').find({$and: [{'_id': {$in: newAdmins}}, {groups: {$not: {$in: newAdmins}}}]})
+							.update({}, {$push: {groups: groupFound.id}}, {multi: true}, function(err) {
+								//If Update err Reject the promise
+								if(err) {
+									return deferred.reject(err);
+								}
+
+								//Resolve with nothing
+								return deferred.resolve(null);
+							});
+					},
+					//Group Update Err. Reject the promise
+					function(err) {
+						return deferred.reject(err);
+					}
+				);
+			}
+		},
+		//Find Error. Reject the promise
+		function(err) {
+			return deferred.reject(err);
+		}
+	);
+
+	//Return the promise
+	return deferred.promise;
+};
+
+
+/**
  * The mongoose model for a group
  * @type {Group}
  */
