@@ -109,4 +109,17 @@ describe('NewsFeedItem', function() {
 			assert.isTrue(NewsFeedItem.schema.paths.createdBy.options.required);
 		});
 	});
+
+	describe('#updatedBy', function() {
+		it('should be an instance field', function() {
+			assert.isObject(NewsFeedItem.schema.paths.updatedBy);
+		});
+		it('should be of type ObjectId pointing to an Account', function() {
+			assert.equal(NewsFeedItem.schema.paths.updatedBy.constructor.name, 'ObjectId', 'Not of type ObjectId');
+			assert.equal(NewsFeedItem.schema.paths.updatedBy.options.ref, 'Account', 'Not pointing to an Account');
+		});
+		it('should have a required option', function() {
+			assert.isTrue(NewsFeedItem.schema.paths.updatedBy.options.required);
+		});
+	});
 });
