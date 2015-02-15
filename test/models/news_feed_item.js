@@ -47,4 +47,16 @@ describe('NewsFeedItem', function() {
 			assert.isTrue(NewsFeedItem.schema.paths.title.options.trim);
 		});
 	});
+
+	describe('#description', function() {
+		it('should be an instance field', function() {
+			assert.isObject(NewsFeedItem.schema.paths.description);
+		});
+		it('should be of type String', function() {
+			assert.equal(NewsFeedItem.schema.paths.description.constructor.name, 'SchemaString');
+		});
+		it('should have a trim option', function() {
+			assert.isTrue(NewsFeedItem.schema.paths.description.options.trim);
+		});
+	});
 });
