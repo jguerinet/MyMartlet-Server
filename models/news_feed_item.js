@@ -78,6 +78,15 @@ var newsFeedItemSchema = new mongoose.Schema({
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'Account',
 		required: true
+	},
+	/**
+	 * The Date when this item was first created.
+	 * @alias NewsFeedItem#createdAt
+	 * @type {!Date}
+	 */
+	createdAt: {
+		type: Date,
+		required: true
 	}
 });
 
