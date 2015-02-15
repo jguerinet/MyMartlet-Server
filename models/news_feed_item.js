@@ -68,6 +68,16 @@ var newsFeedItemSchema = new mongoose.Schema({
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'Account',
 		required: true
+	},
+	/**
+	 * The ref to the Account that last changed this item.
+	 * @alias NewsFeedItem#updatedBy
+	 * @type {!ObjectId}
+	 */
+	updatedBy: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'Account',
+		required: true
 	}
 });
 
