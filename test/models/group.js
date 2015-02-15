@@ -390,4 +390,575 @@ describe('Group', function() {
 			);
 		});
 	});
+
+	describe('.putGroup', function() {
+		afterEach(function() {
+			if(Group.findOne.hasOwnProperty('restore')) {
+				Group.findOne.restore();
+			}
+
+			if(Date.now.hasOwnProperty('restore')) {
+				Date.now.restore();
+			}
+
+			if(Group.create.hasOwnProperty('restore')) {
+				Group.create.restore();
+			}
+
+			if(Account.find.hasOwnProperty('restore')) {
+				Account.find.restore();
+			}
+
+			if(Group.findOneAndUpdate.hasOwnProperty('restore')) {
+				Group.findOneAndUpdate.restore();
+			}
+		});
+
+		it('should be a static function', function() {
+			assert.isFunction(Group.schema.statics.putGroup);
+		});
+		it('should take two args', function() {
+			assert.equal(Group.putGroup.length, 2);
+		});
+		it('should return a promise', function(done) {
+			var returned = Group.putGroup({},{});
+
+			assert.equal(returned.constructor.name, 'Promise');
+
+			returned.then(
+				function() {
+					return done();
+				},
+				function() {
+					return done();
+				}
+			);
+		});
+		it('should try to find a Group with the passed query arg', function(done) {
+			var query = {name: 'group', logoLink: 'logo'};
+
+			var findOneSpy = sinon.spy(Group, 'findOne');
+
+			function assertions() {
+				try {
+					sinon.assert.calledOnce(findOneSpy);
+					sinon.assert.calledWithExactly(findOneSpy, query);
+				}
+				catch(err) {
+					return done(err);
+				}
+
+				return done();
+			}
+
+			Group.putGroup(query, {}).then(
+				function() {
+					return assertions();
+				},
+				function(err) {
+					return assertions();
+				}
+			);
+		});
+		it('should reject the promise if the find Group function call failed', function (done) {
+			var findOneStub = sinon.stub(Group, 'findOne',
+				function () {
+					return {
+						exec: function () {
+							var deferred = q.defer();
+
+							deferred.reject(new Error('stub error'));
+
+							return deferred.promise;
+						}
+					}
+				}
+			);
+
+			Group.putGroup().then(
+				function () {
+					return done(new Error('Promise was resolved'));
+				},
+				function (err) {
+					if (err.message == 'stub error') {
+						return done();
+					}
+
+					return done(err);
+				}
+			);
+		});
+
+		describe('case when a new Group has to be created', function() {
+			it('should create a Group with the group arg if it did not find a Group', function (done) {
+				var admin = {email: 'email', password: 'pass', createdAt: Date.now(), updatedAt: Date.now()};
+
+				Account.create(admin).then(
+					function (adminCreated) {
+						var group = {
+							name: 'group',
+							logoLink: 'logo',
+							createdAt: Date.now(),
+							updatedAt: Date.now(),
+							admins: [adminCreated.id]
+						};
+
+						var nowSpy = sinon.spy(Date, 'now');
+						var createSpy = sinon.spy(Group, 'create');
+
+						Group.putGroup(null, group).then(
+							function () {
+								try {
+									sinon.assert.calledOnce(createSpy);
+									sinon.assert.calledWithExactly(createSpy, {
+										name: group.name,
+										logoLink: group.logoLink,
+										createdAt: nowSpy.getCall(0).returnValue,
+										updatedAt: nowSpy.getCall(0).returnValue,
+										admins: group.admins
+									});
+								}
+								catch (err) {
+									return done(err);
+								}
+
+								return done();
+							},
+							function (err) {
+								return done(err);
+							}
+						);
+					},
+					function (err) {
+						return done(err);
+					}
+				);
+			});
+			it('should reject the promise if the creation of the new Group failed', function (done) {
+				var createGroupSpy = sinon.spy(Group, 'create');
+
+				var group = {name: 'name'};
+
+				Group.putGroup(null, group).then(
+					function () {
+						return done(new Error('The promise was resolved'));
+					},
+					function (actualError) {
+						createGroupSpy.getCall(0).returnValue.then(
+							null,
+							function (expectedErr) {
+								try {
+									assert.deepEqual(actualError, expectedErr, 'Errors are not the same');
+								}
+								catch (err) {
+									return done(err);
+								}
+
+								return done();
+							}
+						);
+					}
+				);
+			});
+			it('should update the Account.groups field of the Accounts who are admins of the Group', function (done) {
+				var admin = {email: 'email', password: 'pass', createdAt: Date.now(), updatedAt: Date.now()};
+
+				Account.create(admin).then(
+					function (adminCreated) {
+						var group = {
+							name: 'group',
+							logoLink: 'logo',
+							createdAt: Date.now(),
+							updatedAt: Date.now(),
+							admins: [adminCreated.id]
+						};
+
+						var updateSpy = null;
+
+						var findStub = sinon.stub(Account, 'find',
+							function (query) {
+								var object = {
+									update: function (crit, update, options, cb) {
+										return cb(null, null, null)
+									},
+									exec: function() {
+										var deferred = q.defer();
+
+										deferred.resolve([1]);
+
+										return deferred.promise;
+									}
+								};
+
+								updateSpy = sinon.spy(object, 'update');
+
+								return object;
+							}
+						);
+
+						Group.putGroup(null, group).then(
+							function (groupCreated) {
+								try {
+									sinon.assert.calledTwice(findStub);
+									sinon.assert.calledWithMatch(findStub, {'_id': {$in: groupCreated.admins}});
+									sinon.assert.calledOnce(updateSpy);
+									sinon.assert.calledWithMatch(updateSpy, {}, {$push: {groups: groupCreated.id}}, {multi: true});
+								}
+								catch (err) {
+									return done(err);
+								}
+
+								return done();
+							},
+							function (err) {
+								return done(err);
+							}
+						);
+					},
+					function (err) {
+						return done(err);
+					}
+				);
+			});
+			it('should resolve the promise with the new Group created', function (done) {
+				var admin = {email: 'email', password: 'pass', createdAt: Date.now(), updatedAt: Date.now()};
+
+				Account.create(admin).then(
+					function (adminCreated) {
+						var group = {name: 'group', logoLink: 'logo', admins: [adminCreated.id]};
+
+						var createSpy = sinon.spy(Group, 'create');
+
+						Group.putGroup(null, group).then(
+							function (groupCreated) {
+								createSpy.getCall(0).returnValue.then(
+									function (actualGroupCreated) {
+										try {
+											assert.deepEqual(groupCreated, actualGroupCreated);
+										}
+										catch (err) {
+											return done(err);
+										}
+
+										return done();
+									},
+									null
+								);
+							},
+							function (err) {
+								return done(err);
+							}
+						);
+					},
+					function (err) {
+						return done(err);
+					}
+				);
+			});
+			it('should reject the promise with the err of the update operation returns an error', function (done) {
+				var admin = {email: 'email', password: 'pass', createdAt: Date.now(), updatedAt: Date.now()};
+
+				Account.create(admin).then(
+					function (adminCreated) {
+						var group = {
+							name: 'group',
+							logoLink: 'logo',
+							createdAt: Date.now(),
+							updatedAt: Date.now(),
+							admins: [adminCreated.id]
+						};
+
+						var updateSpy = null;
+
+						var findStub = sinon.stub(Account, 'find',
+							function (query) {
+								var object = {
+									update: function (update, doc, options, cb) {
+										return cb(new Error('stub error'), null, null)
+									},
+									exec: function() {
+										var deferred = q.defer();
+
+										deferred.resolve([1]);
+
+										return deferred.promise;
+									}
+								};
+
+								updateSpy = sinon.spy(object, 'update');
+
+								return object;
+							}
+						);
+
+						Group.putGroup(null, group).then(
+							function () {
+								return done(new Error('The promise was resolved'));
+							},
+							function (err) {
+								try {
+									assert.equal(err.message, 'stub error');
+								}
+								catch (err) {
+									return done(err);
+								}
+
+								return done();
+							}
+						);
+					},
+					function (err) {
+						return done(err);
+					}
+				);
+			});
+		});
+
+		describe('case when a Group has to be updated', function() {
+			var accountCreated = null;
+
+			beforeEach(function(done) {
+				var account = {email: 'email', password: 'pass', createdAt: Date.now(), updatedAt: Date.now()};
+
+				Account.create(account).then(
+					function(accountMade) {
+						accountCreated = accountMade;
+						return done();
+					},
+					function(err) {
+						return done(err);
+					}
+				);
+			});
+
+			it('should update the found Group with the passed group arg', function(done) {
+				var group = {name: 'group', logoLink: 'logo', createdAt: Date.now(), updatedAt: Date.now(), admins: [accountCreated.id]};
+
+				Group.create(group).then(
+					function(groupCreated) {
+						var findOneAndUpdateSpy = sinon.spy(Group, 'findOneAndUpdate');
+
+						group.name = 'groupTwo';
+						group.logoLink = 'logoThree';
+						group.createdAt = Date.now();
+
+						var dateNowSpy = sinon.spy(Date, 'now');
+
+						Group.putGroup({name: 'group'}, group).then(
+							function() {
+								try {
+									sinon.assert.calledOnce(findOneAndUpdateSpy);
+									sinon.assert.calledOnce(dateNowSpy);
+									sinon.assert.calledWithMatch(findOneAndUpdateSpy, {name: 'group'}, {
+										name: group.name,
+										logoLink: group.logoLink,
+										createdAt: groupCreated.createdAt,
+										updatedAt: dateNowSpy.getCall(0).returnValue,
+										admins: [accountCreated.id]
+									});
+								}
+								catch(err) {
+									return done(err);
+								}
+
+								return done();
+							},
+							function(err) {
+								return done(err);
+							}
+						);
+					},
+					function(err) {
+						return done(err);
+					}
+				);
+			});
+
+			it('should reject the promise with an Error if updating the Group fails', function(done) {
+				var group = {name: 'group', logoLink: 'logo', createdAt: Date.now(), updatedAt: Date.now(), admins: [accountCreated.id]};
+
+				Group.create(group).then(
+					function() {
+						var error = new Error('stub error');
+
+						var findOneAndUpdateStub = sinon.stub(Group, 'findOneAndUpdate', function() {
+							var exec = function() {
+								var deferred = q.defer();
+
+								deferred.reject(error);
+
+								return deferred.promise;
+							};
+
+							return {
+								exec: exec
+							}
+						});
+
+						Group.putGroup({name: 'group'}, group).then(
+							function() {
+								return done(new Error('The promise was resolved'));
+							},
+							function(err) {
+								try {
+									assert.equal(err.message, error.message);
+								}
+								catch(err) {
+									return done(err);
+								}
+
+								return done();
+							}
+						);
+					},
+					function(err) {
+						return done(err);
+					}
+				);
+			});
+
+			it('should update the Account.groups field of any new Group.admins entries', function(done) {
+				var newAdmin = {email: 'emailOne', password: 'pass', createdAt: Date.now(), updatedAt: Date.now()};
+
+				Account.create(newAdmin).then(
+					function(newAdminCreated) {
+						var group = {name: 'name', logoLink: 'logo', createdAt: Date.now(), updatedAt: Date.now(), admins: [accountCreated.id]};
+
+						Group.create(group).then(
+							function(groupCreated) {
+								var updateSpy = null;
+
+								var findStub = sinon.stub(Account, 'find', function(query) {
+									var returned = {
+										update: function(crit, update, options, cb) {
+											return cb();
+										}
+									};
+
+									updateSpy = sinon.spy(returned, 'update');
+
+									return returned;
+								});
+
+								group.admins = [newAdminCreated.id, accountCreated.id];
+
+								Group.putGroup({name: 'name'}, group).then(
+									function() {
+										try {
+											sinon.assert.calledOnce(findStub);
+											sinon.assert.calledWithExactly(findStub, {
+												$and: [
+													{
+														'_id': {$in: [newAdminCreated._id]}
+													},
+													{
+														groups: {$not: {$in: [newAdminCreated._id]}}
+													}
+												]
+											});
+											sinon.assert.calledOnce(updateSpy);
+											sinon.assert.calledWithMatch(updateSpy, {}, {$push: {groups: groupCreated.id}}, {multi: true});
+										}
+										catch(err) {
+											return done(err);
+										}
+
+										return done();
+									},
+									function(err) {
+										return done(err);
+									}
+								);
+							},
+							function(err) {
+								return done(err);
+							}
+						);
+					},
+					function(err) {
+						return done(err);
+					}
+				);
+			});
+
+			it('should resolve the promise with nothing', function(done) {
+				var group = {name: 'group', logoLink: 'logo', createdAt: Date.now(), updatedAt: Date.now(), admins: [accountCreated.id]};
+
+				Group.create(group).then(
+					function() {
+						Group.putGroup({name: 'group'}, group).then(
+							function(value) {
+								try {
+									assert.isNull(value);
+								}
+								catch(err) {
+									return done(err);
+								}
+
+								return done();
+							},
+							function(err) {
+								return done(err);
+							}
+						);
+					},
+					function(err) {
+						return done(err);
+					}
+				);
+			});
+
+			it('should reject the promise with an error if the update operation fails', function(done) {
+				var newAdmin = {email: 'emailOne', password: 'pass', createdAt: Date.now(), updatedAt: Date.now()};
+
+				Account.create(newAdmin).then(
+					function(newAdminCreated) {
+						var group = {name: 'name', logoLink: 'logo', createdAt: Date.now(), updatedAt: Date.now(), admins: [accountCreated.id]};
+
+						Group.create(group).then(
+							function() {
+								var updateSpy = null;
+
+								var findStub = sinon.stub(Account, 'find', function(query) {
+									var returned = {
+										update: function(crit, update, options, cb) {
+											return cb(new Error('stub error'));
+										}
+									};
+
+									updateSpy = sinon.spy(returned, 'update');
+
+									return returned;
+								});
+
+								group.admins = [newAdminCreated.id];
+
+								Group.putGroup({name: 'name'}, group).then(
+									function() {
+										return done(new Error('Promise was resolved'));
+									},
+									function(err) {
+										try {
+											assert.equal(err.message, 'stub error');
+										}
+										catch(err) {
+											return done(err);
+										}
+
+										return done();
+									}
+								);
+							},
+							function(err) {
+								return done(err);
+							}
+						);
+					},
+					function(err) {
+						return done(err);
+					}
+				);
+			});
+		});
+	});
 });
