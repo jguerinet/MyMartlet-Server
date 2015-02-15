@@ -71,4 +71,16 @@ describe('NewsFeedItem', function() {
 			assert.isTrue(NewsFeedItem.schema.paths.liveDate.options.required);
 		});
 	});
+
+	describe('#endDate', function() {
+		it('should be an instance field', function() {
+			assert.isObject(NewsFeedItem.schema.paths.endDate);
+		});
+		it('should be of type Date', function() {
+			assert.equal(NewsFeedItem.schema.paths.endDate.constructor.name, 'SchemaDate');
+		});
+		it('should have a required option', function() {
+			assert.isTrue(NewsFeedItem.schema.paths.endDate.options.required);
+		});
+	});
 });
