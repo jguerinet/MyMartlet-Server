@@ -39,6 +39,15 @@ var newsFeedItemSchema = new mongoose.Schema({
 	liveDate: {
 		type: Date,
 		required: true
+	},
+	/**
+	 * The Date after the liveDate when this item is no longer valid
+	 * @alias NewsFeedItem#endDate
+	 * @type {!Date}
+	 */
+	endDate: {
+		type: Date,
+		required: true
 	}
 });
 
