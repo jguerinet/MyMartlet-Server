@@ -87,6 +87,15 @@ var newsFeedItemSchema = new mongoose.Schema({
 	createdAt: {
 		type: Date,
 		required: true
+	},
+	/**
+	 * The Date when this item was last updated.
+	 * @alias NewsFeedItem#updatedBy
+	 * @type {!Date}
+	 */
+	updatedAt: {
+		type: Date,
+		required: true
 	}
 });
 
