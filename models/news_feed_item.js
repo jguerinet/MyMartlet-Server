@@ -19,6 +19,15 @@ var newsFeedItemSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 		trim: true
+	},
+	/**
+	 * The description for this Item
+	 * @alias NewsFeedItem#description
+	 * @type {string}
+	 */
+	description: {
+		type: String,
+		trim: true
 	}
 });
 
