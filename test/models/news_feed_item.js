@@ -134,4 +134,16 @@ describe('NewsFeedItem', function() {
 			assert.isTrue(NewsFeedItem.schema.paths.createdAt.options.required);
 		});
 	});
+
+	describe('#updatedAt', function() {
+		it('should be an instance field', function() {
+			assert.isObject(NewsFeedItem.schema.paths.updatedAt);
+		});
+		it('should of type Date', function() {
+			assert.equal(NewsFeedItem.schema.paths.updatedAt.constructor.name, 'SchemaDate');
+		});
+		it('should have a required option', function() {
+			assert.isTrue(NewsFeedItem.schema.paths.updatedAt.options.required);
+		});
+	});
 });
