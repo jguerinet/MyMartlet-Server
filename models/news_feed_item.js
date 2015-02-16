@@ -38,7 +38,8 @@ var newsFeedItemSchema = new mongoose.Schema({
 	 */
 	liveDate: {
 		type: Date,
-		required: true
+		required: true,
+		validate: validation.liveDate
 	},
 	/**
 	 * The Date after the liveDate when this item is no longer valid
@@ -47,7 +48,8 @@ var newsFeedItemSchema = new mongoose.Schema({
 	 */
 	endDate: {
 		type: Date,
-		required: true
+		required: true,
+		validate: validation.endDate
 	},
 	/**
 	 * The ref to the group this NewsFeedItem was submitted.
@@ -57,7 +59,8 @@ var newsFeedItemSchema = new mongoose.Schema({
 	group: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'Group',
-		required: true
+		required: true,
+		validate: validation.group
 	},
 	/**
 	 * The ref to the Account that made this item.
@@ -67,7 +70,8 @@ var newsFeedItemSchema = new mongoose.Schema({
 	createdBy: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'Account',
-		required: true
+		required: true,
+		validate: validation.createdBy
 	},
 	/**
 	 * The ref to the Account that last changed this item.
@@ -77,7 +81,8 @@ var newsFeedItemSchema = new mongoose.Schema({
 	updatedBy: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'Account',
-		required: true
+		required: true,
+		validate: validation.updatedBy
 	},
 	/**
 	 * The Date when this item was first created.
