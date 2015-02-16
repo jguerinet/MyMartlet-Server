@@ -4,6 +4,8 @@ var q = require('q');
 var mongoose = require('mongoose');
 
 var NewsFeedItem = require('../../models/news_feed_item');
+var Account = require('../../models/account');
+var Group = require('../../models/group');
 
 describe('NewsFeedItem', function() {
 	before(function(next) {
@@ -19,7 +21,7 @@ describe('NewsFeedItem', function() {
 	});
 
 	afterEach(function(next) {
-		q.all([NewsFeedItem.find({}).remove().exec()]).then(
+		q.all([NewsFeedItem.find({}).remove().exec(), Group.find({}).remove().exec(), Account.find({}).remove().exec()]).then(
 			function() {
 				return next();
 			},
@@ -70,6 +72,72 @@ describe('NewsFeedItem', function() {
 		it('should have a required option', function() {
 			assert.isTrue(NewsFeedItem.schema.paths.liveDate.options.required);
 		});
+		it('should not allow values before the current Date', function(done) {
+			var liveDate = new Date();
+			liveDate.setMonth(liveDate.getMonth() - 1);
+
+			var newsFeedItem = {liveDate: liveDate};
+
+			NewsFeedItem.create(newsFeedItem).then(
+				function() {
+					return done(new Error('The promise was resolved'));
+				},
+				function(err) {
+					try {
+						assert.isDefined(err.errors.liveDate, 'liveDate field has passed validation');
+						assert.equal(err.errors.liveDate.message, 'liveDate field cannot be before the current Date', 'Incorrect error');
+					}
+					catch(err) {
+						return done(err);
+					}
+
+					return done();
+				}
+			);
+		});
+		it('should allow values on the current Date', function(done) {
+			var liveDate = new Date();
+
+			var newsFeedItem = {liveDate: liveDate};
+
+			NewsFeedItem.create(newsFeedItem).then(
+				function() {
+					return done();
+				},
+				function(err) {
+					try {
+						assert.isUndefined(err.errors.liveDate);
+					}
+					catch(err) {
+						return done(err);
+					}
+
+					return done();
+				}
+			);
+		});
+		it('should allow values after the current Date', function(done) {
+			var liveDate = new Date();
+			liveDate.setMonth(liveDate.getMonth()+1);
+
+			var newsFeedItem = {liveDate: liveDate};
+
+			NewsFeedItem.create(newsFeedItem).then(
+				function() {
+					return done();
+				},
+				function(err) {
+					try {
+						assert.isUndefined(err.errors.liveDate);
+					}
+					catch(err) {
+						return done(err);
+					}
+
+					return done();
+				}
+			);
+		});
 	});
 
 	describe('#endDate', function() {
@@ -81,6 +149,72 @@ describe('NewsFeedItem', function() {
 		});
 		it('should have a required option', function() {
 			assert.isTrue(NewsFeedItem.schema.paths.endDate.options.required);
+		});
+		it('should not allow values before the current Date', function(done) {
+			var endDate = new Date();
+			endDate.setMonth(endDate.getMonth() - 1);
+
+			var newsFeedItem = {endDate: endDate};
+
+			NewsFeedItem.create(newsFeedItem).then(
+				function() {
+					return done(new Error('The promise was resolved'));
+				},
+				function(err) {
+					try {
+						assert.isDefined(err.errors.endDate, 'endDate field has passed validation');
+						assert.equal(err.errors.endDate.message, 'endDate field cannot be before the current Date', 'Incorrect error');
+					}
+					catch(err) {
+						return done(err);
+					}
+
+					return done();
+				}
+			);
+		});
+		it('should allow values on the current Date', function(done) {
+			var endDate = new Date();
+
+			var newsFeedItem = {endDate: endDate};
+
+			NewsFeedItem.create(newsFeedItem).then(
+				function() {
+					return done();
+				},
+				function(err) {
+					try {
+						assert.isUndefined(err.errors.endDate);
+					}
+					catch(err) {
+						return done(err);
+					}
+
+					return done();
+				}
+			);
+		});
+		it('should allow values after the current Date', function(done) {
+			var endDate = new Date();
+			endDate.setMonth(endDate.getMonth()+1);
+
+			var newsFeedItem = {endDate: endDate};
+
+			NewsFeedItem.create(newsFeedItem).then(
+				function() {
+					return done();
+				},
+				function(err) {
+					try {
+						assert.isUndefined(err.errors.endDate);
+					}
+					catch(err) {
+						return done(err);
+					}
+
+					return done();
+				}
+			);
 		});
 	});
 
@@ -95,6 +229,63 @@ describe('NewsFeedItem', function() {
 		it('should have a required option', function() {
 			assert.isTrue(NewsFeedItem.schema.paths.group.options.required);
 		});
+		it('should not allow values that do not point to a Group', function(done) {
+			var newsFeedItem = {group: mongoose.Types.ObjectId()};
+
+			NewsFeedItem.create(newsFeedItem).then(
+				function() {
+					return done(new Error('NewsFeedItem was created'));
+				},
+				function(err) {
+					try {
+						assert.isDefined(err.errors.group, 'group field has passed validation');
+						assert.equal(err.errors.group.message, 'group must point to an existing Group');
+					}
+					catch(err) {
+						return done(err);
+					}
+
+					return done();
+				}
+			);
+		});
+		it('should allow values that point to a Group', function(done) {
+			var account = {email: 'email', password: 'pass', createdAt: Date.now(), updatedAt: Date.now()};
+
+			Account.create(account).then(
+				function(accountCreated) {
+					var group = {name: 'group', admins: [accountCreated.id], createdAt: Date.now(), updatedAt: Date.now()};
+
+					Group.create(group).then(
+						function(groupCreated) {
+							var newsFeedItem = {group: groupCreated.id};
+
+							NewsFeedItem.create(newsFeedItem).then(
+								function() {
+									return done();
+								},
+								function(err) {
+									try {
+										assert.isUndefined(err.errors.group);
+									}
+									catch(err) {
+										return done(err);
+									}
+
+									return done();
+								}
+							);
+						},
+						function(err) {
+							return done(err);
+						}
+					);
+				},
+				function(err) {
+					return done(err);
+				}
+			);
+		});
 	});
 
 	describe('#createdBy', function() {
@@ -108,6 +299,54 @@ describe('NewsFeedItem', function() {
 		it('should have a required option', function() {
 			assert.isTrue(NewsFeedItem.schema.paths.createdBy.options.required);
 		});
+		it('should allow values that point to an Account', function(done) {
+			var account = {email: 'email', password: 'pass', createdAt: Date.now(), updatedAt: Date.now()};
+
+			Account.create(account).then(
+				function(accountCreated) {
+					var newsFeedItem = {createdBy: accountCreated.id};
+
+					NewsFeedItem.create(newsFeedItem).then(
+						function() {
+							return done();
+						},
+						function(err) {
+							try {
+								assert.isUndefined(err.errors.createdBy);
+							}
+							catch(err) {
+								return done(err);
+							}
+
+							return done();
+						}
+					);
+				},
+				function(err) {
+					return done(err);
+				}
+			);
+		});
+		it('should not allow values that do not point to an Account', function(done) {
+			var newsFeedItem = {createdBy: mongoose.Types.ObjectId()};
+
+			NewsFeedItem.create(newsFeedItem).then(
+				function() {
+					return done(new Error('The promise was resolved'));
+				},
+				function(err) {
+					try {
+						assert.isDefined(err.errors.createdBy);
+						assert.equal(err.errors.createdBy.message, 'createdBy must point to an existing Account');
+					}
+					catch(err) {
+						return done(err);
+					}
+
+					return done();
+				}
+			);
+		});
 	});
 
 	describe('#updatedBy', function() {
@@ -120,6 +359,54 @@ describe('NewsFeedItem', function() {
 		});
 		it('should have a required option', function() {
 			assert.isTrue(NewsFeedItem.schema.paths.updatedBy.options.required);
+		});
+		it('should allow values that point to an Account', function(done) {
+			var account = {email: 'email', password: 'pass', createdAt: Date.now(), updatedAt: Date.now()};
+
+			Account.create(account).then(
+				function(accountCreated) {
+					var newsFeedItem = {updatedBy: accountCreated.id};
+
+					NewsFeedItem.create(newsFeedItem).then(
+						function() {
+							return done();
+						},
+						function(err) {
+							try {
+								assert.isUndefined(err.errors.updatedBy);
+							}
+							catch(err) {
+								return done(err);
+							}
+
+							return done();
+						}
+					);
+				},
+				function(err) {
+					return done(err);
+				}
+			);
+		});
+		it('should not allow values that do not point to an Account', function(done) {
+			var newsFeedItem = {updatedBy: mongoose.Types.ObjectId()};
+
+			NewsFeedItem.create(newsFeedItem).then(
+				function() {
+					return done(new Error('The promise was resolved'));
+				},
+				function(err) {
+					try {
+						assert.isDefined(err.errors.updatedBy);
+						assert.equal(err.errors.updatedBy.message, 'updatedBy must point to an existing Account');
+					}
+					catch(err) {
+						return done(err);
+					}
+
+					return done();
+				}
+			);
 		});
 	});
 
