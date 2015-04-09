@@ -63,5 +63,9 @@
 			"Fr" : "TD"
 		}
 	], 
-	"RegistrationSemesters" : []
+	"RegistrationSemesters" : [
+      "Summer 2015",
+      "Fall 2015",
+      "Winter 2016"
+    ]
 }
