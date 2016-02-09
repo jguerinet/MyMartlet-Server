@@ -1,7 +1,7 @@
-var basicAuth = require('basic-auth');
-
 module.exports = function(username, password) {
     return function(req, res, next) {
+        var basicAuth = require('basic-auth');
+
         //Get the basic auth info
         var user = basicAuth(req);
 
@@ -14,5 +14,5 @@ module.exports = function(username, password) {
         } else {
             return next();
         }
-    }
+    };
 }
