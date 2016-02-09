@@ -1,8 +1,11 @@
+var configV1 = require('../data/config_v1.json');
+
 var configData = require('../data/config.json');
 var placesData = require('../data/places.json');
 
 module.exports = function(app) {
-	function auth(req,res,next) {
+	function auth(req, res, next) {
+		//Basic auth module
 		var basicAuth = require("basic-auth");
 
 		function unauthorized(res) {
@@ -10,6 +13,7 @@ module.exports = function(app) {
 			res.status(401).end();
 		}
 
+		//Get the user info from the request
 		var user = basicAuth(req);
 
 		var username = 'admin';
