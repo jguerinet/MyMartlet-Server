@@ -7,10 +7,6 @@ var path = require('path');
 //Make the default app object without any routes and middlewares added
 var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
-
 //Our logging module
 var logger = require('morgan');
 app.use(logger('dev'));
