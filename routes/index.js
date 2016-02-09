@@ -1,24 +1,51 @@
-//This method adds all the routes to the app object
-module.exports = function(app,passport) {
-	//Add the /signup routes
-	require("./signup")(app,passport);
+var configData = require('../data/config.json');
+var placesData = require('../data/places.json');
 
-	//Add the /login routes
-	require("./login")(app,passport);
+module.exports = function(app) {
+	function auth(req,res,next) {
+		var basicAuth = require("basic-auth");
 
-	//Add the /admin routes
-	require("./admin")(app);
+		function unauthorized(res) {
+			res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
+			res.status(401).end();
+		}
 
-	//Add the log out route
-	require("./logout")(app);
+		var user = basicAuth(req);
 
-	//Route to get the config for the mobile devices
-	require("./config")(app);
+		var username = 'admin';
+		var password = 'appvelopers';
 
-	//Route for the the mobile devices api routes
-	require("./api")(app);
+		//Check that there is a user, a username, and a password
+		if (!user || !user.name || !user.pass) {
+			//If not, unauthorize them
+			unauthorized(res);
+		}
+		//Check that the correct username and password have been given
+		else if (user.name === username && user.pass === password) {
+			return next();
+		}
+		//If not, unauthorize them
+		else {
+			unauthorized(res);
+		}
+	}
+
+	var configRouter = require("express").Router();
+	configRouter.use(auth);
+	configRouter.get('/', function(req, res) {
+		res.json(configData);
+	});
+
+	var placesRouter = require("express").Router();
+	placesRouter.use(auth);
+	placesRouter.get('/', function(req, res) {
+		res.json(placesData);
+	});
+
+	app.use("/config",configRouter);
+	app.use("/places",placesRouter);
 
     app.get("/",function(req,res) {
-        res.redirect("/login");
+        res.redirect("/api/config");
     });
 };
