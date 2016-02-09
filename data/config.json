@@ -4,66 +4,64 @@
 	"Place Categories" : [
 		{
 			"Name" : "Building",
-			"En" : "Building", 
+			"En" : "Building",
 			"Fr" : "Bâtiments"
-		}, 
+		},
 		{
 			"Name" : "Food",
-			"En" : "Food Services", 
+			"En" : "Food Services",
 			"Fr" : "Services Alimentaires"
-		}, 
+		},
 		{
-			"Name" : "Library", 
-			"En" : "Libraries", 
+			"Name" : "Library",
+			"En" : "Libraries",
 			"Fr" : "Bibliothèques"
-		}, 
+		},
 		{
-			"Name" : "Residence", 
-			"En" : "Residences", 
+			"Name" : "Residence",
+			"En" : "Residences",
 			"Fr" : "Résidences"
-		}, 
+		},
 		{
-			"Name" : "Social", 
+			"Name" : "Social",
 			"En" : "Social Locations",
-			"Fr" : "Endroits Sociaux" 
-		}, 
+			"Fr" : "Endroits Sociaux"
+		},
 		{
-			"Name" : "Bank", 
-			"En" : "All ATMs/Banks", 
+			"Name" : "Bank",
+			"En" : "All ATMs/Banks",
 			"Fr" : "Tous Guichets Automatiques/Banques"
 		},
 		{
-			"Name" : "BMO", 
-			"En" : "BMO", 
+			"Name" : "BMO",
+			"En" : "BMO",
 			"Fr" : "BMO"
 		},
 				{
-			"Name" : "National Bank", 
-			"En" : "National Bank", 
+			"Name" : "National Bank",
+			"En" : "National Bank",
 			"Fr" : "Banque Nationale"
 		},
 				{
-			"Name" : "CIBC", 
-			"En" : "CIBC", 
+			"Name" : "CIBC",
+			"En" : "CIBC",
 			"Fr" : "CIBC"
 		},
 				{
-			"Name" : "RBC", 
-			"En" : "RBC", 
+			"Name" : "RBC",
+			"En" : "RBC",
 			"Fr" : "RBC"
 		},
 				{
-			"Name" : "Scotiabank", 
-			"En" : "Scotiabank", 
+			"Name" : "Scotiabank",
+			"En" : "Scotiabank",
 			"Fr" : "Banque Scotia"
 		},
 				{
-			"Name" : "TD", 
+			"Name" : "TD",
 			"En" : "TD", 
 			"Fr" : "TD"
 		}
-	], 
-	"RegistrationSemesters" : [
-      "Winter 2016"
-    ]
+	],
+	"RegistrationSemesters" : []
 }
