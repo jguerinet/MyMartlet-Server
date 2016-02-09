@@ -5,7 +5,7 @@ var placesData = require('../data/places.json');
 
 module.exports = function(app) {
 	//Route to get the config for the mobile devices
-	require("./config")(app);
+	require("./v1")(app);
 
 	function auth(req, res, next) {
 		//Basic auth module
@@ -19,21 +19,17 @@ module.exports = function(app) {
 		//Get the user info from the request
 		var user = basicAuth(req);
 
-		var username = 'admin';
-		var password = 'appvelopers';
+		//Username and password variables 
+		var username = 'kjw3ro3ijro4wirj';
+		var password = 'p4j2340rf9rifkerv';
 
-		//Check that there is a user, a username, and a password
-		if (!user || !user.name || !user.pass) {
+		//Check that there is a user, username, and password and that they match
+		if (!user || !user.name || !user.pass || user.name !== username ||
+            user.pass !== password) {
 			//If not, unauthorize them
 			unauthorized(res);
-		}
-		//Check that the correct username and password have been given
-		else if (user.name === username && user.pass === password) {
+		} else {
 			return next();
-		}
-		//If not, unauthorize them
-		else {
-			unauthorized(res);
 		}
 	}
 
