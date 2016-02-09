@@ -1,7 +1,7 @@
 var configV1 = require('../data/config_v1.json');
 
 module.exports = function(app) {
-	function auth(req,res,next) {
+	function auth(req, res, next) {
 		var basicAuth = require("basic-auth");
 
 		function unauthorized(res) {
@@ -33,6 +33,6 @@ module.exports = function(app) {
 		res.json(configV1);
 	});
 
-    //Set up the v1 config at the /config endpoint 
+    //Set up the v1 config at the /config endpoint
 	app.use("/config", configRouter);
 };

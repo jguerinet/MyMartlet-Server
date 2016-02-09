@@ -4,6 +4,9 @@ var configData = require('../data/config.json');
 var placesData = require('../data/places.json');
 
 module.exports = function(app) {
+	//Route to get the config for the mobile devices
+	require("./config")(app);
+
 	function auth(req, res, next) {
 		//Basic auth module
 		var basicAuth = require("basic-auth");
