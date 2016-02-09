@@ -11,13 +11,24 @@ var app = express();
 var logger = require('morgan');
 app.use(logger('dev'));
 
+//Set the view engine
+app.set('view engine', 'jade');
+
 //Module to pars the body of the request for post messages
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-//Add all the routes for our application
-require("./routes")(app);
+//Set up the v1 endpoint
+app.use('/config', require('./routes/v1'));
+
+//Set up the api endpoint
+app.use('/api', require('./routes/api'));
+
+//Redirect the base to the config
+app.get('/', function(req, res) {
+	res.redirect('/api/config')
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
