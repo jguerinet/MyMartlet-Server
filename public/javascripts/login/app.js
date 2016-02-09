@@ -1,1 +1,0 @@
-angular.module("mymartlet.login",["mymartlet.login.controllers"]);
