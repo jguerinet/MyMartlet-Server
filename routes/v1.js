@@ -9,7 +9,7 @@ var v1Config = require('../data/v1_config.json');
 var v1Places = require('../data/v1_places.json');
 
 //Base route is the v1 data
-router.get('/', auth, function(req, res) {
+router.get('/config', auth, function(req, res) {
     res.json(v1Config);
 });
 

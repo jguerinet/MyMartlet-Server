@@ -19,8 +19,13 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+//Redirect the old endpoint to the v1 info
+app.get('/config', function(req, res) {
+	res.redirect('/v1/config');
+})
+
 //Set up the v1 endpoint
-app.use('/config', require('./routes/v1'));
+app.use('/v1', require('./routes/v1'));
 
 //Set up the api endpoint
 app.use('/api', require('./routes/api'));
