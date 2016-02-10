@@ -1,0 +1,62 @@
+[
+	{
+		"id": 0,
+		"en": "Buildings",
+		"fr": "Bâtiments"
+	},
+	{
+		"id": 1,
+		"en": "Food Services",
+		"fr": "Services Alimentaires"
+	},
+	{
+		"id": 2,
+		"en": "Libraries",
+		"fr": "Bibliothèques"
+	},
+	{
+		"id": 3,
+		"en": "Residences",
+		"fr": "Résidences"
+	},
+	{
+		"id": 4,
+		"en": "Social Locations",
+		"fr": "Endroits Sociaux"
+	},
+	{
+		"id": 5,
+		"en": "All ATMs/Banks",
+		"fr": "Tous Guichets Automatiques/Banques"
+	},
+	{
+		"id": 6,
+		"en": "BMO",
+		"fr": "BMO"
+	},
+	{
+		"id": 7,
+		"en": "National Bank",
+		"fr": "Banque Nationale"
+	},
+	{
+		"id": 8,
+		"en": "CIBC",
+		"fr": "CIBC"
+	},
+	{
+		"id": 9,
+		"en": "RBC",
+		"fr": "RBC"
+	},
+	{
+		"id": 10,
+		"en": "Scotiabank",
+		"fr": "Banque Scotia"
+	},
+	{
+		"id": 11,
+		"en": "TD",
+		"fr": "TD"
+	}
+]

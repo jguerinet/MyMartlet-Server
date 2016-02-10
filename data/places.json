@@ -1,1981 +1,1981 @@
 [
     {
-        "name" : "Adams Building",
-        "categories" : [
-            "Building"
+        "name": "Adams Building",
+        "categories": [
+            0
         ],
-        "address" : "3450 University,  H3A 0E8",
-        "latitude" : 45.505493,
-        "longitude" : -73.575298
+        "address": "3450 University,  H3A 0E8",
+        "latitude": 45.505493,
+        "longitude": -73.575298
     },
     {
-        "name" : "Arts Building",
-        "categories" : [
-            "Building"
+        "name": "Arts Building",
+        "categories": [
+            0
         ],
-        "address" : "853 Sherbrooke Ouest,  H3A 0G4",
-        "latitude" : 45.505224,
-        "longitude" : -73.577727
+        "address": "853 Sherbrooke Ouest,  H3A 0G4",
+        "latitude": 45.505224,
+        "longitude": -73.577727
     },
     {
-        "name" : "Beatty Hall",
-        "categories" : [
-            "Building"
+        "name": "Beatty Hall",
+        "categories": [
+            0
         ],
-        "address" : "1266 Pins Ouest,  H3G 1A8",
-        "latitude" : 45.50197,
-        "longitude" : -73.583933
+        "address": "1266 Pins Ouest,  H3G 1A8",
+        "latitude": 45.50197,
+        "longitude": -73.583933
     },
     {
-        "name" : "Birks Building",
-        "categories" : [
-            "Building"
+        "name": "Birks Building",
+        "categories": [
+            0
         ],
-        "address" : "3520 University,  H3A 2A7",
-        "latitude" : 45.506575,
-        "longitude" : -73.577408
+        "address": "3520 University,  H3A 2A7",
+        "latitude": 45.506575,
+        "longitude": -73.577408
     },
     {
-        "name" : "Bronfman Building",
-        "categories" : [
-            "Building"
+        "name": "Bronfman Building",
+        "categories": [
+            0
         ],
-        "address" : "1001 Sherbrooke Ouest,  H3A 1G5",
-        "latitude" : 45.502572,
-        "longitude" : -73.576442
+        "address": "1001 Sherbrooke Ouest,  H3A 1G5",
+        "latitude": 45.502572,
+        "longitude": -73.576442
     },
     {
-        "name" : "Brown Student Services Building",
-        "categories" : [
-            "Building"
+        "name": "Brown Student Services Building",
+        "categories": [
+            0
         ],
-        "address" : "3600 McTavish,  H3A 0G3",
-        "latitude" : 45.503726,
-        "longitude" : -73.578535
+        "address": "3600 McTavish,  H3A 0G3",
+        "latitude": 45.503726,
+        "longitude": -73.578535
     },
     {
-        "name" : "Burnside Hall",
-        "categories" : [
-            "Building"
+        "name": "Burnside Hall",
+        "categories": [
+            0
         ],
-        "address" : "805 Sherbrooke Ouest,  H3A 0B9",
-        "latitude" : 45.504704,
-        "longitude" : -73.574985
+        "address": "805 Sherbrooke Ouest,  H3A 0B9",
+        "latitude": 45.504704,
+        "longitude": -73.574985
     },
     {
-        "name" : "Charles Meredith House",
-        "categories" : [
-            "Building"
+        "name": "Charles Meredith House",
+        "categories": [
+            0
         ],
-        "address" : "1130 Pins Ouest,  H3A 1A3",
-        "latitude" : 45.503888,
-        "longitude" : -73.58217
+        "address": "1130 Pins Ouest,  H3A 1A3",
+        "latitude": 45.503888,
+        "longitude": -73.58217
     },
     {
-        "name" : "Currie Gymnasium",
-        "categories" : [
-            "Building"
+        "name": "Currie Gymnasium",
+        "categories": [
+            0
         ],
-        "address" : "475 Pins Ouest,  H2W 1S4",
-        "latitude" : 45.510004,
-        "longitude" : -73.579659
+        "address": "475 Pins Ouest,  H2W 1S4",
+        "latitude": 45.510004,
+        "longitude": -73.579659
     },
     {
-        "name" : "Davis House",
-        "categories" : [
-            "Building"
+        "name": "Davis House",
+        "categories": [
+            0
         ],
-        "address" : "3654 Sir William Osler,  H3G 1Y5",
-        "latitude" : 45.50227,
-        "longitude" : -73.582841
+        "address": "3654 Sir William Osler,  H3G 1Y5",
+        "latitude": 45.50227,
+        "longitude": -73.582841
     },
     {
-        "name" : "Dawson Hall",
-        "categories" : [
-            "Building"
+        "name": "Dawson Hall",
+        "categories": [
+            0
         ],
-        "address" : "853 Sherbrooke Ouest,  H3A 0G5",
-        "latitude" : 45.505576,
-        "longitude" : -73.577368
+        "address": "853 Sherbrooke Ouest,  H3A 0G5",
+        "latitude": 45.505576,
+        "longitude": -73.577368
     },
     {
-        "name" : "Duff Medical Building",
-        "categories" : [
-            "Building"
+        "name": "Duff Medical Building",
+        "categories": [
+            0
         ],
-        "address" : "3775 University,  H3A 2B4",
-        "latitude" : 45.508824,
-        "longitude" : -73.580616
+        "address": "3775 University,  H3A 2B4",
+        "latitude": 45.508824,
+        "longitude": -73.580616
     },
     {
-        "name" : "Duggan House",
-        "categories" : [
-            "Building"
+        "name": "Duggan House",
+        "categories": [
+            0
         ],
-        "address" : "3724 McTavish,  H3A 1Y2",
-        "latitude" : 45.504931,
-        "longitude" : -73.581144
+        "address": "3724 McTavish,  H3A 1Y2",
+        "latitude": 45.504931,
+        "longitude": -73.581144
     },
     {
-        "name" : "Education Building",
-        "categories" : [
-            "Building"
+        "name": "Education Building",
+        "categories": [
+            0
         ],
-        "address" : "3700 McTavish,  H3A 1Y2",
-        "latitude" : 45.504333,
-        "longitude" : -73.580492
+        "address": "3700 McTavish,  H3A 1Y2",
+        "latitude": 45.504333,
+        "longitude": -73.580492
     },
     {
-        "name" : "Faculty Club",
-        "categories" : [
-            "Building"
+        "name": "Faculty Club",
+        "categories": [
+            0
         ],
-        "address" : "3450 McTavish,  H3A 0E5",
-        "latitude" : 45.503156,
-        "longitude" : -73.577286
+        "address": "3450 McTavish,  H3A 0E5",
+        "latitude": 45.503156,
+        "longitude": -73.577286
     },
     {
-        "name" : "Ferrier Building",
-        "categories" : [
-            "Building"
+        "name": "Ferrier Building",
+        "categories": [
+            0
         ],
-        "address" : "840 Doctor-Penfield,  H3A 0G2",
-        "latitude" : 45.505627,
-        "longitude" : -73.578097
+        "address": "840 Doctor-Penfield,  H3A 0G2",
+        "latitude": 45.505627,
+        "longitude": -73.578097
     },
     {
-        "name" : "Hosmer House",
-        "categories" : [
-            "Building"
+        "name": "Hosmer House",
+        "categories": [
+            0
         ],
-        "address" : "3630 Sir William Osler,  H3G 1Y5",
-        "latitude" : 45.501942,
-        "longitude" : -73.582235
+        "address": "3630 Sir William Osler,  H3G 1Y5",
+        "latitude": 45.501942,
+        "longitude": -73.582235
     },
     {
-        "name" : "Hugessen House",
-        "categories" : [
-            "Building"
+        "name": "Hugessen House",
+        "categories": [
+            0
         ],
-        "address" : "3666 McTavish,  H3A 1Y2",
-        "latitude" : 45.504394,
-        "longitude" : -73.580023
+        "address": "3666 McTavish,  H3A 1Y2",
+        "latitude": 45.504394,
+        "longitude": -73.580023
     },
     {
-        "name" : "James Administration Building",
-        "categories" : [
-            "Building"
+        "name": "James Administration Building",
+        "categories": [
+            0
         ],
-        "address" : "845 Sherbrooke Ouest,  H3A 2T5",
-        "latitude" : 45.506169,
-        "longitude" : -73.577676
+        "address": "845 Sherbrooke Ouest,  H3A 2T5",
+        "latitude": 45.506169,
+        "longitude": -73.577676
     },
     {
-        "name" : "Leacock Building",
-        "categories" : [
-            "Building"
+        "name": "Leacock Building",
+        "categories": [
+            0
         ],
-        "address" : "855 Sherbrooke Ouest,  H3A 2T7",
-        "latitude" : 45.504371,
-        "longitude" : -73.578038
+        "address": "855 Sherbrooke Ouest,  H3A 2T7",
+        "latitude": 45.504371,
+        "longitude": -73.578038
     },
     {
-        "name" : "Maass Chemistry Building",
-        "categories" : [
-            "Building"
+        "name": "Maass Chemistry Building",
+        "categories": [
+            0
         ],
-        "address" : "801 Sherbrooke Ouest,  H3A 0B8",
-        "latitude" : 45.504915,
-        "longitude" : -73.574081
+        "address": "801 Sherbrooke Ouest,  H3A 0B8",
+        "latitude": 45.504915,
+        "longitude": -73.574081
     },
     {
-        "name" : "Macdonald Engineering Building",
-        "categories" : [
-            "Building"
+        "name": "Macdonald Engineering Building",
+        "categories": [
+            0
         ],
-        "address" : "817 Sherbrooke Ouest,  H3A 0C3",
-        "latitude" : 45.505366,
-        "longitude" : -73.576617
+        "address": "817 Sherbrooke Ouest,  H3A 0C3",
+        "latitude": 45.505366,
+        "longitude": -73.576617
     },
     {
-        "name" : "Macdonald Stewart Library Building",
-        "categories" : [
-            "Building"
+        "name": "Macdonald Stewart Library Building",
+        "categories": [
+            0
         ],
-        "address" : "809 Sherbrooke Ouest,  H3A 0C1",
-        "latitude" : 45.505065,
-        "longitude" : -73.575355
+        "address": "809 Sherbrooke Ouest,  H3A 0C1",
+        "latitude": 45.505065,
+        "longitude": -73.575355
     },
     {
-        "name" : "McConnell Engineering Building",
-        "categories" : [
-            "Building"
+        "name": "McConnell Engineering Building",
+        "categories": [
+            0
         ],
-        "address" : "3480 University,  H3A 0E9",
-        "latitude" : 45.505955,
-        "longitude" : -73.576263
+        "address": "3480 University,  H3A 0E9",
+        "latitude": 45.505955,
+        "longitude": -73.576263
     },
     {
-        "name" : "McGill Bookstore",
-        "categories" : [
-            "Building"
+        "name": "McGill Bookstore",
+        "categories": [
+            0
         ],
-        "address" : "3420 McTavish,  H3A 3L1",
-        "latitude" : 45.502872,
-        "longitude" : -73.576861
+        "address": "3420 McTavish,  H3A 3L1",
+        "latitude": 45.502872,
+        "longitude": -73.576861
     },
     {
-        "name" : "McLennan Library Building",
-        "categories" : [
-            "Building"
+        "name": "McLennan Library Building",
+        "categories": [
+            0
         ],
-        "address" : "3459 McTavish,  H3A 0C9",
-        "latitude" : 45.503218,
-        "longitude" : -73.575874
+        "address": "3459 McTavish,  H3A 0C9",
+        "latitude": 45.503218,
+        "longitude": -73.575874
     },
     {
-        "name" : "McIntyre Medical Building",
-        "categories" : [
-            "Building"
+        "name": "McIntyre Medical Building",
+        "categories": [
+            0
         ],
-        "address" : "3655 Sir William Osler,  H3G 1Y6",
-        "latitude" : 45.503056,
-        "longitude" : -73.582501
+        "address": "3655 Sir William Osler,  H3G 1Y6",
+        "latitude": 45.503056,
+        "longitude": -73.582501
     },
     {
-        "name" : "Macdonald Harrington Building",
-        "categories" : [
-            "Building"
+        "name": "Macdonald Harrington Building",
+        "categories": [
+            0
         ],
-        "address" : "815 Sherbrooke Ouest,  H3A 0C2",
-        "latitude" : 45.505315,
-        "longitude" : -73.575832
+        "address": "815 Sherbrooke Ouest,  H3A 0C2",
+        "latitude": 45.505315,
+        "longitude": -73.575832
     },
     {
-        "name" : "Montreal General Hospital",
-        "categories" : [
-            "Building"
+        "name": "Montreal General Hospital",
+        "categories": [
+            0
         ],
-        "address" : "1650 Cedar,  H3G 1A4",
-        "latitude" : 45.497082,
-        "longitude" : -73.588589
+        "address": "1650 Cedar,  H3G 1A4",
+        "latitude": 45.497082,
+        "longitude": -73.588589
     },
     {
-        "name" : "Montreal Neurological Institute",
-        "categories" : [
-            "Building"
+        "name": "Montreal Neurological Institute",
+        "categories": [
+            0
         ],
-        "address" : "3801 University,  H3A 2B4",
-        "latitude" : 45.509039,
-        "longitude" : -73.581357
+        "address": "3801 University,  H3A 2B4",
+        "latitude": 45.509039,
+        "longitude": -73.581357
     },
     {
-        "name" : "Morrice Hall",
-        "categories" : [
-            "Building"
+        "name": "Morrice Hall",
+        "categories": [
+            0
         ],
-        "address" : "3485 McTavish,  H3A 0E1",
-        "latitude" : 45.503997,
-        "longitude" : -73.577735
+        "address": "3485 McTavish,  H3A 0E1",
+        "latitude": 45.503997,
+        "longitude": -73.577735
     },
     {
-        "name" : "McTavish 3430",
-        "categories" : [
-            "Building"
+        "name": "McTavish 3430",
+        "categories": [
+            0
         ],
-        "address" : "3430 McTavish,  H3A 0E2",
-        "latitude" : 45.503003,
-        "longitude" : -73.576909
+        "address": "3430 McTavish,  H3A 0E2",
+        "latitude": 45.503003,
+        "longitude": -73.576909
     },
     {
-        "name" : "McTavish 3434",
-        "categories" : [
-            "Building"
+        "name": "McTavish 3434",
+        "categories": [
+            0
         ],
-        "address" : "3434 McTavish,  H3A 0E3",
-        "latitude" : 45.503044,
-        "longitude" : -73.57699
+        "address": "3434 McTavish,  H3A 0E3",
+        "latitude": 45.503044,
+        "longitude": -73.57699
     },
     {
-        "name" : "McTavish 3438",
-        "categories" : [
-            "Building"
+        "name": "McTavish 3438",
+        "categories": [
+            0
         ],
-        "address" : "3438 McTavish,  H3A 0E4",
-        "latitude" : 45.503084,
-        "longitude" : -73.577078
+        "address": "3438 McTavish,  H3A 0E4",
+        "latitude": 45.503084,
+        "longitude": -73.577078
     },
     {
-        "name" : "McTavish 3610 ",
-        "categories" : [
-            "Building"
+        "name": "McTavish 3610 ",
+        "categories": [
+            0
         ],
-        "address" : "3610 McTavish,  H3A 1Y2",
-        "latitude" : 45.503932,
-        "longitude" : -73.579074
+        "address": "3610 McTavish,  H3A 1Y2",
+        "latitude": 45.503932,
+        "longitude": -73.579074
     },
     {
-        "name" : "(New) Chancellor Day Hall(",
-        "categories" : [
-            "Building"
+        "name": "(New) Chancellor Day Hall(",
+        "categories": [
+            0
         ],
-        "address" : "3644 Peel,  H3A 1W9",
-        "latitude" : 45.502951,
-        "longitude" : -73.58084
+        "address": "3644 Peel,  H3A 1W9",
+        "latitude": 45.502951,
+        "longitude": -73.58084
     },
     {
-        "name" : "Old Chancellor Day Hall",
-        "categories" : [
-            "Building"
+        "name": "Old Chancellor Day Hall",
+        "categories": [
+            0
         ],
-        "address" : "3644 Peel,  H3A 1W9",
-        "latitude" : 45.503205,
-        "longitude" : -73.580609
+        "address": "3644 Peel,  H3A 1W9",
+        "latitude": 45.503205,
+        "longitude": -73.580609
     },
     {
-        "name" : "Dr. Penfield 1085",
-        "categories" : [
-            "Building"
+        "name": "Dr. Penfield 1085",
+        "categories": [
+            0
         ],
-        "address" : "1085 Doctor-Penfield,  H3A 1A7",
-        "latitude" : 45.503638,
-        "longitude" : -73.57941
+        "address": "1085 Doctor-Penfield,  H3A 1A7",
+        "latitude": 45.503638,
+        "longitude": -73.57941
     },
     {
-        "name" : "Peterson Hall",
-        "categories" : [
-            "Building"
+        "name": "Peterson Hall",
+        "categories": [
+            0
         ],
-        "address" : "3460 McTavish,  H3A 0E6",
-        "latitude" : 45.503313,
-        "longitude" : -73.577691
+        "address": "3460 McTavish,  H3A 0E6",
+        "latitude": 45.503313,
+        "longitude": -73.577691
     },
     {
-        "name" : "Peel 3437",
-        "categories" : [
-            "Building"
+        "name": "Peel 3437",
+        "categories": [
+            0
         ],
-        "address" : "3437 Peel,  H3A 1W7",
-        "latitude" : 45.502593,
-        "longitude" : -73.577556
+        "address": "3437 Peel,  H3A 1W7",
+        "latitude": 45.502593,
+        "longitude": -73.577556
     },
     {
-        "name" : "Peel 3465",
-        "categories" : [
-            "Building"
+        "name": "Peel 3465",
+        "categories": [
+            0
         ],
-        "address" : "3465 Peel,  H3A 1W7",
-        "latitude" : 45.502907,
-        "longitude" : -73.578198
+        "address": "3465 Peel,  H3A 1W7",
+        "latitude": 45.502907,
+        "longitude": -73.578198
     },
     {
-        "name" : "Peel 3475",
-        "categories" : [
-            "Building"
+        "name": "Peel 3475",
+        "categories": [
+            0
         ],
-        "address" : "3475 Peel,  H3A 1W7",
-        "latitude" : 45.503006,
-        "longitude" : -73.578391
+        "address": "3475 Peel,  H3A 1W7",
+        "latitude": 45.503006,
+        "longitude": -73.578391
     },
     {
-        "name" : "Peel 3487",
-        "categories" : [
-            "Building"
+        "name": "Peel 3487",
+        "categories": [
+            0
         ],
-        "address" : "3487 Peel,  H3A 1W7",
-        "latitude" : 45.503127,
-        "longitude" : -73.578618
+        "address": "3487 Peel,  H3A 1W7",
+        "latitude": 45.503127,
+        "longitude": -73.578618
     },
     {
-        "name" : "Peel 3505",
-        "categories" : [
-            "Building"
+        "name": "Peel 3505",
+        "categories": [
+            0
         ],
-        "address" : "3505 Peel,  H3A 1W7",
-        "latitude" : 45.503302,
-        "longitude" : -73.579011
+        "address": "3505 Peel,  H3A 1W7",
+        "latitude": 45.503302,
+        "longitude": -73.579011
     },
     {
-        "name" : "Peel 3511",
-        "categories" : [
-            "Building"
+        "name": "Peel 3511",
+        "categories": [
+            0
         ],
-        "address" : "3511 Peel,  H4A 1W7",
-        "latitude" : 45.50338,
-        "longitude" : -73.579155
+        "address": "3511 Peel,  H4A 1W7",
+        "latitude": 45.50338,
+        "longitude": -73.579155
     },
     {
-        "name" : "Peel 3647",
-        "categories" : [
-            "Building"
+        "name": "Peel 3647",
+        "categories": [
+            0
         ],
-        "address" : "3647 Peel,  H3A 1X1",
-        "latitude" : 45.503879,
-        "longitude" : -73.580023
+        "address": "3647 Peel,  H3A 1X1",
+        "latitude": 45.503879,
+        "longitude": -73.580023
     },
     {
-        "name" : "Peel 3661",
-        "categories" : [
-            "Building"
+        "name": "Peel 3661",
+        "categories": [
+            0
         ],
-        "address" : "3661 Peel,  H3A 1XA",
-        "latitude" : 45.504048,
-        "longitude" : -73.580331
+        "address": "3661 Peel,  H3A 1XA",
+        "latitude": 45.504048,
+        "longitude": -73.580331
     },
     {
-        "name" : "Peel 3674",
-        "categories" : [
-            "Building"
+        "name": "Peel 3674",
+        "categories": [
+            0
         ],
-        "address" : "3674 Peel,  H3A 1W9",
-        "latitude" : 45.503701,
-        "longitude" : -73.581018
+        "address": "3674 Peel,  H3A 1W9",
+        "latitude": 45.503701,
+        "longitude": -73.581018
     },
     {
-        "name" : "Peel 3690",
-        "categories" : [
-            "Building"
+        "name": "Peel 3690",
+        "categories": [
+            0
         ],
-        "address" : "3690 Peel,  H3A 1W9",
-        "latitude" : 45.503739,
-        "longitude" : -73.581133
+        "address": "3690 Peel,  H3A 1W9",
+        "latitude": 45.503739,
+        "longitude": -73.581133
     },
     {
-        "name" : "Peel 3715",
-        "categories" : [
-            "Building"
+        "name": "Peel 3715",
+        "categories": [
+            0
         ],
-        "address" : "3715 Peel,  H3A 1X1",
-        "latitude" : 45.504386,
-        "longitude" : -73.58101
+        "address": "3715 Peel,  H3A 1X1",
+        "latitude": 45.504386,
+        "longitude": -73.58101
     },
     {
-        "name" : "Penfield 740 (Genome)",
-        "categories" : [
-            "Building"
+        "name": "Penfield 740 (Genome)",
+        "categories": [
+            0
         ],
-        "address" : "740 Doctor-Penfield,  H3A 0G1",
-        "latitude" : 45.506957,
-        "longitude" : -73.579599
+        "address": "740 Doctor-Penfield,  H3A 0G1",
+        "latitude": 45.506957,
+        "longitude": -73.579599
     },
     {
-        "name" : "Pulp and Paper Research Centre",
-        "categories" : [
-            "Building"
+        "name": "Pulp and Paper Research Centre",
+        "categories": [
+            0
         ],
-        "address" : "3420 University,  H3A 2A7",
-        "latitude" : 45.505298,
-        "longitude" : -73.574797
+        "address": "3420 University,  H3A 2A7",
+        "latitude": 45.505298,
+        "longitude": -73.574797
     },
     {
-        "name" : "Purvis Hall",
-        "categories" : [
-            "Building"
+        "name": "Purvis Hall",
+        "categories": [
+            0
         ],
-        "address" : "1020 Pins Ouest,  H3A 1A2",
-        "latitude" : 45.504612,
-        "longitude" : -73.581463
+        "address": "1020 Pins Ouest,  H3A 1A2",
+        "latitude": 45.504612,
+        "longitude": -73.581463
     },
     {
-        "name" : "Redpath Library Building",
-        "categories" : [
-            "Building"
+        "name": "Redpath Library Building",
+        "categories": [
+            0
         ],
-        "address" : "3459 McTavish,  H3A 0C9",
-        "latitude" : 45.503501,
-        "longitude" : -73.576593
+        "address": "3459 McTavish,  H3A 0C9",
+        "latitude": 45.503501,
+        "longitude": -73.576593
     },
     {
-        "name" : "Redpath Museum",
-        "categories" : [
-            "Building"
+        "name": "Redpath Museum",
+        "categories": [
+            0
         ],
-        "address" : "859 Sherbrooke Ouest,  H3A 0C4",
-        "latitude" : 45.504463,
-        "longitude" : -73.577534
+        "address": "859 Sherbrooke Ouest,  H3A 0C4",
+        "latitude": 45.504463,
+        "longitude": -73.577534
     },
     {
-        "name" : "Redpath Hall",
-        "categories" : [
-            "Building"
+        "name": "Redpath Hall",
+        "categories": [
+            0
         ],
-        "address" : "3461 McTavish,  H3A 2K6",
-        "latitude" : 45.503766,
-        "longitude" : -73.577376
+        "address": "3461 McTavish,  H3A 2K6",
+        "latitude": 45.503766,
+        "longitude": -73.577376
     },
     {
-        "name" : "Rutherford Physics Building",
-        "categories" : [
-            "Building"
+        "name": "Rutherford Physics Building",
+        "categories": [
+            0
         ],
-        "address" : "3600 University,  H3A 2T8",
-        "latitude" : 45.507036,
-        "longitude" : -73.578484
+        "address": "3600 University,  H3A 2T8",
+        "latitude": 45.507036,
+        "longitude": -73.578484
     },
     {
-        "name" : "Royal Victoria Hospital",
-        "categories" : [
-            "Building"
+        "name": "Royal Victoria Hospital",
+        "categories": [
+            0
         ],
-        "address" : "687 des Pins,  H3A 1A1",
-        "latitude" : 45.508149,
-        "longitude" : -73.581791
+        "address": "687 des Pins,  H3A 1A1",
+        "latitude": 45.508149,
+        "longitude": -73.581791
     },
     {
-        "name" : "Strathcona Anatomy & Dentistry Building",
-        "categories" : [
-            "Building"
+        "name": "Strathcona Anatomy & Dentistry Building",
+        "categories": [
+            0
         ],
-        "address" : "3640 University,  H3A 0C7",
-        "latitude" : 45.507427,
-        "longitude" : -73.579825
+        "address": "3640 University,  H3A 0C7",
+        "latitude": 45.507427,
+        "longitude": -73.579825
     },
     {
-        "name" : "Sherbrooke 550",
-        "categories" : [
-            "Building"
+        "name": "Sherbrooke 550",
+        "categories": [
+            0
         ],
-        "address" : "550 Sherbrooke Ouest,  H3A 1B9",
-        "latitude" : 45.505537,
-        "longitude" : -73.572223
+        "address": "550 Sherbrooke Ouest,  H3A 1B9",
+        "latitude": 45.505537,
+        "longitude": -73.572223
     },
     {
-        "name" : "Sherbrooke 688",
-        "categories" : [
-            "Building"
+        "name": "Sherbrooke 688",
+        "categories": [
+            0
         ],
-        "address" : "688 Sherbrooke Ouest,  H3A 3R1",
-        "latitude" : 45.504565,
-        "longitude" : -73.573175
+        "address": "688 Sherbrooke Ouest,  H3A 3R1",
+        "latitude": 45.504565,
+        "longitude": -73.573175
     },
     {
-        "name" : "Stewart Biology Building",
-        "categories" : [
-            "Building"
+        "name": "Stewart Biology Building",
+        "categories": [
+            0
         ],
-        "address" : "1205 Doctor-Penfield,  H3A 1B1",
-        "latitude" : 45.502408,
-        "longitude" : -73.581585
+        "address": "1205 Doctor-Penfield,  H3A 1B1",
+        "latitude": 45.502408,
+        "longitude": -73.581585
     },
     {
-        "name" : "Strathcona Music Building",
-        "categories" : [
-            "Building"
+        "name": "Strathcona Music Building",
+        "categories": [
+            0
         ],
-        "address" : "555 Sherbrooke Ouest,  H3A 1E3",
-        "latitude" : 45.505818,
-        "longitude" : -73.573536
+        "address": "555 Sherbrooke Ouest,  H3A 1E3",
+        "latitude": 45.505818,
+        "longitude": -73.573536
     },
     {
-        "name" : "Thomson House",
-        "categories" : [
-            "Building"
+        "name": "Thomson House",
+        "categories": [
+            0
         ],
-        "address" : "3650 McTavish,  H3A 1Y2",
-        "latitude" : 45.504251,
-        "longitude" : -73.579693
+        "address": "3650 McTavish,  H3A 1Y2",
+        "latitude": 45.504251,
+        "longitude": -73.579693
     },
     {
-        "name" : "Trottier Building",
-        "categories" : [
-            "Building"
+        "name": "Trottier Building",
+        "categories": [
+            0
         ],
-        "address" : "3630 University,  H3A 0C6",
-        "latitude" : 45.50739,
-        "longitude" : -73.57909
+        "address": "3630 University,  H3A 0C6",
+        "latitude": 45.50739,
+        "longitude": -73.57909
     },
     {
-        "name" : "University 3534",
-        "categories" : [
-            "Building"
+        "name": "University 3534",
+        "categories": [
+            0
         ],
-        "address" : "3534 University,  H3A 2A7",
-        "latitude" : 45.506704,
-        "longitude" : -73.577596
+        "address": "3534 University,  H3A 2A7",
+        "latitude": 45.506704,
+        "longitude": -73.577596
     },
     {
-        "name" : "University 3550",
-        "categories" : [
-            "Building"
+        "name": "University 3550",
+        "categories": [
+            0
         ],
-        "address" : "3550 University,  H3A 2A7",
-        "latitude" : 45.506862,
-        "longitude" : -73.577867
+        "address": "3550 University,  H3A 2A7",
+        "latitude": 45.506862,
+        "longitude": -73.577867
     },
     {
-        "name" : "University Centre (Shatner Building)",
-        "categories" : [
-            "Building"
+        "name": "University Centre (Shatner Building)",
+        "categories": [
+            0
         ],
-        "address" : "3480 McTavish,  H3A 0E7",
-        "latitude" : 45.5035012,
-        "longitude" : -73.578223
+        "address": "3480 McTavish,  H3A 0E7",
+        "latitude": 45.5035012,
+        "longitude": -73.578223
     },
     {
-        "name" : "Wilson Hall",
-        "categories" : [
-            "Building"
+        "name": "Wilson Hall",
+        "categories": [
+            0
         ],
-        "address" : "3506 University,  H3A 2A7",
-        "latitude" : 45.506342,
-        "longitude" : -73.576979
+        "address": "3506 University,  H3A 2A7",
+        "latitude": 45.506342,
+        "longitude": -73.576979
     },
     {
-        "name" : "Wong Building",
-        "categories" : [
-            "Building"
+        "name": "Wong Building",
+        "categories": [
+            0
         ],
-        "address" : "3610 University,  H3A 0C5",
-        "latitude" : 45.506619,
-        "longitude" : -73.578746
+        "address": "3610 University,  H3A 0C5",
+        "latitude": 45.506619,
+        "longitude": -73.578746
     },
     {
-        "name" : "McIntyre Café",
-        "categories" : [
-            "Food"
+        "name": "McIntyre Café",
+        "categories": [
+            1
         ],
-        "address" : "McIntyre Medical Building",
-        "latitude" : 45.503056,
-        "longitude" : -73.582501
+        "address": "McIntyre Medical Building",
+        "latitude": 45.503056,
+        "longitude": -73.582501
     },
     {
-        "name" : "Second Cup",
-        "categories" : [
-            "Food"
+        "name": "Second Cup",
+        "categories": [
+            1
         ],
-        "address" : "Stewart Biology Building",
-        "latitude" : 45.502408,
-        "longitude" : -73.581585
+        "address": "Stewart Biology Building",
+        "latitude": 45.502408,
+        "longitude": -73.581585
     },
     {
-        "name" : "le comptoir MAC",
-        "categories" : [
-            "Food"
+        "name": "le comptoir MAC",
+        "categories": [
+            1
         ],
-        "address" : "Barton Building",
-        "latitude" : 45.407981,
-        "longitude" : -73.938073
+        "address": "Barton Building",
+        "latitude": 45.407981,
+        "longitude": -73.938073
     },
     {
-        "name" : "Avvocato Café",
-        "categories" : [
-            "Food"
+        "name": "Avvocato Café",
+        "categories": [
+            1
         ],
-        "address" : "(New) Chancellor Day Hall",
-        "latitude" : 45.502951,
-        "longitude" : -73.58084
+        "address": "(New) Chancellor Day Hall",
+        "latitude": 45.502951,
+        "longitude": -73.58084
     },
     {
-        "name" : "Education Café",
-        "categories" : [
-            "Food"
+        "name": "Education Café",
+        "categories": [
+            1
         ],
-        "address" : "Education Building",
-        "latitude" : 45.504333,
-        "longitude" : -73.580492
+        "address": "Education Building",
+        "latitude": 45.504333,
+        "longitude": -73.580492
     },
     {
-        "name" : "Al Taib & Gerts Pub",
-        "categories" : [
-            "Food"
+        "name": "Al Taib & Gerts Pub",
+        "categories": [
+            1
         ],
-        "address" : "University Centre (Shatner Building)",
-        "latitude" : 45.5035012,
-        "longitude" : -73.578223
+        "address": "University Centre (Shatner Building)",
+        "latitude": 45.5035012,
+        "longitude": -73.578223
     },
     {
-        "name" : "Bento Sushi",
-        "categories" : [
-            "Food"
+        "name": "Bento Sushi",
+        "categories": [
+            1
         ],
-        "address" : "Bronfman Building",
-        "latitude" : 45.502572,
-        "longitude" : -73.576442
+        "address": "Bronfman Building",
+        "latitude": 45.502572,
+        "longitude": -73.576442
     },
     {
-        "name" : "Quesada",
-        "categories" : [
-            "Food"
+        "name": "Quesada",
+        "categories": [
+            1
         ],
-        "address" : "Bronfman Building",
-        "latitude" : 45.502572,
-        "longitude" : -73.576442
+        "address": "Bronfman Building",
+        "latitude": 45.502572,
+        "longitude": -73.576442
     },
     {
-        "name" : "Première Moisson",
-        "categories" : [
-            "Food"
+        "name": "Première Moisson",
+        "categories": [
+            1
         ],
-        "address" : "Redpath Library Building",
-        "latitude" : 45.503501,
-        "longitude" : -73.576593
+        "address": "Redpath Library Building",
+        "latitude": 45.503501,
+        "longitude": -73.576593
     },
     {
-        "name" : "Subway",
-        "categories" : [
-            "Food"
+        "name": "Subway",
+        "categories": [
+            1
         ],
-        "address" : "Arts Building",
-        "latitude" : 45.505224,
-        "longitude" : -73.577727
+        "address": "Arts Building",
+        "latitude": 45.505224,
+        "longitude": -73.577727
     },
     {
-        "name" : "Burnside Café",
-        "categories" : [
-            "Food"
+        "name": "Burnside Café",
+        "categories": [
+            1
         ],
-        "address" : "Burnside Hall",
-        "latitude" : 45.504704,
-        "longitude" : -73.574985
+        "address": "Burnside Hall",
+        "latitude": 45.504704,
+        "longitude": -73.574985
     },
     {
-        "name" : "E-Café",
-        "categories" : [
-            "Food"
+        "name": "E-Café",
+        "categories": [
+            1
         ],
-        "address" : "McConnell Engineering Building",
-        "latitude" : 45.505955,
-        "longitude" : -73.576263
+        "address": "McConnell Engineering Building",
+        "latitude": 45.505955,
+        "longitude": -73.576263
     },
     {
-        "name" : "Dispatch Café",
-        "categories" : [
-            "Food"
+        "name": "Dispatch Café",
+        "categories": [
+            1
         ],
-        "address" : "McConnell Engineering Building",
-        "latitude" : 45.505955,
-        "longitude" : -73.576263
+        "address": "McConnell Engineering Building",
+        "latitude": 45.505955,
+        "longitude": -73.576263
     },
     {
-        "name" : "rue McGill Deli",
-        "categories" : [
-            "Food"
+        "name": "rue McGill Deli",
+        "categories": [
+            1
         ],
-        "address" : "Trottier Building",
-        "latitude" : 45.50739,
-        "longitude" : -73.57909
+        "address": "Trottier Building",
+        "latitude": 45.50739,
+        "longitude": -73.57909
     },
     {
-        "name" : "St-Hubert Express",
-        "categories" : [
-            "Food"
+        "name": "St-Hubert Express",
+        "categories": [
+            1
         ],
-        "address" : "Trottier Building",
-        "latitude" : 45.50739,
-        "longitude" : -73.57909
+        "address": "Trottier Building",
+        "latitude": 45.50739,
+        "longitude": -73.57909
     },
     {
-        "name" : "Fabergé Express",
-        "categories" : [
-            "Food"
+        "name": "Fabergé Express",
+        "categories": [
+            1
         ],
-        "address" : "Duff Medical Building",
-        "latitude" : 45.508824,
-        "longitude" : -73.580616
+        "address": "Duff Medical Building",
+        "latitude": 45.508824,
+        "longitude": -73.580616
     },
     {
-        "name" : "Athletics Café",
-        "categories" : [
-            "Food"
+        "name": "Athletics Café",
+        "categories": [
+            1
         ],
-        "address" : "Currie Gymnasium",
-        "latitude" : 45.510004,
-        "longitude" : -73.579659
+        "address": "Currie Gymnasium",
+        "latitude": 45.510004,
+        "longitude": -73.579659
     },
     {
-        "name" : "Royal Victoria College Dining Hall",
-        "categories" : [
-            "Food"
+        "name": "Royal Victoria College Dining Hall",
+        "categories": [
+            1
         ],
-        "address" : "Royal Victoria College",
-        "latitude" : 45.505381,
-        "longitude" : -73.573968
+        "address": "Royal Victoria College",
+        "latitude": 45.505381,
+        "longitude": -73.573968
     },
     {
-        "name" : "Carrefour Sherbrooke Dining Hall",
-        "categories" : [
-            "Food"
+        "name": "Carrefour Sherbrooke Dining Hall",
+        "categories": [
+            1
         ],
-        "address" : "Carrefour Sherbrooke",
-        "latitude" : 45.506712,
-        "longitude" : -73.57261
+        "address": "Carrefour Sherbrooke",
+        "latitude": 45.506712,
+        "longitude": -73.57261
     },
     {
-        "name" : "Première Moisson",
-        "categories" : [
-            "Food"
+        "name": "Première Moisson",
+        "categories": [
+            1
         ],
-        "address" : "New Residence Hall",
-        "latitude" : 45.510903,
-        "longitude" : -73.57615
+        "address": "New Residence Hall",
+        "latitude": 45.510903,
+        "longitude": -73.57615
     },
     {
-        "name" : "New Residence Dining Hall",
-        "categories" : [
-            "Food"
+        "name": "New Residence Dining Hall",
+        "categories": [
+            1
         ],
-        "address" : "New Residence Hall",
-        "latitude" : 45.510903,
-        "longitude" : -73.57615
+        "address": "New Residence Hall",
+        "latitude": 45.510903,
+        "longitude": -73.57615
     },
     {
-        "name" : "Douglas Dining Hall",
-        "categories" : [
-            "Food"
+        "name": "Douglas Dining Hall",
+        "categories": [
+            1
         ],
-        "address" : "Douglas Hall",
-        "latitude" : 45.509107,
-        "longitude" : -73.581725
+        "address": "Douglas Hall",
+        "latitude": 45.509107,
+        "longitude": -73.581725
     },
     {
-        "name" : "Bishop Mountain Hall",
-        "categories" : [
-            "Food"
+        "name": "Bishop Mountain Hall",
+        "categories": [
+            1
         ],
-        "address" : "Bishop Mountain Hall",
-        "latitude" : 45.510656,
-        "longitude" : -73.583728
+        "address": "Bishop Mountain Hall",
+        "latitude": 45.510656,
+        "longitude": -73.583728
     },
     {
-        "name" : "Faculty Club",
-        "categories" : [
-            "Food"
+        "name": "Faculty Club",
+        "categories": [
+            1
         ],
-        "address" : "Faculty Club",
-        "latitude" : 45.503156,
-        "longitude" : -73.577286
+        "address": "Faculty Club",
+        "latitude": 45.503156,
+        "longitude": -73.577286
     },
     {
-        "name" : "La Prep",
-        "categories" : [
-            "Food"
+        "name": "La Prep",
+        "categories": [
+            1
         ],
-        "address" : "University Centre",
-        "latitude" : 45.5035012,
-        "longitude" : -73.578223
+        "address": "University Centre",
+        "latitude": 45.5035012,
+        "longitude": -73.578223
     },
     {
-        "name" : "PGSS",
-        "categories" : [
-            "Food"
+        "name": "PGSS",
+        "categories": [
+            1
         ],
-        "address" : "Thomson House",
-        "latitude" : 45.504251,
-        "longitude" : -73.579693
+        "address": "Thomson House",
+        "latitude": 45.504251,
+        "longitude": -73.579693
     },
     {
-        "name" : "Liquid Nutrition",
-        "categories" : [
-            "Food"
+        "name": "Liquid Nutrition",
+        "categories": [
+            1
         ],
-        "address" : "University Centre",
-        "latitude" : 45.5035012,
-        "longitude" : -73.578223
+        "address": "University Centre",
+        "latitude": 45.5035012,
+        "longitude": -73.578223
     },
     {
-        "name" : "Mange Tout Cafe",
-        "categories" : [
-            "Food"
+        "name": "Mange Tout Cafe",
+        "categories": [
+            1
         ],
-        "address" : "La Citadelle Building",
-        "latitude" : 45.50729,
-        "longitude" : -73.571525
+        "address": "La Citadelle Building",
+        "latitude": 45.50729,
+        "longitude": -73.571525
     },
     {
-        "name" : "S.S.M.U. (Student's Society of McGill)",
-        "categories" : [
-            "Food"
+        "name": "S.S.M.U. (Student's Society of McGill)",
+        "categories": [
+            1
         ],
-        "address" : "University Centre",
-        "latitude" : 45.5035012,
-        "longitude" : -73.578223
+        "address": "University Centre",
+        "latitude": 45.5035012,
+        "longitude": -73.578223
     },
     {
-        "name" : "Vinh's Café",
-        "categories" : [
-            "Food"
+        "name": "Vinh's Café",
+        "categories": [
+            1
         ],
-        "address" : "Penfield 740 (Genome)",
-        "latitude" : 45.506957,
-        "longitude" : -73.579599
+        "address": "Penfield 740 (Genome)",
+        "latitude": 45.506957,
+        "longitude": -73.579599
     },
     {
-        "name" : "Vinh's Music Building",
-        "categories" : [
-            "Food"
+        "name": "Vinh's Music Building",
+        "categories": [
+            1
         ],
-        "address" : "Strathcona Music Building",
-        "latitude" : 45.505818,
-        "longitude" : -73.573536
+        "address": "Strathcona Music Building",
+        "latitude": 45.505818,
+        "longitude": -73.573536
     },
     {
-        "name" : "Life Sciences Library",
-        "categories" : [
-            "Library"
+        "name": "Life Sciences Library",
+        "categories": [
+            2
         ],
-        "address" : "McIntyre Medical Building",
-        "latitude" : 45.503056,
-        "longitude" : -73.582501
+        "address": "McIntyre Medical Building",
+        "latitude": 45.503056,
+        "longitude": -73.582501
     },
     {
-        "name" : "Nahum Gelber Law Library",
-        "categories" : [
-            "Library"
+        "name": "Nahum Gelber Law Library",
+        "categories": [
+            2
         ],
-        "address" : "Gelber Law Library",
-        "latitude" : 45.503505,
-        "longitude" : -73.580735
+        "address": "Gelber Law Library",
+        "latitude": 45.503505,
+        "longitude": -73.580735
     },
     {
-        "name" : "Education Library & Curriculum Resources Centre",
-        "categories" : [
-            "Library"
+        "name": "Education Library & Curriculum Resources Centre",
+        "categories": [
+            2
         ],
-        "address" : "Education Building",
-        "latitude" : 45.504333,
-        "longitude" : -73.580492
+        "address": "Education Building",
+        "latitude": 45.504333,
+        "longitude": -73.580492
     },
     {
-        "name" : "Islamic Studies Library",
-        "categories" : [
-            "Library"
+        "name": "Islamic Studies Library",
+        "categories": [
+            2
         ],
-        "address" : "Morrice Hall",
-        "latitude" : 45.503997,
-        "longitude" : -73.577735
+        "address": "Morrice Hall",
+        "latitude": 45.503997,
+        "longitude": -73.577735
     },
     {
-        "name" : "Blackader-Lauterman Library",
-        "categories" : [
-            "Library"
+        "name": "Blackader-Lauterman Library",
+        "categories": [
+            2
         ],
-        "address" : "Redpath Library Building",
-        "latitude" : 45.503501,
-        "longitude" : -73.576593
+        "address": "Redpath Library Building",
+        "latitude": 45.503501,
+        "longitude": -73.576593
     },
     {
-        "name" : "Humanities and Social Sciences Library",
-        "categories" : [
-            "Library"
+        "name": "Humanities and Social Sciences Library",
+        "categories": [
+            2
         ],
-        "address" : "Redpath Library Building",
-        "latitude" : 45.503501,
-        "longitude" : -73.576593
+        "address": "Redpath Library Building",
+        "latitude": 45.503501,
+        "longitude": -73.576593
     },
     {
-        "name" : "Edward Rosenthall Mathematics and Statistics Library",
-        "categories" : [
-            "Library"
+        "name": "Edward Rosenthall Mathematics and Statistics Library",
+        "categories": [
+            2
         ],
-        "address" : "Burnside Hall",
-        "latitude" : 45.504704,
-        "longitude" : -73.574985
+        "address": "Burnside Hall",
+        "latitude": 45.504704,
+        "longitude": -73.574985
     },
     {
-        "name" : "Schulich Library of Science and Engineering",
-        "categories" : [
-            "Library"
+        "name": "Schulich Library of Science and Engineering",
+        "categories": [
+            2
         ],
-        "address" : "Macdonald Stewart Library Building",
-        "latitude" : 45.505065,
-        "longitude" : -73.575355
+        "address": "Macdonald Stewart Library Building",
+        "latitude": 45.505065,
+        "longitude": -73.575355
     },
     {
-        "name" : "Birks Reading Room",
-        "categories" : [
-            "Library"
+        "name": "Birks Reading Room",
+        "categories": [
+            2
         ],
-        "address" : "Birks Building",
-        "latitude" : 45.506575,
-        "longitude" : -73.577408
+        "address": "Birks Building",
+        "latitude": 45.506575,
+        "longitude": -73.577408
     },
     {
-        "name" : "Marvin Duchow Music Library",
-        "categories" : [
-            "Library"
+        "name": "Marvin Duchow Music Library",
+        "categories": [
+            2
         ],
-        "address" : "New Music Building",
-        "latitude" : 45.506228,
-        "longitude" : -73.57324
+        "address": "New Music Building",
+        "latitude": 45.506228,
+        "longitude": -73.57324
     },
     {
-        "name" : "Howard Ross Library of Management",
-        "categories" : [
-            "Library"
+        "name": "Howard Ross Library of Management",
+        "categories": [
+            2
         ],
-        "address" : "McLennan Library Building",
-        "latitude" : 45.503218,
-        "longitude" : -73.575874
+        "address": "McLennan Library Building",
+        "latitude": 45.503218,
+        "longitude": -73.575874
     },
     {
-        "name" : "Rare Books and Special Collections",
-        "categories" : [
-            "Library"
+        "name": "Rare Books and Special Collections",
+        "categories": [
+            2
         ],
-        "address" : "Redpath Library Building",
-        "latitude" : 45.503501,
-        "longitude" : -73.576593
+        "address": "Redpath Library Building",
+        "latitude": 45.503501,
+        "longitude": -73.576593
     },
     {
-        "name" : "McGill University Archives",
-        "categories" : [
-            "Library"
+        "name": "McGill University Archives",
+        "categories": [
+            2
         ],
-        "address" : "McLennan Library Building",
-        "latitude" : 45.503218,
-        "longitude" : -73.575874
+        "address": "McLennan Library Building",
+        "latitude": 45.503218,
+        "longitude": -73.575874
     },
     {
-        "name" : "Osler Library of the History of Medicine",
-        "categories" : [
-            "Library"
+        "name": "Osler Library of the History of Medicine",
+        "categories": [
+            2
         ],
-        "address" : "McIntyre Medical Building",
-        "latitude" : 45.503056,
-        "longitude" : -73.582501
+        "address": "McIntyre Medical Building",
+        "latitude": 45.503056,
+        "longitude": -73.582501
     },
     {
-        "name" : "Walter Hitschfeld Geography Information Centre",
-        "categories" : [
-            "Library"
+        "name": "Walter Hitschfeld Geography Information Centre",
+        "categories": [
+            2
         ],
-        "address" : "Burnside Hall",
-        "latitude" : 45.504704,
-        "longitude" : -73.574985
+        "address": "Burnside Hall",
+        "latitude": 45.504704,
+        "longitude": -73.574985
     },
     {
-        "name" : "Macdonald Campus Library",
-        "categories" : [
-            "Library"
+        "name": "Macdonald Campus Library",
+        "categories": [
+            2
         ],
-        "address" : "Barton Building",
-        "latitude" : 45.407981,
-        "longitude" : -73.938073
+        "address": "Barton Building",
+        "latitude": 45.407981,
+        "longitude": -73.938073
     },
     {
-        "name" : "Barton Building",
-        "categories" : [
-            "Building"
+        "name": "Barton Building",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.407981,
-        "longitude" : -73.938073
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.407981,
+        "longitude": -73.938073
     },
     {
-        "name" : "Brace Research Unit",
-        "categories" : [
-            "Building"
+        "name": "Brace Research Unit",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.405384,
-        "longitude" : -73.936365
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.405384,
+        "longitude": -73.936365
     },
     {
-        "name" : "Brittain Hall",
-        "categories" : [
-            "Building"
+        "name": "Brittain Hall",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.404854,
-        "longitude" : -73.942925
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.404854,
+        "longitude": -73.942925
     },
     {
-        "name" : "Cattle Complex",
-        "categories" : [
-            "Building"
+        "name": "Cattle Complex",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.412033,
-        "longitude" : -73.94436
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.412033,
+        "longitude": -73.94436
     },
     {
-        "name" : "Centennial Centre Building (Student Service)",
-        "categories" : [
-            "Building"
+        "name": "Centennial Centre Building (Student Service)",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.405997,
-        "longitude" : -73.938889
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.405997,
+        "longitude": -73.938889
     },
     {
-        "name" : "Department of Bioresource Engineering",
-        "categories" : [
-            "Building"
+        "name": "Department of Bioresource Engineering",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.407801,
-        "longitude" : -73.938701
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.407801,
+        "longitude": -73.938701
     },
     {
-        "name" : "EcoMuseum",
-        "categories" : [
-            "Building"
+        "name": "EcoMuseum",
+        "categories": [
+            0
         ],
-        "address" : "21125 Sainte Marie Rd",
-        "latitude" : 45.426159,
-        "longitude" : -73.935635
+        "address": "21125 Sainte Marie Rd",
+        "latitude": 45.426159,
+        "longitude": -73.935635
     },
     {
-        "name" : "EcoResidence",
-        "categories" : [
-            "Building"
+        "name": "EcoResidence",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.407187,
-        "longitude" : -73.935042
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.407187,
+        "longitude": -73.935042
     },
     {
-        "name" : "Farm Centre",
-        "categories" : [
-            "Building"
+        "name": "Farm Centre",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.411652,
-        "longitude" : -73.943186
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.411652,
+        "longitude": -73.943186
     },
     {
-        "name" : "Facilities Management",
-        "categories" : [
-            "Building"
+        "name": "Facilities Management",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.403428,
-        "longitude" : -73.94017
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.403428,
+        "longitude": -73.94017
     },
     {
-        "name" : "Glenfinnan Arena",
-        "categories" : [
-            "Building"
+        "name": "Glenfinnan Arena",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.407675,
-        "longitude" : -73.943708
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.407675,
+        "longitude": -73.943708
     },
     {
-        "name" : "Glenaladale House",
-        "categories" : [
-            "Building"
+        "name": "Glenaladale House",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.403563,
-        "longitude" : -73.943267
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.403563,
+        "longitude": -73.943267
     },
     {
-        "name" : "Harrison House",
-        "categories" : [
-            "Building"
+        "name": "Harrison House",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.405191,
-        "longitude" : -73.937515
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.405191,
+        "longitude": -73.937515
     },
     {
-        "name" : "Horticultural Services",
-        "categories" : [
-            "Building"
+        "name": "Horticultural Services",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.40909,
-        "longitude" : -73.936521
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.40909,
+        "longitude": -73.936521
     },
     {
-        "name" : "Institute of Parasitology",
-        "categories" : [
-            "Building"
+        "name": "Institute of Parasitology",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.408434,
-        "longitude" : -73.938422
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.408434,
+        "longitude": -73.938422
     },
     {
-        "name" : "Large Animal Research Unit",
-        "categories" : [
-            "Building"
+        "name": "Large Animal Research Unit",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.410221,
-        "longitude" : -73.945068
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.410221,
+        "longitude": -73.945068
     },
     {
-        "name" : "Laird Hall",
-        "categories" : [
-            "Building"
+        "name": "Laird Hall",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.406885,
-        "longitude" : -73.939479
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.406885,
+        "longitude": -73.939479
     },
     {
-        "name" : "Macdonald Campus Daycare",
-        "categories" : [
-            "Building"
+        "name": "Macdonald Campus Daycare",
+        "categories": [
+            0
         ],
-        "address" : "1 Maple St Anne de Bellevue",
-        "latitude" : 45.403129,
-        "longitude" : -73.944215
+        "address": "1 Maple St Anne de Bellevue",
+        "latitude": 45.403129,
+        "longitude": -73.944215
     },
     {
-        "name" : "Nutrition Barn",
-        "categories" : [
-            "Building"
+        "name": "Nutrition Barn",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.411136,
-        "longitude" : -73.944264
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.411136,
+        "longitude": -73.944264
     },
     {
-        "name" : "Old Barn",
-        "categories" : [
-            "Building"
+        "name": "Old Barn",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.411923,
-        "longitude" : -73.941667
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.411923,
+        "longitude": -73.941667
     },
     {
-        "name" : "Power House",
-        "categories" : [
-            "Building"
+        "name": "Power House",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.404595,
-        "longitude" : -73.938885
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.404595,
+        "longitude": -73.938885
     },
     {
-        "name" : "Donald McQueen Shaver Poultry Research Center",
-        "categories" : [
-            "Building"
+        "name": "Donald McQueen Shaver Poultry Research Center",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.413946,
-        "longitude" : -73.942354
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.413946,
+        "longitude": -73.942354
     },
     {
-        "name" : "Raymond Building",
-        "categories" : [
-            "Building"
+        "name": "Raymond Building",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.407774,
-        "longitude" : -73.939645
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.407774,
+        "longitude": -73.939645
     },
     {
-        "name" : "Rowles House",
-        "categories" : [
-            "Building"
+        "name": "Rowles House",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.405144,
-        "longitude" : -73.937934
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.405144,
+        "longitude": -73.937934
     },
     {
-        "name" : "Stewart Athletic Complex",
-        "categories" : [
-            "Building"
+        "name": "Stewart Athletic Complex",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.405381,
-        "longitude" : -73.94045
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.405381,
+        "longitude": -73.94045
     },
     {
-        "name" : "Tadja Hall",
-        "categories" : [
-            "Building"
+        "name": "Tadja Hall",
+        "categories": [
+            0
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.404388,
-        "longitude" : -73.937481
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.404388,
+        "longitude": -73.937481
     },
     {
-        "name" : "Carrefour Sherbrooke",
-        "categories" : [
-            "Residence"
+        "name": "Carrefour Sherbrooke",
+        "categories": [
+            3
         ],
-        "address" : "475 Sherbrooke Ouest",
-        "latitude" : 45.506712,
-        "longitude" : -73.57261
+        "address": "475 Sherbrooke Ouest",
+        "latitude": 45.506712,
+        "longitude": -73.57261
     },
     {
-        "name" : "Douglas Hall",
-        "categories" : [
-            "Residence"
+        "name": "Douglas Hall",
+        "categories": [
+            3
         ],
-        "address" : "3851 University",
-        "latitude" : 45.509107,
-        "longitude" : -73.581725
+        "address": "3851 University",
+        "latitude": 45.509107,
+        "longitude": -73.581725
     },
     {
-        "name" : "Greenbriar Apartments",
-        "categories" : [
-            "Residence"
+        "name": "Greenbriar Apartments",
+        "categories": [
+            3
         ],
-        "address" : "3575 University",
-        "latitude" : 45.507359,
-        "longitude" : -73.577901
+        "address": "3575 University",
+        "latitude": 45.507359,
+        "longitude": -73.577901
     },
     {
-        "name" : "La Citadelle Buidling",
-        "categories" : [
-            "Residence"
+        "name": "La Citadelle Buidling",
+        "categories": [
+            3
         ],
-        "address" : "410 Sherbrooke Ouest",
-        "latitude" : 45.50729,
-        "longitude" : -73.571525
+        "address": "410 Sherbrooke Ouest",
+        "latitude": 45.50729,
+        "longitude": -73.571525
     },
     {
-        "name" : "McConnell Hall",
-        "categories" : [
-            "Residence"
+        "name": "McConnell Hall",
+        "categories": [
+            3
         ],
-        "address" : "3905 University",
-        "latitude" : 45.510943,
-        "longitude" : -73.583118
+        "address": "3905 University",
+        "latitude": 45.510943,
+        "longitude": -73.583118
     },
     {
-        "name" : "Molson Hall",
-        "categories" : [
-            "Residence"
+        "name": "Molson Hall",
+        "categories": [
+            3
         ],
-        "address" : "3915 University",
-        "latitude" : 45.511105,
-        "longitude" : -73.583919
+        "address": "3915 University",
+        "latitude": 45.511105,
+        "longitude": -73.583919
     },
     {
-        "name" : "Gardner Hall",
-        "categories" : [
-            "Residence"
+        "name": "Gardner Hall",
+        "categories": [
+            3
         ],
-        "address" : "3925 University",
-        "latitude" : 45.510347,
-        "longitude" : -73.584252
+        "address": "3925 University",
+        "latitude": 45.510347,
+        "longitude": -73.584252
     },
     {
-        "name" : "M.O.R.E. House Peel",
-        "categories" : [
-            "Residence"
+        "name": "M.O.R.E. House Peel",
+        "categories": [
+            3
         ],
-        "address" : "3491 Peel",
-        "latitude" : 45.503149,
-        "longitude" : -73.578662
+        "address": "3491 Peel",
+        "latitude": 45.503149,
+        "longitude": -73.578662
     },
     {
-        "name" : "M.O.R.E. House University 1",
-        "categories" : [
-            "Residence"
+        "name": "M.O.R.E. House University 1",
+        "categories": [
+            3
         ],
-        "address" : "3561 University",
-        "latitude" : 45.50725,
-        "longitude" : -73.577728
+        "address": "3561 University",
+        "latitude": 45.50725,
+        "longitude": -73.577728
     },
     {
-        "name" : "M.O.R.E. House University 2",
-        "categories" : [
-            "Residence"
+        "name": "M.O.R.E. House University 2",
+        "categories": [
+            3
         ],
-        "address" : "3619 University",
-        "latitude" : 45.507811,
-        "longitude" : -73.578975
+        "address": "3619 University",
+        "latitude": 45.507811,
+        "longitude": -73.578975
     },
     {
-        "name" : "M.O.R.E. House University 3",
-        "categories" : [
-            "Residence"
+        "name": "M.O.R.E. House University 3",
+        "categories": [
+            3
         ],
-        "address" : "3653 University",
-        "latitude" : 45.508174,
-        "longitude" : -73.579719
+        "address": "3653 University",
+        "latitude": 45.508174,
+        "longitude": -73.579719
     },
     {
-        "name" : "M.O.R.E. House Pine 1",
-        "categories" : [
-            "Residence"
+        "name": "M.O.R.E. House Pine 1",
+        "categories": [
+            3
         ],
-        "address" : "546 Pine",
-        "latitude" : 45.50847,
-        "longitude" : -73.579714
+        "address": "546 Pine",
+        "latitude": 45.50847,
+        "longitude": -73.579714
     },
     {
-        "name" : "M.O.R.E. House Pine 2",
-        "categories" : [
-            "Residence"
+        "name": "M.O.R.E. House Pine 2",
+        "categories": [
+            3
         ],
-        "address" : "510 Pine",
-        "latitude" : 45.508995,
-        "longitude" : -73.579537
+        "address": "510 Pine",
+        "latitude": 45.508995,
+        "longitude": -73.579537
     },
     {
-        "name" : "M.O.R.E. House Pine 3",
-        "categories" : [
-            "Residence"
+        "name": "M.O.R.E. House Pine 3",
+        "categories": [
+            3
         ],
-        "address" : "515 Pine",
-        "latitude" : 45.509152,
-        "longitude" : -73.57997
+        "address": "515 Pine",
+        "latitude": 45.509152,
+        "longitude": -73.57997
     },
     {
-        "name" : "New Residence Hall",
-        "categories" : [
-            "Residence"
+        "name": "New Residence Hall",
+        "categories": [
+            3
         ],
-        "address" : "3625 Parc",
-        "latitude" : 45.510903,
-        "longitude" : -73.57615
+        "address": "3625 Parc",
+        "latitude": 45.510903,
+        "longitude": -73.57615
     },
     {
-        "name" : "Royal Victoria College (RVC)",
-        "categories" : [
-            "Residence"
+        "name": "Royal Victoria College (RVC)",
+        "categories": [
+            3
         ],
-        "address" : "3425 University",
-        "latitude" : 45.505381,
-        "longitude" : -73.573968
+        "address": "3425 University",
+        "latitude": 45.505381,
+        "longitude": -73.573968
     },
     {
-        "name" : "Solin Hall",
-        "categories" : [
-            "Residence"
+        "name": "Solin Hall",
+        "categories": [
+            3
         ],
-        "address" : "3510 Lionel-Groulx",
-        "latitude" : 45.481275,
-        "longitude" : -73.581653
+        "address": "3510 Lionel-Groulx",
+        "latitude": 45.481275,
+        "longitude": -73.581653
     },
     {
-        "name" : "University Hall",
-        "categories" : [
-            "Residence"
+        "name": "University Hall",
+        "categories": [
+            3
         ],
-        "address" : "3473 University",
-        "latitude" : 45.506409,
-        "longitude" : -73.575539
+        "address": "3473 University",
+        "latitude": 45.506409,
+        "longitude": -73.575539
     },
     {
-        "name" : "Pres Rez",
-        "categories" : [
-            "Residence"
+        "name": "Pres Rez",
+        "categories": [
+            3
         ],
-        "address" : "3495 University",
-        "latitude" : 45.506528,
-        "longitude" : -73.575936
+        "address": "3495 University",
+        "latitude": 45.506528,
+        "longitude": -73.575936
     },
     {
-        "name" : "Bishop Mountain Hall",
-        "categories" : [
-            "Residence"
+        "name": "Bishop Mountain Hall",
+        "categories": [
+            3
         ],
-        "address" : "3935 University",
-        "latitude" : 45.510656,
-        "longitude" : -73.583728
+        "address": "3935 University",
+        "latitude": 45.510656,
+        "longitude": -73.583728
     },
     {
-        "name" : "ECO Residence",
-        "categories" : [
-            "Residence"
+        "name": "ECO Residence",
+        "categories": [
+            3
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.407187,
-        "longitude" : -73.935042
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.407187,
+        "longitude": -73.935042
     },
     {
-        "name" : "Laird Hall",
-        "categories" : [
-            "Residence"
+        "name": "Laird Hall",
+        "categories": [
+            3
         ],
-        "address" : "21111 Lakeshore Road St Anne de Bellevue",
-        "latitude" : 45.406885,
-        "longitude" : -73.939479
+        "address": "21111 Lakeshore Road St Anne de Bellevue",
+        "latitude": 45.406885,
+        "longitude": -73.939479
     },
     {
-        "name" : "EUS Common Room (Blues Pub)",
-        "categories" : [
-            "Social"
+        "name": "EUS Common Room (Blues Pub)",
+        "categories": [
+            4
         ],
-        "address" : "McConnell Engineering Building",
-        "latitude" : 45.505955,
-        "longitude" : -73.576263
+        "address": "McConnell Engineering Building",
+        "latitude": 45.505955,
+        "longitude": -73.576263
     },
     {
-        "name" : "4a7",
-        "categories" : [
-            "Social"
+        "name": "4a7",
+        "categories": [
+            4
         ],
-        "address" : "Bronfman Building",
-        "latitude" : 45.502572,
-        "longitude" : -73.576442
+        "address": "Bronfman Building",
+        "latitude": 45.502572,
+        "longitude": -73.576442
     },
     {
-        "name" : "BDA (Bar des Arts)",
-        "categories" : [
-            "Social"
+        "name": "BDA (Bar des Arts)",
+        "categories": [
+            4
         ],
-        "address" : "Leacock Building",
-        "latitude" : 45.504371,
-        "longitude" : -73.578038
+        "address": "Leacock Building",
+        "latitude": 45.504371,
+        "longitude": -73.578038
     },
     {
-        "name" : "Gerts",
-        "categories" : [
-            "Social"
+        "name": "Gerts",
+        "categories": [
+            4
         ],
-        "address" : "University Centre (Shatner Building)",
-        "latitude" : 45.5035012,
-        "longitude" : -73.578223
+        "address": "University Centre (Shatner Building)",
+        "latitude": 45.5035012,
+        "longitude": -73.578223
     },
     {
-        "name" : "Frostbite",
-        "categories" : [
-            "Social"
+        "name": "Frostbite",
+        "categories": [
+            4
         ],
-        "address" : "McConnell Engineering Building",
-        "latitude" : 45.505955,
-        "longitude" : -73.576263
+        "address": "McConnell Engineering Building",
+        "latitude": 45.505955,
+        "longitude": -73.576263
     },
     {
-        "name" : "ECSESS Lounge",
-        "categories" : [
-            "Social"
+        "name": "ECSESS Lounge",
+        "categories": [
+            4
         ],
-        "address" : "Trottier Building",
-        "latitude" : 45.50739,
-        "longitude" : -73.57909
+        "address": "Trottier Building",
+        "latitude": 45.50739,
+        "longitude": -73.57909
     },
     {
-        "name" : "BMO Branch",
-        "categories" : [
-            "BMO",
-            "Bank"
+        "name": "BMO Branch",
+        "categories": [
+            6,
+            5
         ],
-        "address" : "93 St-Anne,  H9X 1L9",
-        "latitude" : 45.412412,
-        "longitude" : -73.948399
+        "address": "93 St-Anne,  H9X 1L9",
+        "latitude": 45.412412,
+        "longitude": -73.948399
     },
     {
-        "name" : "BMO ATM",
-        "categories" : [
-            "BMO",
-            "Bank"
+        "name": "BMO ATM",
+        "categories": [
+            6,
+            5
         ],
-        "address" : "305 Des Anciens Combatants,  H9X 1Y9",
-        "latitude" : 45.411275,
-        "longitude" : -73.950802
+        "address": "305 Des Anciens Combatants,  H9X 1Y9",
+        "latitude": 45.411275,
+        "longitude": -73.950802
     },
     {
-        "name" : "National Bank ATM",
-        "categories" : [
-            "National Bank",
-            "Bank"
+        "name": "National Bank ATM",
+        "categories": [
+            7,
+            5
         ],
-        "address" : "33 St-Pierre,  H9X 1Z5",
-        "latitude" : 45.405324,
-        "longitude" : -73.950643
+        "address": "33 St-Pierre,  H9X 1Z5",
+        "latitude": 45.405324,
+        "longitude": -73.950643
     },
     {
-        "name" : "CIBC ATM",
-        "categories" : [
-            "CIBC",
-            "Bank"
+        "name": "CIBC ATM",
+        "categories": [
+            8,
+            5
         ],
-        "address" : "21275 Lakeshore,  H9X 3L9",
-        "latitude" : 45.405286,
-        "longitude" : -73.94188
+        "address": "21275 Lakeshore,  H9X 3L9",
+        "latitude": 45.405286,
+        "longitude": -73.94188
     },
     {
-        "name" : "RBC ATM",
-        "categories" : [
-            "RBC",
-            "Bank"
+        "name": "RBC ATM",
+        "categories": [
+            9,
+            5
         ],
-        "address" : "56 Sainte Anne,  H9X 1L6",
-        "latitude" : 45.403088,
-        "longitude" : 73.949662
+        "address": "56 Sainte Anne,  H9X 1L6",
+        "latitude": 45.403088,
+        "longitude": 73.949662
     },
     {
-        "name" : "RBC ATM",
-        "categories" : [
-            "RBC",
-            "Bank"
+        "name": "RBC ATM",
+        "categories": [
+            9,
+            5
         ],
-        "address" : "Department of Bioresource Engineering Macdonald Stewart Building",
-        "latitude" : 45.407801,
-        "longitude" : -73.938701
+        "address": "Department of Bioresource Engineering Macdonald Stewart Building",
+        "latitude": 45.407801,
+        "longitude": -73.938701
     },
     {
-        "name" : "CIBC Branch",
-        "categories" : [
-            "CIBC",
-            "Bank"
+        "name": "CIBC Branch",
+        "categories": [
+            8,
+            5
         ],
-        "address" : "1006 Sherbrooke W,  H3A 2S2",
-        "latitude" : 45.502385,
-        "longitude" : -73.575869
+        "address": "1006 Sherbrooke W,  H3A 2S2",
+        "latitude": 45.502385,
+        "longitude": -73.575869
     },
     {
-        "name" : "Scotiabank ATM",
-        "categories" : [
-            "Scotiabank",
-            "Bank"
+        "name": "Scotiabank ATM",
+        "categories": [
+            10,
+            5
         ],
-        "address" : "University Centre (Shatner Building)",
-        "latitude" : 45.5035012,
-        "longitude" : -73.578223
+        "address": "University Centre (Shatner Building)",
+        "latitude": 45.5035012,
+        "longitude": -73.578223
     },
     {
-        "name" : "Scotiabank ATM",
-        "categories" : [
-            "Scotiabank",
-            "Bank"
+        "name": "Scotiabank ATM",
+        "categories": [
+            10,
+            5
         ],
-        "address" : "1100 Docteur Penfield,  H3A 1A8",
-        "latitude" : 45.50262,
-        "longitude" : -73.580209
+        "address": "1100 Docteur Penfield,  H3A 1A8",
+        "latitude": 45.50262,
+        "longitude": -73.580209
     },
     {
-        "name" : "CIBC ATM",
-        "categories" : [
-            "CIBC",
-            "Bank"
+        "name": "CIBC ATM",
+        "categories": [
+            8,
+            5
         ],
-        "address" : "1200 Mcgill College,  H3B 4G7",
-        "latitude" : 45.501506,
-        "longitude" : -73.570516
+        "address": "1200 Mcgill College,  H3B 4G7",
+        "latitude": 45.501506,
+        "longitude": -73.570516
     },
     {
-        "name" : "CIBC Branch",
-        "categories" : [
-            "CIBC",
-            "Bank"
+        "name": "CIBC Branch",
+        "categories": [
+            8,
+            5
         ],
-        "address" : "600 Cathcart,  H3B 1K8",
-        "latitude" : 45.503794,
-        "longitude" : -73.568168
+        "address": "600 Cathcart,  H3B 1K8",
+        "latitude": 45.503794,
+        "longitude": -73.568168
     },
     {
-        "name" : "TD Branch",
-        "categories" : [
-            "TD",
-            "Bank"
+        "name": "TD Branch",
+        "categories": [
+            11,
+            5
         ],
-        "address" : "2001 University,  H3A 2A6",
-        "latitude" : 45.504564,
-        "longitude" : -73.572159
+        "address": "2001 University,  H3A 2A6",
+        "latitude": 45.504564,
+        "longitude": -73.572159
     },
     {
-        "name" : "Scotiabank Branch",
-        "categories" : [
-            "Scotiabank",
-            "Bank"
+        "name": "Scotiabank Branch",
+        "categories": [
+            10,
+            5
         ],
-        "address" : "1002 Sherbrooke W,  H3A 3L6",
-        "latitude" : 45.502235,
-        "longitude" : -73.574962
+        "address": "1002 Sherbrooke W,  H3A 3L6",
+        "latitude": 45.502235,
+        "longitude": -73.574962
     },
     {
-        "name" : "Scotiabank ATM",
-        "categories" : [
-            "Scotiabank",
-            "Bank"
+        "name": "Scotiabank ATM",
+        "categories": [
+            10,
+            5
         ],
-        "address" : "977 St-Catherine W,  H3B 4W3",
-        "latitude" : 45.501044,
-        "longitude" : -73.57234
+        "address": "977 St-Catherine W,  H3B 4W3",
+        "latitude": 45.501044,
+        "longitude": -73.57234
     },
     {
-        "name" : "Scotiabank ATM",
-        "categories" : [
-            "Scotiabank",
-            "Bank"
+        "name": "Scotiabank ATM",
+        "categories": [
+            10,
+            5
         ],
-        "address" : "1500 Mcgill College,  H3A 3J5",
-        "latitude" : 45.502278,
-        "longitude" : -73.572724
+        "address": "1500 Mcgill College,  H3A 3J5",
+        "latitude": 45.502278,
+        "longitude": -73.572724
     },
     {
-        "name" : "Scotiabank ATM",
-        "categories" : [
-            "Scotiabank",
-            "Bank"
+        "name": "Scotiabank ATM",
+        "categories": [
+            10,
+            5
         ],
-        "address" : "600 De Maisonneuve,  H3A 3J2",
-        "latitude" : 45.504623,
-        "longitude" : -73.571113
+        "address": "600 De Maisonneuve,  H3A 3J2",
+        "latitude": 45.504623,
+        "longitude": -73.571113
     },
     {
-        "name" : "Scotiabank Branch",
-        "categories" : [
-            "Scotiabank",
-            "Bank"
+        "name": "Scotiabank Branch",
+        "categories": [
+            10,
+            5
         ],
-        "address" : "2055 University,  H3A 3H9",
-        "latitude" : 45.504451,
-        "longitude" : -73.572141
+        "address": "2055 University,  H3A 3H9",
+        "latitude": 45.504451,
+        "longitude": -73.572141
     },
     {
-        "name" : "Scotiabank ATM",
-        "categories" : [
-            "Scotiabank",
-            "Bank"
+        "name": "Scotiabank ATM",
+        "categories": [
+            10,
+            5
         ],
-        "address" : "333 President Kennedy,  H2X 4C7",
-        "latitude" : 45.507733,
-        "longitude" : -73.56957
+        "address": "333 President Kennedy,  H2X 4C7",
+        "latitude": 45.507733,
+        "longitude": -73.56957
     },
     {
-        "name" : "National Bank Branch",
-        "categories" : [
-            "National Bank",
-            "Bank"
+        "name": "National Bank Branch",
+        "categories": [
+            7,
+            5
         ],
-        "address" : "1140 Sherbrooke W,  H3A 2S1",
-        "latitude" : 45.501227,
-        "longitude" : -73.577064
+        "address": "1140 Sherbrooke W,  H3A 2S1",
+        "latitude": 45.501227,
+        "longitude": -73.577064
     },
     {
-        "name" : "National Bank ATM",
-        "categories" : [
-            "National Bank",
-            "Bank"
+        "name": "National Bank ATM",
+        "categories": [
+            7,
+            5
         ],
-        "address" : "1411 Peel,  H3A 1S5",
-        "latitude" : 45.500285,
-        "longitude" : -73.573086
+        "address": "1411 Peel,  H3A 1S5",
+        "latitude": 45.500285,
+        "longitude": -73.573086
     },
     {
-        "name" : "National Bank Branch",
-        "categories" : [
-            "National Bank",
-            "Bank"
+        "name": "National Bank Branch",
+        "categories": [
+            7,
+            5
         ],
-        "address" : "955 De Maisonneuve W,  H3A 1M4",
-        "latitude" : 45.502204,
-        "longitude" : -73.573457
+        "address": "955 De Maisonneuve W,  H3A 1M4",
+        "latitude": 45.502204,
+        "longitude": -73.573457
     },
     {
-        "name" : "National Bank ATM",
-        "categories" : [
-            "National Bank",
-            "Bank"
+        "name": "National Bank ATM",
+        "categories": [
+            7,
+            5
         ],
-        "address" : "1155 Metcalfe,  H3B 5G2",
-        "latitude" : 45.500052,
-        "longitude" : -73.570376
+        "address": "1155 Metcalfe,  H3B 5G2",
+        "latitude": 45.500052,
+        "longitude": -73.570376
     },
     {
-        "name" : "National Bank ATM",
-        "categories" : [
-            "National Bank",
-            "Bank"
+        "name": "National Bank ATM",
+        "categories": [
+            7,
+            5
         ],
-        "address" : "800 De Maisonneuve,  H3A 3E4",
-        "latitude" : 45.503373,
-        "longitude" : -73.572391
+        "address": "800 De Maisonneuve,  H3A 3E4",
+        "latitude": 45.503373,
+        "longitude": -73.572391
     },
     {
-        "name" : "National Bank ATM",
-        "categories" : [
-            "National Bank",
-            "Bank"
+        "name": "National Bank ATM",
+        "categories": [
+            7,
+            5
         ],
-        "address" : "2100 University,  H3A 2T3",
-        "latitude" : 45.504502,
-        "longitude" : -73.572668
+        "address": "2100 University,  H3A 2T3",
+        "latitude": 45.504502,
+        "longitude": -73.572668
     },
     {
-        "name" : "National Bank ATM",
-        "categories" : [
-            "National Bank",
-            "Bank"
+        "name": "National Bank ATM",
+        "categories": [
+            7,
+            5
         ],
-        "address" : "500 Sherbrooke W,  H3A 3G6",
-        "latitude" : 45.506209,
-        "longitude" : -73.572113
+        "address": "500 Sherbrooke W,  H3A 3G6",
+        "latitude": 45.506209,
+        "longitude": -73.572113
     },
     {
-        "name" : "BMO Branch",
-        "categories" : [
-            "BMO",
-            "Bank"
+        "name": "BMO Branch",
+        "categories": [
+            6,
+            5
         ],
-        "address" : "2005 Peel,  H3A 1T7",
-        "latitude" : 45.501082,
-        "longitude" : -73.574813
+        "address": "2005 Peel,  H3A 1T7",
+        "latitude": 45.501082,
+        "longitude": -73.574813
     },
     {
-        "name" : "BMO Branch",
-        "categories" : [
-            "BMO",
-            "Bank"
+        "name": "BMO Branch",
+        "categories": [
+            6,
+            5
         ],
-        "address" : "1155 Metcalfe,  H3B 2V7",
-        "latitude" : 45.500052,
-        "longitude" : -73.570376
+        "address": "1155 Metcalfe,  H3B 2V7",
+        "latitude": 45.500052,
+        "longitude": -73.570376
     },
     {
-        "name" : "BMO Branch",
-        "categories" : [
+        "name": "BMO Branch",
+        "categories": [
             " H3B 1C1",
-            "Bank"
+            5
         ],
-        "address" : "670,  St-Catherine W",
-        "latitude" : 45.502973,
-        "longitude" : -73.5698
+        "address": "670,  St-Catherine W",
+        "latitude": 45.502973,
+        "longitude": -73.5698
     },
     {
-        "name" : "BMO ATM",
-        "categories" : [
-            "BMO",
-            "Bank"
+        "name": "BMO ATM",
+        "categories": [
+            6,
+            5
         ],
-        "address" : "705 St-Catherine W,  H3B 4G5",
-        "latitude" : 45.502841,
-        "longitude" : -73.571638
+        "address": "705 St-Catherine W,  H3B 4G5",
+        "latitude": 45.502841,
+        "longitude": -73.571638
     },
     {
-        "name" : "RBC Branch",
-        "categories" : [
-            "RBC",
-            "Bank"
+        "name": "RBC Branch",
+        "categories": [
+            9,
+            5
         ],
-        "address" : "1 Place Ville Marie,  H3C 3B5",
-        "latitude" : 45.501461,
-        "longitude" : -73.569412
+        "address": "1 Place Ville Marie,  H3C 3B5",
+        "latitude": 45.501461,
+        "longitude": -73.569412
     },
     {
-        "name" : "RBC Branch",
-        "categories" : [
-            "RBC",
-            "Bank"
+        "name": "RBC Branch",
+        "categories": [
+            9,
+            5
         ],
-        "address" : "1100 Sherbrooke W,  H3A 1G7",
-        "latitude" : 45.501556,
-        "longitude" : -73.576562
+        "address": "1100 Sherbrooke W,  H3A 1G7",
+        "latitude": 45.501556,
+        "longitude": -73.576562
     },
     {
-        "name" : "RBC Branch",
-        "categories" : [
-            "RBC",
-            "Bank"
+        "name": "RBC Branch",
+        "categories": [
+            9,
+            5
         ],
-        "address" : "300 Leo Pariseau,  H2X 4B3",
-        "latitude" : 45.511569,
-        "longitude" : -73.576509
+        "address": "300 Leo Pariseau,  H2X 4B3",
+        "latitude": 45.511569,
+        "longitude": -73.576509
     },
     {
-        "name" : "RBC Branch",
-        "categories" : [
-            "RBC",
-            "Bank"
+        "name": "RBC Branch",
+        "categories": [
+            9,
+            5
         ],
-        "address" : "2157 Guy,  H3H 2L9",
-        "latitude" : 45.496279,
-        "longitude" : -73.580176
+        "address": "2157 Guy,  H3H 2L9",
+        "latitude": 45.496279,
+        "longitude": -73.580176
     },
     {
-        "name" : "RBC Branch",
-        "categories" : [
-            "RBC",
-            "Bank"
+        "name": "RBC Branch",
+        "categories": [
+            9,
+            5
         ],
-        "address" : "1140 St-Catherine W,  H3B 1H7",
-        "latitude" : 45.499423,
-        "longitude" : -73.573423
+        "address": "1140 St-Catherine W,  H3B 1H7",
+        "latitude": 45.499423,
+        "longitude": -73.573423
     },
     {
-        "name" : "RBC ATM",
-        "categories" : [
-            "RBC",
-            "Bank"
+        "name": "RBC ATM",
+        "categories": [
+            9,
+            5
         ],
-        "address" : "Mcintyre Medical Centre",
-        "latitude" : 45.502297,
-        "longitude" : -73.581726
+        "address": "Mcintyre Medical Centre",
+        "latitude": 45.502297,
+        "longitude": -73.581726
     },
     {
-        "name" : "RBC ATM",
-        "categories" : [
-            "RBC",
-            "Bank"
+        "name": "RBC ATM",
+        "categories": [
+            9,
+            5
         ],
-        "address" : "McConnell Engineering Building",
-        "latitude" : 45.505955,
-        "longitude" : -73.576263
+        "address": "McConnell Engineering Building",
+        "latitude": 45.505955,
+        "longitude": -73.576263
     },
     {
-        "name" : "RBC ATM",
-        "categories" : [
-            "RBC",
-            "Bank"
+        "name": "RBC ATM",
+        "categories": [
+            9,
+            5
         ],
-        "address" : "Bronfman Management Building",
-        "latitude" : 45.502572,
-        "longitude" : -73.576442
+        "address": "Bronfman Management Building",
+        "latitude": 45.502572,
+        "longitude": -73.576442
     },
     {
-        "name" : "RBC ATM",
-        "categories" : [
-            "RBC",
-            "Bank"
+        "name": "RBC ATM",
+        "categories": [
+            9,
+            5
         ],
-        "address" : "Sir Arthur Currie Gymnasium",
-        "latitude" : 45.510004,
-        "longitude" : -73.579659
+        "address": "Sir Arthur Currie Gymnasium",
+        "latitude": 45.510004,
+        "longitude": -73.579659
     },
     {
-        "name" : "RBC ATM",
-        "categories" : [
-            "RBC",
-            "Bank"
+        "name": "RBC ATM",
+        "categories": [
+            9,
+            5
         ],
-        "address" : "Burnside Hall",
-        "latitude" : 45.504704,
-        "longitude" : -73.574985
+        "address": "Burnside Hall",
+        "latitude": 45.504704,
+        "longitude": -73.574985
     },
     {
-        "name" : "RBC ATM",
-        "categories" : [
-            "RBC",
-            "Bank"
+        "name": "RBC ATM",
+        "categories": [
+            9,
+            5
         ],
-        "address" : "New Reisdence Hall",
-        "latitude" : 45.510903,
-        "longitude" : -73.57615
+        "address": "New Reisdence Hall",
+        "latitude": 45.510903,
+        "longitude": -73.57615
     },
     {
-        "name" : "RBC ATM",
-        "categories" : [
-            "RBC",
-            "Bank"
+        "name": "RBC ATM",
+        "categories": [
+            9,
+            5
         ],
-        "address" : "Sherbrooke 688",
-        "latitude" : 45.504565,
-        "longitude" : -73.573175
+        "address": "Sherbrooke 688",
+        "latitude": 45.504565,
+        "longitude": -73.573175
     },
     {
-        "name" : "RBC ATM",
-        "categories" : [
-            "RBC",
-            "Bank"
+        "name": "RBC ATM",
+        "categories": [
+            9,
+            5
         ],
-        "address" : "Redpath Library Building",
-        "latitude" : 45.503501,
-        "longitude" : -73.576593
+        "address": "Redpath Library Building",
+        "latitude": 45.503501,
+        "longitude": -73.576593
     },
     {
-        "name" : "RBC ATM",
-        "categories" : [
-            "RBC",
-            "Bank"
+        "name": "RBC ATM",
+        "categories": [
+            9,
+            5
         ],
-        "address" : "Chancellor Day Building",
-        "latitude" : 45.502951,
-        "longitude" : -73.58084
+        "address": "Chancellor Day Building",
+        "latitude": 45.502951,
+        "longitude": -73.58084
     },
     {
-        "name" : "RBC ATM",
-        "categories" : [
-            "RBC",
-            "Bank"
+        "name": "RBC ATM",
+        "categories": [
+            9,
+            5
         ],
-        "address" : "Education Building",
-        "latitude" : 45.504333,
-        "longitude" : -73.580492
+        "address": "Education Building",
+        "latitude": 45.504333,
+        "longitude": -73.580492
    }
 ]
