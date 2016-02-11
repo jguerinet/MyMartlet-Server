@@ -1,6 +1,6 @@
 {
 	"MinAndroidVersion" : 8,
-	"PlacesURL" : "https://mymartlet.herokuapp.com/v1/places",
+	"PlacesURL" : "https://mymartlet.herokuapp.com/api/v1/places",
 	"Place Categories" : [
 		{
 			"Name" : "Building",

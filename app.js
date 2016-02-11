@@ -21,18 +21,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //Redirect the old endpoint to the v1 info
 app.get('/config', function(req, res) {
-	res.redirect('/v1/config');
+	res.redirect('/api/v1/config');
 })
 
 //Set up the v1 endpoint
-app.use('/v1', require('./routes/v1'));
+app.use('/api/v1', require('./routes/v1'));
 
-//Set up the api endpoint
-app.use('/api', require('./routes/api'));
+//Set up the v2 endpoint
+app.use('/api/v2', require('./routes/v2'));
 
 //Redirect the base to the config
 app.get('/', function(req, res) {
-	res.redirect('/api/config')
+	res.redirect('/api/v2/config')
 });
 
 // catch 404 and forward to error handler
