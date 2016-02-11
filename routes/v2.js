@@ -4,11 +4,11 @@ var auth = require('../auth')('kjw3ro3ijro4wirj', 'p4j2340rf9rifkerv');
 var router = require('express').Router();
 
 //Config data
-var config = require('../data/config.json');
+var config = require('../data/v2/config.json');
 //Places data
-var places = require('../data/places.json');
+var places = require('../data/v2/places.json');
 //Categories data
-var categories = require('../data/categories.json');
+var categories = require('../data/v2/categories.json');
 
 //Last date the config was modified
 var modifiedConfig = new Date('2016-02-08');
