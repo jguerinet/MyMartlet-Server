@@ -9,13 +9,17 @@ var config = require('../data/v2/config.json');
 var places = require('../data/v2/places.json');
 //Categories data
 var categories = require('../data/v2/categories.json');
+//Registration Semesters data
+var registrationSemesters = require('../data/v2/registration_semesters.json');
 
 //Last date the config was modified
-var modifiedConfig = new Date('2016-02-08');
+var modifiedConfig = new Date('2016-02-09');
 //Last date the places were modified
-var modifiedPlaces = new Date('2016-02-08');
+var modifiedPlaces = new Date('2016-02-09');
 //Last date the categories were modified
-var modifiedCategories = new Date('2016-02-08');
+var modifiedCategories = new Date('2016-02-09');
+//Last date the registration semesters were modified
+var modifiedRegistrationSemesters = new Date('2016-02-09');
 
 //Base route redirects to the config
 router.get('/', function(req, res) {
@@ -36,6 +40,11 @@ router.get('/places', auth, function(req, res) {
 router.get('/categories', auth, function(req, res) {
 	parseRequest(req, res, modifiedCategories, categories);
 });
+
+//Registration Semesters route
+router.get('/registration-semesters', auth, function(req, res) {
+	parseRequest(req, res, modifiedRegistrationSemesters, registrationSemesters);
+})
 
 //Parses the request and returns the right info based on the If-Modified-Since
 var parseRequest = function(req, res, ifModifiedSinceDate, json) {
