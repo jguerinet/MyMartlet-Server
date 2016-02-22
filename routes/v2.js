@@ -1,5 +1,3 @@
-//The authentication module
-var auth = require('../auth')('kjw3ro3ijro4wirj', 'p4j2340rf9rifkerv');
 //Router instance
 var router = require('express').Router();
 
@@ -27,22 +25,22 @@ router.get('/', function(req, res) {
 });
 
 //Config route
-router.get('/config', auth, function(req, res) {
+router.get('/config', function(req, res) {
 	parseRequest(req, res, modifiedConfig, config);
 });
 
 //Places route
-router.get('/places', auth, function(req, res) {
+router.get('/places', function(req, res) {
 	parseRequest(req, res, modifiedPlaces, places);
 });
 
 //Categories route
-router.get('/categories', auth, function(req, res) {
+router.get('/categories', function(req, res) {
 	parseRequest(req, res, modifiedCategories, categories);
 });
 
 //Registration Terms route
-router.get('/registration-terms', auth, function(req, res) {
+router.get('/registration-terms', function(req, res) {
 	parseRequest(req, res, modifiedRegistrationTerms, registrationTerms);
 })
 
