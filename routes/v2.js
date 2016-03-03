@@ -11,13 +11,13 @@ var categories = require('../data/v2/categories.json');
 var registrationTerms = require('../data/v2/registration_terms.json');
 
 //Last date the config was modified
-var modifiedConfig = new Date('2016-02-09');
+var modifiedConfig = new Date('2016-03-01');
 //Last date the places were modified
-var modifiedPlaces = new Date('2016-02-09');
+var modifiedPlaces = new Date('2016-03-01');
 //Last date the categories were modified
-var modifiedCategories = new Date('2016-02-09');
+var modifiedCategories = new Date('2016-03-01');
 //Last date the registration terms were modified
-var modifiedRegistrationTerms = new Date('2016-02-09');
+var modifiedRegistrationTerms = new Date('2016-03-01');
 
 //Base route redirects to the config
 router.get('/', function(req, res) {
