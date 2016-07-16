@@ -17,7 +17,7 @@ var modifiedPlaces = new Date('2016-03-01');
 //Last date the categories were modified
 var modifiedCategories = new Date('2016-03-01');
 //Last date the registration terms were modified
-var modifiedRegistrationTerms = new Date('2016-03-01');
+var modifiedRegistrationTerms = new Date('2016-07-16');
 
 //Base route redirects to the config
 router.get('/', function(req, res) {
