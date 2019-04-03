@@ -30,6 +30,8 @@ app.use('/api/v1', require('./routes/v1'));
 // Set up the v2 endpoint
 app.use('/api/v2', require('./routes/v2'));
 
+app.use('/api/v3', require('./routes/v3'));
+
 // Redirect the base to the config
 app.get('/', function(req, res) {
 	res.redirect('/api/v2/config')
